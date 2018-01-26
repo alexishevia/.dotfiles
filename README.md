@@ -1,7 +1,7 @@
 # sysconfig
 scripts to configure my dev environment
 
-This scripts should allow me to reconstruct my entire development environment on a blank Ubuntu machine.
+These scripts should allow me to reconstruct my entire development environment on a blank Ubuntu machine.
 
 ## Usage
 ```
