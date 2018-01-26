@@ -137,5 +137,5 @@ WORKON_HOME=~/.virtualenvs
 if [[ $PWD/ = $HOME/Projects/FOX/* ]];
   then
     source $HOME/Projects/FOX/.aws_keys;
-    nvm-use;
+    nvm use;
 fi
