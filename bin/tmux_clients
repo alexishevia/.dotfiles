@@ -18,7 +18,7 @@ then
 
     # ppp window
     tmux new-window -t clients -n ppp
-    tmux send-keys -t clients:ppp 'ppp' C-m
+    tmux send-keys -t clients:ppp 'npx ppp-cli' C-m
 fi
 
 # select window 'ppp'
