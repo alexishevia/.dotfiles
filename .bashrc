@@ -102,11 +102,6 @@ complete -A command npx
 # save ~/.npmrc authToken value into an NPM_TOKEN env variable
 export NPM_TOKEN=$(grep -oP 'authToken=\K.*' ~/.npmrc)
 
-# create an nvm-use function that automatically installs global npm packages
-function nvm-use {
-  nvm use $1 && install_global_packages
-}
-
 #---------------------------------------
 # MongoDB
 #---------------------------------------

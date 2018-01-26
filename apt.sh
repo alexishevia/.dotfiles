@@ -12,5 +12,3 @@ sudo apt remove --yes avahi-daemon vim vim-gnome terminator
 # apt cleanup
 sudo apt autoclean --yes
 sudo apt autoremove --yes
-
-

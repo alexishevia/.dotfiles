@@ -8,6 +8,15 @@ pushd ~/.nvm
 git pull
 . ~/.nvm/nvm.sh
 popd
-nvm install 8.9
-nvm use 8.9
 
+
+versions='8.9.4'
+
+for version in $versions; do
+  nvm install $version
+  nvm use $version
+  npm install -g npm yarn timezones-cli eslint eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-import @foxdcg/is-commit-deployed @foxdcg/reindex-mpx-item
+done
+
+nvm alias default 8.9.4
+nvm use 8.9.4
