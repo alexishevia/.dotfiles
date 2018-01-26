@@ -14,7 +14,7 @@ done
 for dir in $dirs; do
   if [ -d ~/$dir ]
   then
-    rm -r ~/$dir
+    sudo rm -r ~/$dir
   fi
   cp -r $dir ~/$dir
 done
