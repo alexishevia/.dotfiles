@@ -19,3 +19,5 @@ pushd ~/.nvm
 git pull
 . ~/.nvm/nvm.sh
 popd
+nvm install 8.9
+nvm use 8.9
