@@ -18,6 +18,7 @@ Plug 'scrooloose/nerdcommenter'
 
 " file explorer
 Plug 'scrooloose/nerdtree'
+Plug 'ivalkeen/nerdtree-execute'
 
 " syntax checking
 Plug 'scrooloose/syntastic'
