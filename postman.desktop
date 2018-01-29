@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Postman
+Exec=/home/alexishevia/.Postman/Postman
+Icon=/home/alexishevia/.Postman/resources/app/assets/icon.png
+Type=Application
+Categories=GTK;GNOME;Utility;

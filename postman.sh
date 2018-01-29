@@ -17,4 +17,10 @@ then
   rm ~/bin/postman
 fi
 
+if [ -e  ~/.local/share/applications/postman.desktop ]
+then
+  rm ~/.local/share/applications/postman.desktop
+fi
+
 ln -s ~/.Postman/Postman ~/bin/postman
+cp postman.desktop ~/.local/share/applications/postman.desktop
