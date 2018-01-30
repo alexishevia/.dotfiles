@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e # exit if any command fails
+
 if ! [ -d ~/.robo3t-1.1.1-linux-x86_64-c93c6b0 ];
 then
   wget https://download.robomongo.org/1.1.1/linux/robo3t-1.1.1-linux-x86_64-c93c6b0.tar.gz

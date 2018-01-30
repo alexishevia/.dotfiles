@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e # exit if any command fails
+
 npm install -g postman-updater-linux
 
 if [ -d ~/.Postman ];

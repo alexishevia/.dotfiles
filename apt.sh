@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e # exit if any command fails
+
 # f.lux
 sudo add-apt-repository --yes ppa:nathan-renniewaldock/flux
 

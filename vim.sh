@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e # exit if any command fails
+
 if [ -d ~/.vim ]
 then
   sudo rm -r ~/.vim
