@@ -192,7 +192,31 @@ nnoremap gr :tabp<Enter>
     endif
 
 " use ENTER to add new lines without going into insert mode
-nnoremap <CR> o<Esc>k
+" I had to disable this in order to get :Toc working correctly.
+" see: https://github.com/plasticboy/vim-markdown/issues/359
+" nnoremap <CR> o<Esc>k
+
+" disable vim-markdown folding
+let g:vim_markdown_folding_disabled = 1
+
+" open :Toc with ,e
+nnoremap <Leader>e :Toc<CR>
+
+" open :Toc panel on document load
+function! s:Toc()
+  if &filetype == 'markdown'
+    :Toc
+    set filetype=qf
+    setl nofoldenable
+    syntax on
+  endif
+endfunction
+autocmd VimEnter *.m*  call s:Toc()
+autocmd BufReadPost *.m* call s:Toc()
+autocmd BufWinEnter *.m* call s:Toc()
+
+" close :Toc on <Enter>
+nnoremap <expr><enter> &ft=="qf" ? "<cr>:lcl<cr>" : (getpos(".")[2]==1 ? "i<cr><esc>": "i<cr><esc>l")
 
 " Start recording keystrokes by typing qq.
 " End recording with q (first press Escape if you are in insert mode).
@@ -331,3 +355,4 @@ set noswapfile
 
 " save backup files to a custom directory
 " set backupdir=~/.vim/backup
+
