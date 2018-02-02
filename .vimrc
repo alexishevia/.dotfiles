@@ -49,10 +49,8 @@ Plug 'tmhedberg/matchit'
 Plug 'chrisbra/unicode.vim'
 
 " markdown utilities
+Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-
-" markdown table of contents generator
-Plug 'ajorgensen/vim-markdown-toc'
 
 " utility functions
 Plug 'tomtom/tlib_vim'
