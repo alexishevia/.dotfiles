@@ -3,7 +3,7 @@
 # if 'fox' session exists, attach to it.
 # otherwise, create it with the following windows:
 # - editor: vim
-# - tail: bin/start && bin/tail
+# - tail: bin/start all && bin/tail all
 # - indexer: docker-compose exec indexer ash
 
 tmux has-session -t fox
@@ -25,7 +25,7 @@ then
     tmux send-keys -t fox:tail 'nvm use' C-m
     tmux send-keys -t fox:tail 'source ../.aws_keys' C-m
     tmux send-keys -t fox:tail 'clear' C-m
-    tmux send-keys -t fox:tail 'bin/start && bin/tail'
+    tmux send-keys -t fox:tail 'bin/start all && bin/tail all'
 
     # indexer window
     tmux new-window -t fox -n indexer
