@@ -18,6 +18,6 @@ module.exports = {
       props: true,
       ignorePropertyModificationsFor: ['memo', 'acc'], // allow reducer accumulators to be modified
     }],
-    'complexity': ['error', 2], // allow max cyclomatic complexity of 2
+    'complexity': ['error', 5], // allow max cyclomatic complexity of 5
   },
 };
