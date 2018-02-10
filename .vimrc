@@ -14,7 +14,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'Shougo/neocomplete.vim'
 
 " easy comment/uncomment
-Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 
 " file explorer
 Plug 'scrooloose/nerdtree'
