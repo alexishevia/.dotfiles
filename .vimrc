@@ -48,9 +48,15 @@ Plug 'tmhedberg/matchit'
 " handle unicode and digraphs characters
 Plug 'chrisbra/unicode.vim'
 
+" quoting/parenthesizing made simple
+Plug 'tpope/vim-surround'
+
 " markdown utilities
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+
+" repeat.vim: enable repeating supported plugin maps with '.'
+Plug 'tpope/vim-repeat'
 
 " utility functions
 Plug 'tomtom/tlib_vim'
@@ -69,6 +75,9 @@ set relativenumber
 
 " change <Leader> key from \ to ,
 let mapleader = ","
+
+" use jk instead of Escape
+inoremap jk <esc>
 
 " make j & k move up/down a single row in the screen (not on a linewise basis)
 nnoremap j gj
