@@ -17,7 +17,7 @@ versions='8.9.3 8.9.4'
 for version in $versions; do
   nvm install $version
   nvm use $version
-  npm install -g npm yarn lerna timezones-cli ppp-cli json eslint eslint-config-airbnb commitizen eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-import @foxdcg/is-commit-deployed @foxdcg/reindex-mpx-item
+  npm install -g npm yarn lerna timezones-cli ppp-cli json eslint eslint-config-airbnb commitizen eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-import @foxdcg/is-commit-deployed @foxdcg/reindex-mpx-item @mprokopowicz/sqs-monitor
 done
 
 nvm alias default 8.9.4
