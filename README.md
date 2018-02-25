@@ -6,5 +6,10 @@ These scripts should allow me to reconstruct my entire development environment o
 ## Usage
 ```
 git clone https://github.com/alexishevia/.sysconfig ~/.sysconfig
-~/.sysconfig/run.sh
+
+# To backup your computer
+~/.sysconfig/backup.sh
+
+# To restore on a new computer
+~/.sysconfig/restore.sh
 ```

@@ -7,3 +7,4 @@ set -e # exit if any command fails
 ./dotfiles.sh
 ./vim.sh
 ./bin.sh
+./ssh.sh restore
