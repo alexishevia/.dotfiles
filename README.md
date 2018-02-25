@@ -5,11 +5,16 @@ These scripts should allow me to reconstruct my entire development environment o
 
 ## Usage
 ```
-git clone https://github.com/alexishevia/.sysconfig ~/.sysconfig
+# Download repo
+sudo apt-get install wget unzip
+wget https://github.com/alexishevia/.sysconfig/archive/master.zip
+unzip master.zip
+rm master.zip
+cd .sysconfig-master
 
-# To backup your computer
+# Backup
 ~/.sysconfig/backup.sh
 
-# To restore on a new computer
+# Restore
 ~/.sysconfig/restore.sh
 ```
