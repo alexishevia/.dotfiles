@@ -2,7 +2,7 @@
 
 set -e # exit if any command fails
 
-if [ $1 != 'backup' ] && [ $1 != 'restore' ]
+if [ ! $1 ] || ([ $1 != 'backup' ] && [ $1 != 'restore' ])
 then
   echo 'Argument must be "backup" or "restore".';
   exit 1;
@@ -37,6 +37,16 @@ fi
 
 if [ $1 = 'restore' ]
 then
+  # wait until ssh backup exists
+  echo -n 'Waiting for ~/Dropbox/sshbackup.tar.gz to be ready'
+  while [ ! -f ~/Dropbox/sshbackup.tar.gz ]
+  do
+    echo -n '.'; sleep 1;
+    echo -n '.'; sleep 1;
+    echo -n '.'; sleep 1;
+    echo -en "\b\b\b   \b\b\b"; sleep 1;
+  done
+
   # create tmp mount directory
   mkdir /tmp/sshmountdir
 
