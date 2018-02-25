@@ -6,7 +6,7 @@ These scripts should allow me to reconstruct my entire development environment o
 ## Usage
 ```
 # Download repo
-sudo apt-get install wget unzip
+sudo apt install wget unzip
 wget https://github.com/alexishevia/.sysconfig/archive/master.zip
 unzip master.zip
 rm master.zip
