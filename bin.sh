@@ -8,5 +8,4 @@ then
 fi
 cp -r bin ~/bin
 
-./robomongo.sh
 ./postman.sh
