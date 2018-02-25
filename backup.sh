@@ -20,5 +20,5 @@ for repo in $repos; do
   popd;
 done
 
-# backup the ~/.ssh directory
-./ssh.sh backup
+# backup confidential directories
+./encrypted.sh backup
