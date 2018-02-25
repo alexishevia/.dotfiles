@@ -8,3 +8,4 @@ set -e # exit if any command fails
 ./vim.sh
 ./bin.sh
 ./ssh.sh restore
+./git.sh

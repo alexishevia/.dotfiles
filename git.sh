@@ -2,7 +2,7 @@
 
 set -e # exit if any command fails
 
-# make sure repos have no pending changes
+# clone repos I use
 repos="$HOME/.sysconfig?git@github.com:alexishevia/.sysconfig.git
 $HOME/knowledge?git@bitbucket.org:alexishevia/knowledge.git
 $HOME/Projects/Personales/faru?git@github.com:alexishevia/faru.git
@@ -11,14 +11,9 @@ $HOME/Projects/FOX/dcgapi-services?git@github.com:foxbroadcasting/dcgapi-service
 for repo in $repos; do
   IFS='?' read -a arr <<< $repo
   dir="${arr[0]}"
+  url="${arr[1]}"
 
-  pushd $dir
-  if [[ `git status --porcelain` ]]; then
-    echo "ERROR: git repo $dir has pending changes"
-    exit 1;
+  if [ ! -d $dir ]; then
+    git clone $url $dir
   fi
-  popd;
 done
-
-# backup the ~/.ssh directory
-./ssh.sh backup
