@@ -25,7 +25,7 @@ then
     tmux send-keys -t fox:tail 'nvm use' C-m
     tmux send-keys -t fox:tail 'source ../.aws_keys' C-m
     tmux send-keys -t fox:tail 'clear' C-m
-    tmux send-keys -t fox:tail 'bin/start -a && bin/tail'
+    tmux send-keys -t fox:tail 'bin/start -m -e -a && bin/tail'
 
     # indexer window
     tmux new-window -t fox -n indexer
