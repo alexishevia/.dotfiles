@@ -27,7 +27,7 @@ sudo add-apt-repository ppa:openshot.developers/ppa
 sudo apt update
 
 # install apt packages I use
-sudo apt install --yes curl build-essential git git-core gitk ack-grep ncurses-term xclip dconf-tools unzip libjpeg62 libwebkitgtk-1.0-0 unrar compizconfig-settings-manager s3cmd compiz-plugins sni-qt:i386 gcolor2 screenruler vim-gtk android-tools-adb android-tools-fastboot rbenv tidy exuberant-ctags synapse fluxgui google-chrome-stable charles-proxy silversearcher-ag veracrypt dropbox openshot
+sudo apt install --yes curl build-essential git git-core gitk ack-grep ncurses-term xclip dconf-tools unzip libjpeg62 libwebkitgtk-1.0-0 unrar compizconfig-settings-manager s3cmd compiz-plugins sni-qt:i386 gcolor2 screenruler vim-gtk android-tools-adb android-tools-fastboot rbenv tidy exuberant-ctags synapse fluxgui google-chrome-stable charles-proxy silversearcher-ag veracrypt dropbox openshot bashdb
 
 # remove apt packages I don't want
 sudo apt remove --yes avahi-daemon vim vim-gnome terminator
