@@ -103,11 +103,6 @@ complete -A command npx
 export NPM_TOKEN=$(grep -oP 'authToken=\K.*' ~/.npmrc)
 
 #---------------------------------------
-# MongoDB
-#---------------------------------------
-PATH=$PATH:~/bin/robomongo-0.9.0/bin
-
-#---------------------------------------
 # Python
 #---------------------------------------
 WORKON_HOME=~/.virtualenvs
