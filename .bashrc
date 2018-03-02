@@ -78,6 +78,9 @@ export LC_ALL=en_US.UTF-8
 alias nordvpn_la='sudo openvpn --config /etc/openvpn/ovpn_tcp/us357.nordvpn.com.tcp.ovpn --auth-user-pass ~/.nordvpnpass'
 alias nordvpn_ny='sudo openvpn --config /etc/openvpn/ovpn_tcp/us327.nordvpn.com.tcp.ovpn --auth-user-pass ~/.nordvpnpass'
 
+# add alias for fox vpn
+alias foxvpn='sudo openvpn --config ~/.fox.ovpn'
+
 #---------------------------------------
 # JAVA
 #---------------------------------------

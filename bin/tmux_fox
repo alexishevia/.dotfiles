@@ -5,6 +5,7 @@
 # - editor: vim
 # - tail: bin/start && bin/tail
 # - indexer: docker-compose exec indexer ash
+# - vpn: foxvpn
 
 tmux has-session -t fox
 
@@ -34,6 +35,10 @@ then
     tmux send-keys -t fox:indexer 'source ../.aws_keys' C-m
     tmux send-keys -t fox:indexer 'clear' C-m
     tmux send-keys -t fox:indexer 'docker-compose exec indexer ash'
+
+    # vpn window
+    tmux new-window -t fox -n vpn
+    tmux send-keys -t fox:vpn 'foxvpn'
 fi
 
 # select window 'editor'

@@ -25,9 +25,10 @@ then
   tar -zcvf /tmp/backupmountdir/sshbackup.tar.gz .ssh;
   popd;
 
-  # copy ~/.npmrc and ~/.nordvpnpass into veracrypt volume
+  # copy sensitive files into veracrypt volume
   cp ~/.npmrc /tmp/backupmountdir/.npmrc
   cp ~/.nordvpnpass /tmp/backupmountdir/.nordvpnpass
+  cp ~/.fox.ovpn /tmp/backupmountdir/.fox.ovpn
 
   # unmount all veracrypt volumes
   veracrypt -t -d
@@ -62,9 +63,10 @@ then
   tar -zxvf /tmp/backupmountdir/sshbackup.tar.gz
   popd;
 
-  # copy ~/.npmrc and ~/.nordvpnpass
+  # copy sensitive files to their correct location
   cp /tmp/backupmountdir/.npmrc ~/.npmrc
   cp /tmp/backupmountdir/.nordvpnpass ~/.nordvpnpass
+  cp /tmp/backupmountdir/.fox.ovpn ~/.fox.ovpn
 
   # unmount all veracrypt volumes
   veracrypt -t -d
