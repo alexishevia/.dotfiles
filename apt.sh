@@ -36,6 +36,7 @@ sudo apt remove --yes avahi-daemon vim vim-gnome terminator
 sudo snap install slack --classic
 sudo snap install tmux --classic
 sudo snap install skype --classic
+sudo snap install asciinema --classic
 sudo snap install spotify http jq robomongo
 
 # apt cleanup
