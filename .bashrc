@@ -112,6 +112,12 @@ WORKON_HOME=~/.virtualenvs
 . /usr/local/bin/virtualenvwrapper.sh
 
 #---------------------------------------
+# Go Lang
+#---------------------------------------
+export GOPATH=/home/alexishevia/go
+PATH=$PATH:/usr/lib/go-1.9/bin:/home/alexishevia/go/bin
+
+#---------------------------------------
 # Android
 #---------------------------------------
 # add android tools to path
