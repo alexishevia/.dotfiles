@@ -5,7 +5,7 @@
 # - editor: vim
 # - tail: bin/start && bin/tail
 # - indexer: docker-compose exec indexer ash
-# - vpn: foxvpn
+# - vpn/flow: foxvpn and flow server
 
 tmux has-session -t fox
 
@@ -36,13 +36,16 @@ then
     tmux send-keys -t fox:indexer 'clear' C-m
     tmux send-keys -t fox:indexer 'docker-compose exec indexer ash'
 
-    # vpn window
-    tmux new-window -t fox -n vpn
-    tmux send-keys -t fox:vpn 'foxvpn'
+    # vpn/flow window
+    tmux new-window -t fox -n vpn/flow
+    tmux send-keys -t fox:vpn/flow 'foxvpn' C-m
+    tmux split-window -t fox:vpn/flow
+    tmux send-keys -t fox:vpn/flow.1 'cd ~/Projects/FOX/dcgapi-services' C-m
+    tmux send-keys -t fox:vpn/flow.1 'flow' C-m
 fi
 
-# select window 'editor'
-tmux select-window -t fox:editor
+# select 'flow' pane
+tmux select-pane -t fox:vpn/flow.0
 
 # attach to session
 tmux attach -t fox
