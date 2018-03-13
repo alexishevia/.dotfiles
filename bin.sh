@@ -15,4 +15,11 @@ then
 fi
 cp hotlist.desktop ~/.local/share/applications/hotlist.desktop
 
+# add desktop entry for 'fresh-chrome' command
+if [ -e  ~/.local/share/applications/fresh-chrome.desktop ]
+then
+  rm ~/.local/share/applications/fresh-chrome.desktop
+fi
+cp fresh-chrome.desktop ~/.local/share/applications/fresh-chrome.desktop
+
 ./postman.sh

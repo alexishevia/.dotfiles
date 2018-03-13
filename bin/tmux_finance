@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# if 'finance' session exists, attach to it.
+# otherwise, create it
+
+tmux has-session -t finance
+
+if [ $? != 0 ]
+then
+    tmux new -s finance -n editor -d
+    tmux send-keys -t finance:editor 'cd ~/Projects/Personales/personal_finance' C-m
+    tmux send-keys -t finance:editor 'vim .'
+fi
+
+# select window 'editor'
+tmux select-window -t finance:editor
+
+# attach to session
+tmux attach -t finance
