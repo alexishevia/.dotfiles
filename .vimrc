@@ -58,6 +58,9 @@ Plug 'plasticboy/vim-markdown'
 " repeat.vim: enable repeating supported plugin maps with '.'
 Plug 'tpope/vim-repeat'
 
+" Go development plugin for Vim
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+
 " utility functions
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-projectionist'
@@ -356,6 +359,9 @@ iabbrev [check] 🗸
 iabbrev [bullet] ∙
 iabbrev [bullet1] •
 iabbrev [bullet2] ◦
+
+" avoid conflicts between syntastic and vim-go
+let g:go_fmt_fail_silently = 1
 
 " don't create backup files
 set nobackup
