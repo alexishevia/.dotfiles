@@ -14,6 +14,9 @@ sudo add-apt-repository --yes ppa:openshot.developers/ppa
 # go lang
 sudo add-apt-repository --yes ppa:gophers/archive
 
+# git
+sudo add-apt-repository --yes ppa:git-core/ppa
+
 # google chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
