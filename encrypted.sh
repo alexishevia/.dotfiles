@@ -8,10 +8,17 @@ then
   exit 1;
 fi
 
+# When running 'backup', you will be asked:
+# 1. The password for the new teracrypt volume to create
+# 2. Keyfile - leave the default value of [none]
+# 3. Random characters
+# 4. The same password as #1
+# 5. Keyfile - leave the default value of [none]
+# 6. Your linux sudo password
 if [ $1 = 'backup' ]
 then
   # create veracrypt volume
-  veracrypt -t --create /tmp/backup.tc --size=300K --volume-type=normal \
+  veracrypt -t --create /tmp/backup.tc --size=600K --volume-type=normal \
     --encryption=AES --hash=sha-512 --filesystem=FAT --pim=0;
 
   # create tmp mount directory
@@ -23,6 +30,11 @@ then
   # copy ssh directory into veracrypt volume as a tar.gz file
   pushd ~;
   tar -zcvf /tmp/backupmountdir/sshbackup.tar.gz .ssh;
+  popd;
+
+  # copy .gnupg directory into veracrypt volume as a tar.gz file
+  pushd ~;
+  tar -zcvf /tmp/backupmountdir/gnupgbackup.tar.gz .gnupg;
   popd;
 
   # copy sensitive files into veracrypt volume
@@ -42,7 +54,7 @@ fi
 
 if [ $1 = 'restore' ]
 then
-  # wait until ssh backup exists
+  # wait until backup file exists
   while [ ! -f ~/Dropbox/backup.tc ]
   do
     echo -n 'Waiting for ~/Dropbox/backup.tc to be ready'
@@ -58,9 +70,14 @@ then
   # mount veracrypt volume
   veracrypt -t ~/Dropbox/backup.tc /tmp/backupmountdir --pim=0 --protect-hidden=no
 
-  # extract tar into .ssh
+  # extract sshbackup tar into .ssh
   pushd ~;
   tar -zxvf /tmp/backupmountdir/sshbackup.tar.gz
+  popd;
+
+  # extract gnupgbackup tar into .gnupg
+  pushd ~;
+  tar -zxvf /tmp/backupmountdir/gnupgbackup.tar.gz
   popd;
 
   # copy sensitive files to their correct location

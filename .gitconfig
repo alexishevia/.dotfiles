@@ -17,3 +17,7 @@
   pf = push --force-with-lease
 [core]
   editor = /usr/bin/vim
+[gpg]
+  program = gpg2
+[commit]
+  gpgsign = true
