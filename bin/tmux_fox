@@ -3,8 +3,7 @@
 # if 'fox' session exists, attach to it.
 # otherwise, create it with the following windows:
 # - editor: vim
-# - tail: bin/start && bin/tail
-# - indexer: docker-compose exec indexer ash
+# - tail: docker-compose up
 # - vpn/flow: foxvpn and flow server
 
 tmux has-session -t fox
@@ -26,15 +25,9 @@ then
     tmux send-keys -t fox:tail 'nvm use' C-m
     tmux send-keys -t fox:tail 'source ../.aws_keys' C-m
     tmux send-keys -t fox:tail 'clear' C-m
-    tmux send-keys -t fox:tail 'bin/start -m -e -a && bin/tail'
-
-    # indexer window
-    tmux new-window -t fox -n indexer
-    tmux send-keys -t fox:indexer 'cd ~/Projects/FOX/dcgapi-services' C-m
-    tmux send-keys -t fox:indexer 'nvm use' C-m
-    tmux send-keys -t fox:indexer 'source ../.aws_keys' C-m
-    tmux send-keys -t fox:indexer 'clear' C-m
-    tmux send-keys -t fox:indexer 'docker-compose exec indexer ash'
+    tmux send-keys -t fox:tail 'rm $HOME/Projects/FOX/dcgapi-services/.env' C-m
+    tmux send-keys -t fox:tail 'ln -s $HOME/Projects/FOX/dcgapi-services/env/core/vpn.env $HOME/Projects/FOX/dcgapi-services/.env' C-m
+    tmux send-keys -t fox:tail 'docker-compose up -d screens series video && docker-compose logs -f'
 
     # vpn/flow window
     tmux new-window -t fox -n vpn/flow
