@@ -39,7 +39,6 @@ then
 
   # copy sensitive files into veracrypt volume
   cp ~/.npmrc /tmp/backupmountdir/.npmrc
-  cp ~/.nordvpnpass /tmp/backupmountdir/.nordvpnpass
   cp ~/.fox.ovpn /tmp/backupmountdir/.fox.ovpn
 
   # unmount all veracrypt volumes
@@ -82,7 +81,6 @@ then
 
   # copy sensitive files to their correct location
   cp /tmp/backupmountdir/.npmrc ~/.npmrc
-  cp /tmp/backupmountdir/.nordvpnpass ~/.nordvpnpass
   cp /tmp/backupmountdir/.fox.ovpn ~/.fox.ovpn
 
   # unmount all veracrypt volumes

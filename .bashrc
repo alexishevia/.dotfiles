@@ -74,10 +74,6 @@ PATH=$PATH:~/bin
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# add alias for nordvpn
-alias nordvpn_la='sudo openvpn --config /etc/openvpn/ovpn_tcp/us357.nordvpn.com.tcp.ovpn --auth-user-pass ~/.nordvpnpass'
-alias nordvpn_ny='sudo openvpn --config /etc/openvpn/ovpn_tcp/us327.nordvpn.com.tcp.ovpn --auth-user-pass ~/.nordvpnpass'
-
 # add alias for fox vpn
 alias foxvpn='sudo openvpn --config ~/.fox.ovpn'
 
