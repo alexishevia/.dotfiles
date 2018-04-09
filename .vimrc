@@ -371,3 +371,6 @@ set noswapfile
 " save backup files to a custom directory
 " set backupdir=~/.vim/backup
 
+" use ,cf to copy the full path to the current file
+nnoremap <leader>cf :let @+=expand("%:p")<CR>
+
