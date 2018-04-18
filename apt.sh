@@ -17,6 +17,10 @@ sudo add-apt-repository --yes ppa:gophers/archive
 # git
 sudo add-apt-repository --yes ppa:git-core/ppa
 
+# heroku
+sudo add-apt-repository --yes "deb https://cli-assets.heroku.com/branches/stable/apt ./"
+curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
+
 # sublime text
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
@@ -37,7 +41,7 @@ echo 'deb http://linux.dropbox.com/ubuntu/ xenial main' | sudo tee /etc/apt/sour
 sudo apt update
 
 # install apt packages I use
-sudo apt install --yes curl build-essential git git-core gitk ack-grep ncurses-term xclip dconf-tools unzip libjpeg62 libwebkitgtk-1.0-0 unrar compizconfig-settings-manager s3cmd compiz-plugins sni-qt:i386 gcolor2 screenruler vim-gtk android-tools-adb android-tools-fastboot rbenv tidy exuberant-ctags synapse fluxgui google-chrome-stable charles-proxy silversearcher-ag veracrypt dropbox openshot bashdb golang-1.9-go gnupg2 libzmq5 libzmq3-dev apt-transport-https sublime-text
+sudo apt install --yes curl build-essential git git-core gitk ack-grep ncurses-term xclip dconf-tools unzip libjpeg62 libwebkitgtk-1.0-0 unrar compizconfig-settings-manager s3cmd compiz-plugins sni-qt:i386 gcolor2 screenruler vim-gtk android-tools-adb android-tools-fastboot rbenv tidy exuberant-ctags synapse fluxgui google-chrome-stable charles-proxy silversearcher-ag veracrypt dropbox openshot bashdb golang-1.9-go gnupg2 libzmq5 libzmq3-dev apt-transport-https sublime-text heroku
 
 # remove apt packages I don't want
 sudo apt remove --yes avahi-daemon vim vim-gnome terminator
