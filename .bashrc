@@ -111,7 +111,7 @@ WORKON_HOME=~/.virtualenvs
 # Go Lang
 #---------------------------------------
 export GOPATH=/home/alexishevia/go
-PATH=$PATH:/usr/lib/go-1.9/bin:/home/alexishevia/go/bin
+PATH=$PATH:/usr/lib/go-1.10/bin:/home/alexishevia/go/bin
 
 #---------------------------------------
 # Android
