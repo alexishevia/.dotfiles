@@ -79,6 +79,9 @@ set relativenumber
 " change <Leader> key from \ to ,
 let mapleader = ","
 
+" set <LocalLeader> key to -
+let maplocalleader = "-"
+
 " use jk instead of Escape
 inoremap jk <esc>
 
