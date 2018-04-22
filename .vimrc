@@ -128,6 +128,7 @@ endfun
 
 " remove trailing whitespace on file save:
 augroup trimWhitespace
+  autocmd!
   autocmd BufWritePre * :call <SID>TrimWhiteSpace()
 augroup END
 
@@ -188,7 +189,10 @@ nnoremap <leader>r :NERDTreeFind<cr>
 let NERDTreeShowLineNumbers=1
 
 " make sure relative line numbers are used in NERDTree
-autocmd FileType nerdtree setlocal relativenumber
+augroup relativenumber
+  autocmd!
+  autocmd FileType nerdtree setlocal relativenumber
+augroup END
 
 " use ,t to create a new tab
 nnoremap <leader>t :tabnew<Enter>
@@ -226,9 +230,12 @@ function! s:Toc()
     syntax on
   endif
 endfunction
-autocmd VimEnter *.m*  call s:Toc()
-autocmd BufReadPost *.m* call s:Toc()
-autocmd BufWinEnter *.m* call s:Toc()
+augroup toc
+  autocmd!
+  autocmd VimEnter *.m*  call s:Toc()
+  autocmd BufReadPost *.m* call s:Toc()
+  autocmd BufWinEnter *.m* call s:Toc()
+augroup END
 
 " close :Toc on <Enter>
 nnoremap <expr><enter> &ft=="qf" ? "<cr>:lcl<cr>" : (getpos(".")[2]==1 ? "i<cr><esc>": "i<cr><esc>l")
@@ -275,10 +282,13 @@ nnoremap <leader>h <C-W><C-H>
 runtime macros/matchit.vim
 
 " allow matchit to navigate quickly to ending tag in xml/html files
-autocmd FileType html let b:match_words = '<\(\w\w*\):</\1,{:}'
-autocmd FileType xhtml let b:match_words = '<\(\w\w*\):</\1,{:}'
-autocmd FileType xml let b:match_words = '<\(\w\w*\):</\1,{:}'
-autocmd FileType eco let b:match_words = '<\(\w\w*\):</\1,{:}'
+augroup matchit
+  autocmd!
+  autocmd FileType html let b:match_words = '<\(\w\w*\):</\1,{:}'
+  autocmd FileType xhtml let b:match_words = '<\(\w\w*\):</\1,{:}'
+  autocmd FileType xml let b:match_words = '<\(\w\w*\):</\1,{:}'
+  autocmd FileType eco let b:match_words = '<\(\w\w*\):</\1,{:}'
+augroup END
 
 " remap semicolon to colon (no need to use Shift + ;)
 nnoremap ; :
@@ -377,5 +387,35 @@ set noswapfile
 " use ,cf to copy the full path to the current file
 nnoremap <leader>cf :let @+=expand("%:p")<CR>
 
-" do not display tabs and trailing spaces for go files
-autocmd FileType go setlocal nolist
+" --- golang --- "
+
+augroup golang
+  autocmd!
+
+  " do not display tabs and trailing spaces for go files
+  autocmd FileType go setlocal nolist
+
+  " use -b for :GoBuild
+  autocmd FileType go nnoremap <buffer> <localleader>b :GoBuild<CR>
+
+  " use -r for :GoRun
+  autocmd FileType go nnoremap <buffer> <localleader>r :GoRun<CR>
+
+  " use -t for :GoTest
+  autocmd FileType go nnoremap <buffer> <localleader>t :GoTest<CR>
+
+  " use -c for :GoCoverageToggle
+  autocmd FileType go nnoremap <buffer> <localleader>c :GoCoverageToggle<CR>
+
+  " use -ds for :GoDebugStart
+  autocmd FileType go nnoremap <buffer> <localleader>ds :GoDebugStart<CR>
+
+  " use -db for :GoDebugBreakpoint
+  autocmd FileType go nnoremap <buffer> <localleader>db :GoDebugBreakpoint<CR>
+
+  " use -dc for :GoDebugContinue
+  autocmd FileType go nnoremap <buffer> <localleader>dc :GoDebugContinue<CR>
+
+  " use -dx for :GoDebugStop
+  autocmd FileType go nnoremap <buffer> <localleader>dx :GoDebugStop<CR>
+augroup END
