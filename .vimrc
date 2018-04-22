@@ -55,9 +55,6 @@ Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
-" repeat.vim: enable repeating supported plugin maps with '.'
-Plug 'tpope/vim-repeat'
-
 " Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
