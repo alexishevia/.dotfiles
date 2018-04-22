@@ -2,6 +2,9 @@
 
 set -e # exit if any command fails
 
+# vim
+sudo add-apt-repository --yes ppa:jonathonf/vim
+
 # f.lux
 sudo add-apt-repository --yes ppa:nathan-renniewaldock/flux
 
