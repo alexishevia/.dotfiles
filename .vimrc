@@ -377,3 +377,5 @@ set noswapfile
 " use ,cf to copy the full path to the current file
 nnoremap <leader>cf :let @+=expand("%:p")<CR>
 
+" do not display tabs and trailing spaces for go files
+autocmd FileType go setlocal nolist
