@@ -389,11 +389,20 @@ nnoremap <leader>cf :let @+=expand("%:p")<CR>
 
 " --- golang --- "
 
+" auto :GoMetaLinter on save
+let g:go_metalinter_autosave = 1
+
 augroup golang
   autocmd!
 
   " do not display tabs and trailing spaces for go files
   autocmd FileType go setlocal nolist
+
+  " use -d for :GoDef
+  autocmd FileType go nnoremap <buffer> <localleader>d :GoDef<CR>
+
+  " use -p for :GoDefPop
+  autocmd FileType go nnoremap <buffer> <localleader>p :GoDefPop<CR>
 
   " use -b for :GoBuild
   autocmd FileType go nnoremap <buffer> <localleader>b :GoBuild<CR>
@@ -406,6 +415,9 @@ augroup golang
 
   " use -c for :GoCoverageToggle
   autocmd FileType go nnoremap <buffer> <localleader>c :GoCoverageToggle<CR>
+
+  " use -l for :GoMetaLinter
+  autocmd FileType go nnoremap <buffer> <localleader>l :GoMetaLinter<CR>
 
   " use -ds for :GoDebugStart
   autocmd FileType go nnoremap <buffer> <localleader>ds :GoDebugStart<CR>
