@@ -61,6 +61,9 @@ Plug 'tpope/vim-repeat'
 " Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
+" color schemes
+Plug 'rafi/awesome-vim-colorschemes'
+
 " utility functions
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-projectionist'
@@ -90,7 +93,7 @@ nnoremap j gj
 nnoremap k gk
 
 " load theme
-colorscheme xoria256
+colorscheme PaperColor
 
 " specify dark background (for plugins that don't read it properly from theme)
 set background=dark
