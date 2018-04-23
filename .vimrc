@@ -387,6 +387,23 @@ set noswapfile
 " use ,cf to copy the full path to the current file
 nnoremap <leader>cf :let @+=expand("%:p")<CR>
 
+" --- javascript --- "
+
+augroup javascript
+  autocmd!
+
+  " use -d to follow ctags definition
+  autocmd FileType javascript,javascript.jsx nnoremap <buffer> <localleader>d <C-]>
+
+  " use -D to pop out from ctags definition
+  autocmd FileType javascript,javascript.jsx nnoremap <buffer> <localleader>D <C-T>
+
+  " use -p to open CtrlP in tag mode
+  autocmd FileType javascript,javascript.jsx nnoremap <buffer> <localleader>p :CtrlPTag<cr>
+augroup END
+
+nnoremap <buffer> <localleader>d <Ctrl>]
+
 " --- golang --- "
 
 " auto :GoMetaLinter on save
@@ -401,8 +418,8 @@ augroup golang
   " use -d for :GoDef
   autocmd FileType go nnoremap <buffer> <localleader>d :GoDef<CR>
 
-  " use -p for :GoDefPop
-  autocmd FileType go nnoremap <buffer> <localleader>p :GoDefPop<CR>
+  " use -D for :GoDefPop
+  autocmd FileType go nnoremap <buffer> <localleader>D :GoDefPop<CR>
 
   " use -b for :GoBuild
   autocmd FileType go nnoremap <buffer> <localleader>b :GoBuild<CR>
