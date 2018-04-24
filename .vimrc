@@ -387,16 +387,22 @@ set noswapfile
 " use ,cf to copy the full path to the current file
 nnoremap <leader>cf :let @+=expand("%:p")<CR>
 
+" close preview window after selecting autocomplete option
+augroup completion_preview_close
+  autocmd!
+  autocmd CompleteDone * if !&previewwindow && &completeopt =~ 'preview' | silent! pclose | endif
+augroup END
+
 " --- javascript --- "
 
 augroup javascript
   autocmd!
 
-  " use -d to follow ctags definition
-  autocmd FileType javascript,javascript.jsx nnoremap <buffer> <localleader>d <C-]>
+  " use -f to follow ctags definition
+  autocmd FileType javascript,javascript.jsx nnoremap <buffer> <localleader>f <C-]>
 
-  " use -D to pop out from ctags definition
-  autocmd FileType javascript,javascript.jsx nnoremap <buffer> <localleader>D <C-T>
+  " use -F to pop out from ctags definition
+  autocmd FileType javascript,javascript.jsx nnoremap <buffer> <localleader>F <C-T>
 
   " use -p to open CtrlP in tag mode
   autocmd FileType javascript,javascript.jsx nnoremap <buffer> <localleader>p :CtrlPTag<cr>
@@ -415,11 +421,14 @@ augroup golang
   " do not display tabs and trailing spaces for go files
   autocmd FileType go setlocal nolist
 
-  " use -d for :GoDef
-  autocmd FileType go nnoremap <buffer> <localleader>d :GoDef<CR>
+  " use -f for :GoDef
+  autocmd FileType go nnoremap <buffer> <localleader>f :GoDef<CR>
 
-  " use -D for :GoDefPop
-  autocmd FileType go nnoremap <buffer> <localleader>D :GoDefPop<CR>
+  " use -F for :GoDefPop
+  autocmd FileType go nnoremap <buffer> <localleader>F :GoDefPop<CR>
+
+  "use -p to open CtrlP in tag mode
+  autocmd FileType go nnoremap <buffer> <localleader>p :GoDeclsDir<CR>
 
   " use -b for :GoBuild
   autocmd FileType go nnoremap <buffer> <localleader>b :GoBuild<CR>
@@ -436,8 +445,8 @@ augroup golang
   " use -l for :GoMetaLinter
   autocmd FileType go nnoremap <buffer> <localleader>l :GoMetaLinter<CR>
 
-  " use -ds for :GoDebugStart
-  autocmd FileType go nnoremap <buffer> <localleader>ds :GoDebugStart<CR>
+  " use -dS for :GoDebugStart
+  autocmd FileType go nnoremap <buffer> <localleader>dS :GoDebugStart<CR>
 
   " use -db for :GoDebugBreakpoint
   autocmd FileType go nnoremap <buffer> <localleader>db :GoDebugBreakpoint<CR>
@@ -445,6 +454,18 @@ augroup golang
   " use -dc for :GoDebugContinue
   autocmd FileType go nnoremap <buffer> <localleader>dc :GoDebugContinue<CR>
 
-  " use -dx for :GoDebugStop
-  autocmd FileType go nnoremap <buffer> <localleader>dx :GoDebugStop<CR>
+  " use -dn for :GoDebugNext
+  autocmd FileType go nnoremap <buffer> <localleader>dn :GoDebugNext<CR>
+
+  " use -ds for :GoDebugStep
+  autocmd FileType go nnoremap <buffer> <localleader>ds :GoDebugStep<CR>
+
+  " use -do for :GoDebugStepOut
+  autocmd FileType go nnoremap <buffer> <localleader>do :GoDebugStepOut<CR>
+
+  " use -dp for :GoDebugPrint
+  autocmd FileType go nnoremap <buffer> <localleader>dp :GoDebugPrint
+
+  " use -dX for :GoDebugStop
+  autocmd FileType go nnoremap <buffer> <localleader>dX :GoDebugStop<CR>
 augroup END
