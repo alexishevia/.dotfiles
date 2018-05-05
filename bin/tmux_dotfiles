@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# if 'dotfiles' session exists, attach to it.
+# otherwise, create it
+
+tmux has-session -t dotfiles
+
+if [ $? != 0 ]
+then
+    tmux new -s dotfiles -n editor -d
+    tmux send-keys -t dotfiles:editor 'cd ~/.dotfiles' C-m
+    tmux send-keys -t dotfiles:editor 'vim .'
+fi
+
+# select window 'editor'
+tmux select-window -t dotfiles:editor
+
+# attach to session
+tmux attach -t dotfiles

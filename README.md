@@ -1,4 +1,4 @@
-# sysconfig
+# dotfiles
 scripts to configure my dev environment
 
 These scripts should allow me to reconstruct my entire development environment on a blank Ubuntu machine.
@@ -7,14 +7,14 @@ These scripts should allow me to reconstruct my entire development environment o
 ```
 # Download repo
 sudo apt install wget unzip
-wget https://github.com/alexishevia/.sysconfig/archive/master.zip
+wget https://github.com/alexishevia/.dotfiles/archive/master.zip
 unzip master.zip
 rm master.zip
-cd .sysconfig-master
+cd .dotfiles
 
 # Backup
-~/.sysconfig/backup.sh
+~/.dotfiles/backup.sh
 
 # Restore
-~/.sysconfig/restore.sh
+~/.dotfiles/restore.sh
 ```
