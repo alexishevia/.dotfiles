@@ -9,4 +9,3 @@ set -e # exit if any command fails
 ./vim.sh
 ./bin.sh
 ./git.sh
-./go.sh
