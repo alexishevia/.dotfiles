@@ -55,6 +55,7 @@ sudo snap install tmux --classic
 sudo snap install skype --classic
 sudo snap install asciinema --classic
 sudo snap install spotify http jq robomongo
+sudo snap install kubectl --classic
 
 # refresh already installed snaps
 sudo snap refresh
