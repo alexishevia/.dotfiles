@@ -12,7 +12,7 @@ if [ $? != 0 ]
 then
     # editor window
     tmux new -s fox -n editor -d
-    tmux send-keys -t fox:editor 'cd ~/Projects/FOX/dcgapi-services' C-m
+    tmux send-keys -t fox:editor 'cd $HOME/Projects/FOX/dcgapi-services' C-m
     tmux send-keys -t fox:editor 'nvm use' C-m
     tmux send-keys -t fox:editor 'source ../.aws_keys' C-m
     tmux send-keys -t fox:editor 'clear' C-m
@@ -21,19 +21,19 @@ then
 
     # tail window
     tmux new-window -t fox -n tail
-    tmux send-keys -t fox:tail 'cd ~/Projects/FOX/dcgapi-services' C-m
+    tmux send-keys -t fox:tail 'cd $HOME/Projects/FOX/dcgapi-services' C-m
     tmux send-keys -t fox:tail 'nvm use' C-m
     tmux send-keys -t fox:tail 'source ../.aws_keys' C-m
     tmux send-keys -t fox:tail 'clear' C-m
-    tmux send-keys -t fox:tail 'rm $HOME/Projects/FOX/dcgapi-services/.env' C-m
-    tmux send-keys -t fox:tail 'ln -s $HOME/Projects/FOX/dcgapi-services/env/core/vpn.env $HOME/Projects/FOX/dcgapi-services/.env' C-m
-    tmux send-keys -t fox:tail 'docker-compose up -d screens series video && docker-compose logs -f'
+    tmux send-keys -t fox:tail 'rm .env' C-m
+    tmux send-keys -t fox:tail 'ln -s ./env/core/local.env .env' C-m
+    tmux send-keys -t fox:tail 'docker-compose up -d && docker-compose logs -f | grep -v health'
 
     # vpn/flow window
     tmux new-window -t fox -n vpn/flow
     tmux send-keys -t fox:vpn/flow 'foxvpn' C-m
     tmux split-window -t fox:vpn/flow
-    tmux send-keys -t fox:vpn/flow.1 'cd ~/Projects/FOX/dcgapi-services' C-m
+    tmux send-keys -t fox:vpn/flow.1 'cd $HOME/Projects/FOX/dcgapi-services' C-m
     tmux send-keys -t fox:vpn/flow.1 'flow' C-m
 fi
 
