@@ -23,3 +23,4 @@ fi
 cp fresh-chrome.desktop ~/.local/share/applications/fresh-chrome.desktop
 
 ./postman.sh
+./fiddler.sh

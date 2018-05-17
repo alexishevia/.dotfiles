@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Fiddler
+Exec=mono /home/alexishevia/.fiddler/Fiddler.exe
+Type=Application
+Categories=GTK;GNOME;Utility;
+
