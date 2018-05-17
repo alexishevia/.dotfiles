@@ -13,3 +13,4 @@ set -e # exit if any command fails
 ./nvm.sh
 ./git.sh
 ./postman.sh
+./python.sh
