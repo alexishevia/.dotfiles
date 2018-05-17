@@ -40,6 +40,7 @@ then
   # copy sensitive files into veracrypt volume
   cp ~/.npmrc /tmp/backupmountdir/.npmrc
   cp ~/.fox.ovpn /tmp/backupmountdir/.fox.ovpn
+  cp ~/.ppprc.json /tmp/backupmountdir/.ppprc.json
 
   # unmount all veracrypt volumes
   veracrypt -t -d
@@ -82,6 +83,7 @@ then
   # copy sensitive files to their correct location
   cp /tmp/backupmountdir/.npmrc ~/.npmrc
   cp /tmp/backupmountdir/.fox.ovpn ~/.fox.ovpn
+  cp /tmp/backupmountdir/.ppprc.json ~/.ppprc.json
 
   # unmount all veracrypt volumes
   veracrypt -t -d
