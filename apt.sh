@@ -36,10 +36,6 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sud
 wget -q -O - https://www.charlesproxy.com/packages/apt/PublicKey | sudo apt-key add -
 echo 'deb https://www.charlesproxy.com/packages/apt/ charles-proxy main' | sudo tee /etc/apt/sources.list.d/charles.list
 
-# dropbox
-# sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
-# echo 'deb http://linux.dropbox.com/ubuntu/ xenial main' | sudo tee /etc/apt/sources.list.d/dropbox.list
-
 # apt update
 sudo apt update
 
