@@ -21,7 +21,3 @@ then
   rm ~/.local/share/applications/fresh-chrome.desktop
 fi
 cp fresh-chrome.desktop ~/.local/share/applications/fresh-chrome.desktop
-
-./dropbox.sh
-./postman.sh
-./fiddler.sh
