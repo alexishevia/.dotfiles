@@ -34,6 +34,11 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sud
 wget -q -O - https://www.charlesproxy.com/packages/apt/PublicKey | sudo apt-key add -
 echo 'deb https://www.charlesproxy.com/packages/apt/ charles-proxy main' | sudo tee /etc/apt/sources.list.d/charles.list
 
+# albert
+wget -nv -O /tmp/Release.key https://build.opensuse.org/projects/home:manuelschneid3r/public_key
+sudo apt-key add - < /tmp/Release.key
+echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
+
 # apt update
 sudo apt update
 
@@ -45,7 +50,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   synapse fluxgui google-chrome-stable charles-proxy silversearcher-ag        \
   veracrypt openshot golang-1.10-go gnupg2 libzmq5 libzmq3-dev                \
   apt-transport-https sublime-text heroku mono-complete openshot dkms         \
-  libxcb-xtest0 ttf-ancient-fonts python-pip gnome-tweak-tool
+  libxcb-xtest0 ttf-ancient-fonts python-pip gnome-tweak-tool albert
 
 # remove apt packages I don't want
 sudo apt remove --yes avahi-daemon vim vim-gnome terminator
