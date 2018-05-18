@@ -41,6 +41,7 @@ then
   cp ~/.npmrc /tmp/backupmountdir/.npmrc
   cp ~/.fox.ovpn /tmp/backupmountdir/.fox.ovpn
   cp ~/.ppprc.json /tmp/backupmountdir/.ppprc.json
+  cp ~/Projects/FOX/.aws_keys /tmp/backupmountdir/.fox_aws_keys
 
   # unmount all veracrypt volumes
   veracrypt -t -d
@@ -84,6 +85,7 @@ then
   cp /tmp/backupmountdir/.npmrc ~/.npmrc
   cp /tmp/backupmountdir/.fox.ovpn ~/.fox.ovpn
   cp /tmp/backupmountdir/.ppprc.json ~/.ppprc.json
+  cp /tmp/backupmountdir/.fox_aws_keys ~/Projects/FOX/.aws_keys
 
   # unmount all veracrypt volumes
   veracrypt -t -d
