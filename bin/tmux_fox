@@ -41,4 +41,9 @@ fi
 tmux select-pane -t fox:vpn/flow.0
 
 # attach to session
-tmux attach -t fox
+tmux ls | grep attached
+if [ $? == 0 ]; then
+    tmux switch -t fox
+else
+    tmux attach -t fox
+fi

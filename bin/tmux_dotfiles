@@ -16,4 +16,9 @@ fi
 tmux select-window -t dotfiles:editor
 
 # attach to session
-tmux attach -t dotfiles
+tmux ls | grep attached
+if [ $? == 0 ]; then
+    tmux switch -t dotfiles
+else
+    tmux attach -t dotfiles
+fi

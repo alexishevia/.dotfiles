@@ -16,4 +16,9 @@ fi
 tmux select-window -t finance:editor
 
 # attach to session
-tmux attach -t finance
+tmux ls | grep attached
+if [ $? == 0 ]; then
+    tmux switch -t finance
+else
+    tmux attach -t finance
+fi

@@ -24,4 +24,9 @@ fi
 tmux select-window -t jupyter:editor
 
 # attach to session
-tmux attach -t jupyter
+tmux ls | grep attached
+if [ $? == 0 ]; then
+    tmux switch -t jupyter
+else
+    tmux attach -t jupyter
+fi

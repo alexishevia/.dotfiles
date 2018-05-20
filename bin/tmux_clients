@@ -25,4 +25,9 @@ fi
 tmux select-window -t clients:ppp
 
 # attach to session
-tmux attach -t clients
+tmux ls | grep attached
+if [ $? == 0 ]; then
+    tmux switch -t clients
+else
+    tmux attach -t clients
+fi

@@ -20,4 +20,9 @@ fi
 tmux select-window -t knowledge:editor
 
 # attach to session
-tmux attach -t knowledge
+tmux ls | grep attached
+if [ $? == 0 ]; then
+    tmux switch -t knowledge
+else
+    tmux attach -t knowledge
+fi
