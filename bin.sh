@@ -21,3 +21,8 @@ then
   rm ~/.local/share/applications/fresh-chrome.desktop
 fi
 cp fresh-chrome.desktop ~/.local/share/applications/fresh-chrome.desktop
+
+# install dep (golang)
+if ! [ -x "$(command -v dep)" ]; then
+  curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+fi
