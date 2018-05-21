@@ -42,10 +42,9 @@ sudo apt update
 # install apt packages I use
 sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   ncurses-term xclip dconf-tools unzip libjpeg62 libwebkitgtk-1.0-0 unrar     \
-  compizconfig-settings-manager s3cmd compiz-plugins sni-qt:i386 screenruler  \
   vim-gtk android-tools-adb android-tools-fastboot rbenv tidy exuberant-ctags \
-  synapse google-chrome-stable charles-proxy silversearcher-ag                \
-  veracrypt openshot golang-1.10-go gnupg2 libzmq5 libzmq3-dev                \
+  synapse google-chrome-stable charles-proxy silversearcher-ag sni-qt:i386    \
+  veracrypt openshot golang-1.10-go gnupg2 libzmq5 libzmq3-dev screenruler    \
   apt-transport-https sublime-text heroku mono-complete openshot dkms         \
   libxcb-xtest0 ttf-ancient-fonts python-pip gnome-tweak-tool albert          \
   docker.io docker-compose gnome-screensaver openvpn vlc
