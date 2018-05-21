@@ -26,3 +26,6 @@ cp fresh-chrome.desktop ~/.local/share/applications/fresh-chrome.desktop
 if ! [ -x "$(command -v dep)" ]; then
   curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 fi
+
+# map gnome-open to xdg-open
+ln -s /usr/bin/xdg-open ~/bin/gnome-open
