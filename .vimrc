@@ -223,25 +223,6 @@ nnoremap gr :tabp<Enter>
 " disable vim-markdown folding
 let g:vim_markdown_folding_disabled = 1
 
-" open :Toc with ,e
-nnoremap <Leader>e :Toc<CR>
-
-" open :Toc panel on document load
-function! s:Toc()
-  if &filetype == 'markdown'
-    :Toc
-    set filetype=qf
-    setl nofoldenable
-    syntax on
-  endif
-endfunction
-augroup toc
-  autocmd!
-  autocmd VimEnter *.m*  call s:Toc()
-  autocmd BufReadPost *.m* call s:Toc()
-  autocmd BufWinEnter *.m* call s:Toc()
-augroup END
-
 " close :Toc on <Enter>
 nnoremap <expr><enter> &ft=="qf" ? "<cr>:lcl<cr>" : (getpos(".")[2]==1 ? "i<cr><esc>": "i<cr><esc>l")
 
