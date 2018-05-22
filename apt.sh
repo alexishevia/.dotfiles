@@ -47,7 +47,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   veracrypt openshot golang-1.10-go gnupg2 libzmq5 libzmq3-dev screenruler    \
   apt-transport-https sublime-text heroku mono-complete openshot dkms         \
   libxcb-xtest0 ttf-ancient-fonts python-pip gnome-tweak-tool albert          \
-  docker.io docker-compose gnome-screensaver openvpn vlc
+  docker.io docker-compose gnome-screensaver openvpn vlc postgresql-10
 
 # remove apt packages I don't want
 sudo apt remove --yes avahi-daemon vim vim-gnome terminator
