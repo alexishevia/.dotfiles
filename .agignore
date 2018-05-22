@@ -3,3 +3,6 @@ bower_components
 git
 vendor
 *.log
+nsolid
+nginx/www
+elasticsearch/data
