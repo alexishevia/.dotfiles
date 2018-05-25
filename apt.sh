@@ -51,7 +51,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   libgconf-2-4 network-manager-openvpn-gnome
 
 # remove apt packages I don't want
-sudo apt remove --yes avahi-daemon vim vim-gnome terminator inkscape
+sudo apt remove --yes avahi-daemon vim vim-gnome terminator gimp inkscape
 
 # install snap packages I use
 sudo snap install slack --classic
