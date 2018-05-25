@@ -51,15 +51,15 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   libgconf-2-4 network-manager-openvpn-gnome
 
 # remove apt packages I don't want
-sudo apt remove --yes avahi-daemon vim vim-gnome terminator
+sudo apt remove --yes avahi-daemon vim vim-gnome terminator inkscape
 
 # install snap packages I use
 sudo snap install slack --classic
 sudo snap install tmux --classic
 sudo snap install skype --classic
 sudo snap install asciinema --classic
-sudo snap install spotify http jq robomongo
 sudo snap install kubectl --classic
+sudo snap install spotify http jq robomongo gimp inkscape
 
 # refresh already installed snaps
 sudo snap refresh
