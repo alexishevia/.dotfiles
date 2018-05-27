@@ -12,7 +12,7 @@ sudo snap install sublime-text --classic
 sudo snap install go --classic
 sudo snap install heroku --classic
 sudo snap install spotify http jq robomongo gimp inkscape libreoffice chromium \
-  vlc postgresql10
+  vlc postgresql10 obs-studio
 
 # refresh already installed snaps
 sudo snap refresh
