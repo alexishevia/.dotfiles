@@ -2,8 +2,9 @@
 
 set -e # exit if any command fails
 
-./apt.sh
 ./dotfiles.sh
+./apt.sh
+./snap.sh
 ./vim.sh
 ./bin.sh
 ./dropbox.sh
