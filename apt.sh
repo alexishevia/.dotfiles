@@ -9,9 +9,6 @@ sudo add-apt-repository --yes ppa:jonathonf/vim
 # veracrypt
 sudo add-apt-repository --yes ppa:unit193/encryption
 
-# go lang
-sudo add-apt-repository --yes ppa:gophers/archive
-
 # git
 sudo add-apt-repository --yes ppa:git-core/ppa
 
@@ -40,7 +37,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   ncurses-term xclip dconf-tools unzip libjpeg62 libwebkitgtk-1.0-0 unrar     \
   vim-gtk android-tools-adb android-tools-fastboot rbenv tidy exuberant-ctags \
   synapse google-chrome-stable charles-proxy silversearcher-ag sni-qt:i386    \
-  veracrypt openshot golang-1.10-go gnupg2 libzmq5 libzmq3-dev screenruler    \
+  veracrypt openshot gnupg2 libzmq5 libzmq3-dev screenruler                   \
   apt-transport-https heroku mono-complete openshot dkms libgconf-2-4         \
   libxcb-xtest0 ttf-ancient-fonts python-pip gnome-tweak-tool albert          \
   docker.io docker-compose gnome-screensaver openvpn vlc postgresql-10        \
