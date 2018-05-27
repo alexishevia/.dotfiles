@@ -90,6 +90,12 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 alias dockerRemoveUntaggedVolumes='docker volume rm $(docker volume ls -qf dangling=true | grep ".\{64\}")'
 
 #---------------------------------------
+# PostgreSQL
+#---------------------------------------
+alias pgctl='postgresql10.pgctl -D ~/snap/postgresql10/common/data -l ~/snap/postgresql10/common/logs/logfile'
+alias psql='postgresql10.psql'
+
+#---------------------------------------
 # Node
 #---------------------------------------
 # add nvm to path
@@ -112,13 +118,6 @@ WORKON_HOME=~/.virtualenvs
 #---------------------------------------
 export GOPATH=/home/alexishevia/go
 PATH=$PATH:/usr/lib/go-1.10/bin:/home/alexishevia/go/bin
-
-#---------------------------------------
-# Android
-#---------------------------------------
-# add android tools to path
-# PATH=$PATH:~/android-sdk/tools
-# PATH=$PATH:~/android-sdk/platform-tools
 
 #---------------------------------------
 # PHP

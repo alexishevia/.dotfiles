@@ -31,12 +31,13 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   synapse charles-proxy silversearcher-ag sni-qt:i386 veracrypt               \
   gnupg2 libzmq5 libzmq3-dev screenruler apt-transport-https mono-complete    \
   dkms libgconf-2-4 libxcb-xtest0 ttf-ancient-fonts python-pip python3-pip    \
-  vlc postgresql-10 docker.io docker-compose gnome-screensaver albert         \
+  docker.io docker-compose gnome-screensaver albert                           \
   gnome-tweak-tool openvpn network-manager-openvpn-gnome
 
 # remove apt packages I don't want
 sudo apt remove --yes avahi-daemon vim vim-gnome terminator gimp inkscape     \
-  libreoffice openshot openshot-qt
+  openshot openshot-qt vlc postgresql postgresql-10 postgresql-client-common  \
+  libreoffice
 
 # apt cleanup
 sudo apt upgrade --yes
