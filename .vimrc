@@ -11,7 +11,13 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 
 " auto-completion
-Plug 'Shougo/neocomplete.vim'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 " easy comment/uncomment
 Plug 'tpope/vim-commentary'
@@ -139,17 +145,14 @@ set ttym=xterm2
 au CursorMoved * checktime
 au CursorMovedI * checktime
 
-" disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-
 " enable auto-complete on startup
-let g:neocomplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
 
 " auto-complete use smartcase
-let g:neocomplete#enable_smart_case = 1
+let g:deoplete#enable_smart_case = 1
 
 " auto-complete <CR> completion.
-inoremap <expr><CR>  pumvisible() ? "\<C-n>" : "\<CR>"
+inoremap <expr><CR> pumvisible() ? "\<C-n>" : "\<CR>"
 
 " use ,p to do fuzzy filename search
 nnoremap <Leader>p :CtrlP<Enter>
@@ -361,12 +364,6 @@ set noswapfile
 
 " use ,cf to copy the full path to the current file
 nnoremap <leader>cf :let @+=expand("%:p")<CR>
-
-" close preview window after selecting autocomplete option
-augroup completion_preview_close
-  autocmd!
-  autocmd CompleteDone * if !&previewwindow && &completeopt =~ 'preview' | silent! pclose | endif
-augroup END
 
 " --- javascript --- "
 
