@@ -19,10 +19,6 @@ sudo add-apt-repository --yes ppa:git-core/ppa
 curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
 echo "deb https://cli-assets.heroku.com/branches/stable/apt ./" | sudo tee /etc/apt/sources.list.d/heroku-cli.list
 
-# sublime text
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-
 # google chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
@@ -45,10 +41,10 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   vim-gtk android-tools-adb android-tools-fastboot rbenv tidy exuberant-ctags \
   synapse google-chrome-stable charles-proxy silversearcher-ag sni-qt:i386    \
   veracrypt openshot golang-1.10-go gnupg2 libzmq5 libzmq3-dev screenruler    \
-  apt-transport-https sublime-text heroku mono-complete openshot dkms         \
+  apt-transport-https heroku mono-complete openshot dkms libgconf-2-4         \
   libxcb-xtest0 ttf-ancient-fonts python-pip gnome-tweak-tool albert          \
   docker.io docker-compose gnome-screensaver openvpn vlc postgresql-10        \
-  libgconf-2-4 network-manager-openvpn-gnome
+  network-manager-openvpn-gnome
 
 # remove apt packages I don't want
 sudo apt remove --yes avahi-daemon vim vim-gnome terminator gimp inkscape     \
