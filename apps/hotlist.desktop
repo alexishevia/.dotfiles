@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Hotlist
 Exec=/home/alexishevia/bin/hotlist
-Icon=/usr/share/icons/hicolor/48x48/apps/google-chrome.png
+Icon=/usr/share/icons/LoginIcons/apps/24/preferences-desktop-locale.svg
 Type=Application
 Categories=GTK;GNOME;Internet;
