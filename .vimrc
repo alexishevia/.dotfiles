@@ -21,8 +21,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'ivalkeen/nerdtree-execute'
 
 " syntax checking
-Plug 'scrooloose/syntastic'
-Plug 'mtscout6/syntastic-local-eslint.vim'
+Plug 'w0rp/ale'
 
 " lean & mean status/tabline
 Plug 'bling/vim-airline'
@@ -298,13 +297,6 @@ hi SpecialKey ctermfg=66 guifg=#649A9A
 " highlight current line
 set cursorline
 
-" syntastic settings
-let g:syntastic_check_on_open=1
-let g:syntastic_enable_highlighting = 0
-let g:syntastic_python_checkers=['pylama']
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_coffee_checkers=['coffeelint']
-
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vnoremap <Enter> <Plug>(EasyAlign)
 
@@ -358,9 +350,6 @@ iabbrev [check] 🗸
 iabbrev [bullet] ∙
 iabbrev [bullet1] •
 iabbrev [bullet2] ◦
-
-" avoid conflicts between syntastic and vim-go
-let g:go_fmt_fail_silently = 1
 
 " don't create backup files
 set nobackup
