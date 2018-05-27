@@ -6,12 +6,12 @@ set -e # exit if any command fails
 ./apt.sh
 ./snap.sh
 ./vim.sh
-./bin.sh
-./dropbox.sh
-./fiddler.sh
-./zoom.sh
+./apps/bin.sh
+./apps/dropbox.sh
+./apps/fiddler.sh
+./apps/zoom.sh
+./apps/postman.sh
+./python.sh
 ./encrypted.sh restore
 ./nvm.sh
 ./git.sh
-./postman.sh
-./python.sh
