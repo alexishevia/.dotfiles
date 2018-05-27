@@ -108,12 +108,6 @@ complete -A command npx
 export NPM_TOKEN=$(grep -oP 'authToken=\K.*' ~/.npmrc)
 
 #---------------------------------------
-# Python
-#---------------------------------------
-WORKON_HOME=~/.virtualenvs
-. /usr/local/bin/virtualenvwrapper.sh
-
-#---------------------------------------
 # Go Lang
 #---------------------------------------
 export GOPATH=/home/alexishevia/go
