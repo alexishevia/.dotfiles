@@ -9,8 +9,10 @@ set -e # exit if any command fails
 ./apps/bin.sh
 ./apps/dropbox.sh
 ./apps/fiddler.sh
-./apps/zoom.sh
+./apps/openshot.sh
+./apps/peek.sh
 ./apps/postman.sh
+./apps/zoom.sh
 ./python.sh
 ./encrypted.sh restore
 ./nvm.sh

@@ -28,15 +28,15 @@ sudo apt update
 sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   ncurses-term xclip dconf-tools unzip libjpeg62 libwebkitgtk-1.0-0 unrar     \
   vim-gtk android-tools-adb android-tools-fastboot rbenv tidy exuberant-ctags \
-  synapse charles-proxy silversearcher-ag sni-qt:i386 veracrypt openshot      \
+  synapse charles-proxy silversearcher-ag sni-qt:i386 veracrypt               \
   gnupg2 libzmq5 libzmq3-dev screenruler apt-transport-https mono-complete    \
-  openshot dkms libgconf-2-4 libxcb-xtest0 ttf-ancient-fonts python-pip       \
-  python3-pip vlc postgresql-10 docker.io docker-compose gnome-screensaver    \
-  gnome-tweak-tool albert openvpn network-manager-openvpn-gnome
+  dkms libgconf-2-4 libxcb-xtest0 ttf-ancient-fonts python-pip python3-pip    \
+  vlc postgresql-10 docker.io docker-compose gnome-screensaver albert         \
+  gnome-tweak-tool openvpn network-manager-openvpn-gnome
 
 # remove apt packages I don't want
 sudo apt remove --yes avahi-daemon vim vim-gnome terminator gimp inkscape     \
-  libreoffice
+  libreoffice openshot openshot-qt
 
 # apt cleanup
 sudo apt upgrade --yes
