@@ -12,10 +12,6 @@ sudo add-apt-repository --yes ppa:unit193/encryption
 # git
 sudo add-apt-repository --yes ppa:git-core/ppa
 
-# google chrome
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-
 # charles proxy
 wget -q -O - https://www.charlesproxy.com/packages/apt/PublicKey | sudo apt-key add -
 echo 'deb https://www.charlesproxy.com/packages/apt/ charles-proxy main' | sudo tee /etc/apt/sources.list.d/charles.list
@@ -32,12 +28,11 @@ sudo apt update
 sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   ncurses-term xclip dconf-tools unzip libjpeg62 libwebkitgtk-1.0-0 unrar     \
   vim-gtk android-tools-adb android-tools-fastboot rbenv tidy exuberant-ctags \
-  synapse google-chrome-stable charles-proxy silversearcher-ag sni-qt:i386    \
-  veracrypt openshot gnupg2 libzmq5 libzmq3-dev screenruler                   \
-  apt-transport-https mono-complete openshot dkms libgconf-2-4                \
-  libxcb-xtest0 ttf-ancient-fonts python-pip python3-pip vlc postgresql-10    \
-  docker.io docker-compose gnome-screensaver gnome-tweak-tool albert          \
-  openvpn network-manager-openvpn-gnome
+  synapse charles-proxy silversearcher-ag sni-qt:i386 veracrypt openshot      \
+  gnupg2 libzmq5 libzmq3-dev screenruler apt-transport-https mono-complete    \
+  openshot dkms libgconf-2-4 libxcb-xtest0 ttf-ancient-fonts python-pip       \
+  python3-pip vlc postgresql-10 docker.io docker-compose gnome-screensaver    \
+  gnome-tweak-tool albert openvpn network-manager-openvpn-gnome
 
 # remove apt packages I don't want
 sudo apt remove --yes avahi-daemon vim vim-gnome terminator gimp inkscape     \

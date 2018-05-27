@@ -11,7 +11,7 @@ sudo snap install kubectl --classic
 sudo snap install sublime-text --classic
 sudo snap install go --classic
 sudo snap install heroku --classic
-sudo snap install spotify http jq robomongo gimp inkscape libreoffice
+sudo snap install spotify http jq robomongo gimp inkscape libreoffice chromium
 
 # refresh already installed snaps
 sudo snap refresh
