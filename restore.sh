@@ -13,6 +13,7 @@ set -e # exit if any command fails
 ./apps/peek.sh
 ./apps/postman.sh
 ./apps/zoom.sh
+./apps/minikube.sh
 ./python.sh
 ./encrypted.sh restore
 ./nvm.sh
