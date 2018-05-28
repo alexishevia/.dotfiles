@@ -32,7 +32,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   synapse charles-proxy silversearcher-ag sni-qt:i386 veracrypt               \
   gnupg2 libzmq5 libzmq3-dev screenruler apt-transport-https mono-complete    \
   dkms libgconf-2-4 libxcb-xtest0 ttf-ancient-fonts python-pip python3-pip    \
-  docker.io docker-compose gnome-screensaver virtualbox-5.2                   \
+  docker.io docker-compose gnome-screensaver virtualbox-5.2 mdbus2            \
   gnome-tweak-tool openvpn network-manager-openvpn-gnome
 
 # remove apt packages I don't want
