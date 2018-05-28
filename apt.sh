@@ -16,11 +16,6 @@ sudo add-apt-repository --yes ppa:git-core/ppa
 wget -q -O - https://www.charlesproxy.com/packages/apt/PublicKey | sudo apt-key add -
 echo 'deb https://www.charlesproxy.com/packages/apt/ charles-proxy main' | sudo tee /etc/apt/sources.list.d/charles.list
 
-# albert
-wget -nv -O /tmp/Release.key https://build.opensuse.org/projects/home:manuelschneid3r/public_key
-sudo apt-key add - < /tmp/Release.key
-echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
-
 # virtualbox
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
@@ -37,7 +32,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   synapse charles-proxy silversearcher-ag sni-qt:i386 veracrypt               \
   gnupg2 libzmq5 libzmq3-dev screenruler apt-transport-https mono-complete    \
   dkms libgconf-2-4 libxcb-xtest0 ttf-ancient-fonts python-pip python3-pip    \
-  docker.io docker-compose gnome-screensaver albert virtualbox-5.2            \
+  docker.io docker-compose gnome-screensaver virtualbox-5.2                   \
   gnome-tweak-tool openvpn network-manager-openvpn-gnome
 
 # remove apt packages I don't want
