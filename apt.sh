@@ -22,6 +22,10 @@ wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key a
 codename=$(lsb_release --codename | cut -f2)
 echo "deb https://download.virtualbox.org/virtualbox/debian ${codename} contrib" | sudo tee /etc/apt/sources.list.d/dropbox.list
 
+# spotify
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0DF731E45CE24F27EEEB1450EFDC8610341D9410 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+
 # apt update
 sudo apt update
 
@@ -33,7 +37,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   gnupg2 libzmq5 libzmq3-dev screenruler apt-transport-https mono-complete    \
   dkms libgconf-2-4 libxcb-xtest0 ttf-ancient-fonts python-pip python3-pip    \
   docker.io docker-compose gnome-screensaver virtualbox-5.2 mdbus2            \
-  gnome-tweak-tool openvpn network-manager-openvpn-gnome
+  gnome-tweak-tool openvpn network-manager-openvpn-gnome spotify-client
 
 # remove apt packages I don't want
 sudo apt remove --yes avahi-daemon vim vim-gnome terminator gimp inkscape     \
