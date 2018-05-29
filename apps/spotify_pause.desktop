@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Pause Spotify
+Exec=sp pause
+Icon=/usr/share/icons/HighContrast/48x48/actions/media-playback-pause.png
+Terminal=false
+Type=Application
+Categories=Utilities;
