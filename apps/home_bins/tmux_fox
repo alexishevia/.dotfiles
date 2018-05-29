@@ -34,7 +34,7 @@ then
     tmux send-keys -t fox:vpn/flow 'foxvpn' C-m
     tmux split-window -t fox:vpn/flow
     tmux send-keys -t fox:vpn/flow.1 'cd $HOME/Projects/FOX/dcgapi-services' C-m
-    tmux send-keys -t fox:vpn/flow.1 'ctags -R .' C-m
+    tmux send-keys -t fox:vpn/flow.1 'ctags -R packages' C-m
     tmux send-keys -t fox:vpn/flow.1 'bin/flow' C-m
 fi
 
