@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Fresh Chrome
 Exec=/home/alexishevia/bin/fresh-chrome
-Icon=/usr/share/icons/hicolor/48x48/apps/google-chrome.png
+Icon=/usr/share/icons/chromium.png
 Type=Application
 Categories=GTK;GNOME;Internet;

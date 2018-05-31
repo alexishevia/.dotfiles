@@ -11,6 +11,7 @@ cp -r ./apps/home_bins ~/bin
 cat ./apps/hotlist.desktop > ~/.local/share/applications/hotlist.desktop
 
 # add desktop entry for 'fresh-chrome' command
+sudo cp ./apps/chromium.png /usr/share/icons/chromium.png
 cat ./apps/fresh-chrome.desktop > ~/.local/share/applications/fresh-chrome.desktop
 
 # install dep (golang)
