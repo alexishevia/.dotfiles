@@ -59,6 +59,7 @@ Plug 'tpope/vim-surround'
 " markdown utilities
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'ajorgensen/vim-markdown-toc'
 
 " Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
