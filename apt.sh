@@ -38,7 +38,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   dkms libgconf-2-4 libxcb-xtest0 ttf-ancient-fonts python-pip python3-pip    \
   docker.io docker-compose gnome-screensaver virtualbox-5.2 mdbus2            \
   gnome-tweak-tool openvpn network-manager-openvpn-gnome spotify-client       \
-  adobe-flashplugin
+  adobe-flashplugin mongodb-clients
 
 # remove apt packages I don't want
 sudo apt remove --yes avahi-daemon vim vim-gnome terminator gimp inkscape     \
