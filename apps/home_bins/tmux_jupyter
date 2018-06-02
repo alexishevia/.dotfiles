@@ -17,7 +17,7 @@ then
     # server window
     tmux new-window -t jupyter -n server
     tmux send-keys -t jupyter:server 'cd ~/jupyter_notebooks' C-m
-    tmux send-keys -t jupyter:server 'docker run -it -p 8888:8888 -v ~/jupyter_notebooks:/home/gopher/jupyter_notebooks yunabe/lgo' C-m
+    tmux send-keys -t jupyter:server 'pipenv shell jupyter notebook' C-m
 fi
 
 # select window 'editor'
