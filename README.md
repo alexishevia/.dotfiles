@@ -4,7 +4,7 @@ scripts to configure my dev environment
 These scripts should allow me to reconstruct my entire development environment on a blank Ubuntu 18.04 (Bionic Beaver) machine.
 
 ## Usage
-```
+```sh
 # Download repo
 sudo apt install wget curl unzip
 wget https://github.com/alexishevia/.dotfiles/archive/master.zip

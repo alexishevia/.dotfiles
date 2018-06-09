@@ -17,5 +17,8 @@ for repo in $REPOS; do
   popd;
 done
 
+# backup dconf settings
+dconf dump /org/ > ./dconf.backup
+
 # backup confidential directories
 ./encrypted.sh backup

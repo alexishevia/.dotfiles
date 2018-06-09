@@ -19,3 +19,6 @@ set -e # exit if any command fails
 ./encrypted.sh restore
 ./nvm.sh
 ./git.sh
+
+# restore dconf settings
+dconf load /org/ < ./dconf.backup
