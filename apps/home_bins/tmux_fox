@@ -4,6 +4,7 @@
 # otherwise, create it with the following windows:
 # - editor: vim
 # - tail: docker-compose up
+# - test: bin/unit-test
 # - vpn/flow: foxvpn and flow server
 
 tmux has-session -t fox
@@ -26,8 +27,16 @@ then
     tmux send-keys -t fox:tail 'source ../.aws_keys' C-m
     tmux send-keys -t fox:tail 'clear' C-m
     tmux send-keys -t fox:tail 'rm .env' C-m
-    tmux send-keys -t fox:tail 'ln -s ./env/core/local.env .env' C-m
-    tmux send-keys -t fox:tail 'docker-compose up -d && docker-compose stop e2e && docker-compose logs -f | grep -v health'
+    tmux send-keys -t fox:tail 'ln -s ./env/core/vpn.env .env' C-m
+    tmux send-keys -t fox:tail 'docker-compose up -d && docker-compose stop e2e && docker-compose up -d nsolid-console && docker-compose logs -f | grep -v health'
+
+    # test window
+    tmux new-window -t fox -n test
+    tmux send-keys -t fox:test 'cd $HOME/Projects/FOX/dcgapi-services' C-m
+    tmux send-keys -t fox:test 'nvm use' C-m
+    tmux send-keys -t fox:test 'source ../.aws_keys' C-m
+    tmux send-keys -t fox:test 'clear' C-m
+    tmux send-keys -t fox:test 'bin/unit-test -p service-video -P'
 
     # vpn/flow window
     tmux new-window -t fox -n vpn/flow
