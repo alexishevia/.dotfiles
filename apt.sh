@@ -29,21 +29,21 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 # apt update
 sudo apt update
 
+# remove apt packages I don't want
+sudo apt remove --yes avahi-daemon vim vim-gnome terminator gimp inkscape     \
+  openshot openshot-qt vlc postgresql postgresql-10 postgresql-client-common  \
+  libreoffice
+
 # install apt packages I use
 sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   ncurses-term xclip dconf-tools unzip libjpeg62 libwebkitgtk-1.0-0 unrar     \
-  vim-gtk android-tools-adb android-tools-fastboot rbenv tidy exuberant-ctags \
+  android-tools-adb android-tools-fastboot rbenv tidy exuberant-ctags         \
   synapse charles-proxy silversearcher-ag sni-qt:i386 veracrypt               \
   gnupg2 libzmq5 libzmq3-dev screenruler apt-transport-https mono-complete    \
   dkms libgconf-2-4 libxcb-xtest0 ttf-ancient-fonts python-pip python3-pip    \
   docker.io docker-compose gnome-screensaver virtualbox-5.2 mdbus2            \
   gnome-tweak-tool openvpn network-manager-openvpn-gnome spotify-client       \
   adobe-flashplugin mongodb-clients flameshot chromium-browser
-
-# remove apt packages I don't want
-sudo apt remove --yes avahi-daemon vim vim-gnome terminator gimp inkscape     \
-  openshot openshot-qt vlc postgresql postgresql-10 postgresql-client-common  \
-  libreoffice
 
 # apt cleanup
 sudo apt upgrade --yes
@@ -52,3 +52,6 @@ sudo apt autoremove --yes
 
 # add user to the docker group
 sudo usermod -aG docker ${USER}
+
+# temporary fix to keep git at a stable version
+sudo apt install --yes vim-gtk=2:8.0.1453-1ubuntu1 vim-common=2:8.0.1453-1ubuntu1 vim-gui-common=2:8.0.1453-1ubuntu1 vim-runtime=2:8.0.1453-1ubuntu1
