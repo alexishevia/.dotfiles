@@ -8,6 +8,7 @@ set -e # exit if any command fails
 ./vim.sh
 ./apps/bin.sh
 ./apps/dropbox.sh
+./apps/prey.sh
 ./apps/fiddler.sh
 ./apps/openshot.sh
 ./apps/peek.sh
