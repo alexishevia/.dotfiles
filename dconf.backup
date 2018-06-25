@@ -19,7 +19,7 @@ hinting='slight'
 numlock-state='off'
 
 [gnome/shell]
-favorite-apps=['chromium_chromium.desktop', 'org.gnome.Terminal.desktop', 'spotify.desktop', 'org.gnome.Nautilus.desktop']
+favorite-apps=['chromium-browser.desktop', 'org.gnome.Terminal.desktop', 'spotify.desktop', 'org.gnome.Nautilus.desktop']
 
 [gnome/shell/app-switcher]
 current-workspace-only=true
@@ -56,7 +56,7 @@ search-filter-time-type='last_modified'
 
 [gnome/nautilus/window-state]
 sidebar-width=196
-geometry='890x494+1520+97'
+geometry='890x482+445+225'
 maximized=false
 
 [gnome/power-manager]
@@ -78,7 +78,7 @@ window-height=480
 window-width=600
 
 [gnome/evince/default]
-window-ratio=(1.4493464454883815, 0.88257577651993457)
+window-ratio=(1.4493464052287581, 0.88257575757575757)
 
 [gnome/evolution-data-server]
 network-monitor-gio-name=''
@@ -91,7 +91,7 @@ clock-show-seconds=false
 gtk-im-module='gtk-im-context-simple'
 
 [gnome/desktop/notifications]
-application-children=['update-manager', 'org-gnome-nautilus', 'firefox', 'google-chrome', 'spotify-spotify', 'slack-slack', 'org-gnome-software', 'org-gnome-terminal', 'gnome-network-panel', 'apport-gtk', 'obs-studio-obs-studio', 'chromium-chromium', 'gimp-gimp', 'spotify', 'postman', 'skype-skypeforlinux', 'gnome-control-center']
+application-children=['update-manager', 'org-gnome-nautilus', 'firefox', 'google-chrome', 'spotify-spotify', 'slack-slack', 'org-gnome-software', 'org-gnome-terminal', 'gnome-network-panel', 'apport-gtk', 'obs-studio-obs-studio', 'chromium-chromium', 'gimp-gimp', 'spotify', 'postman', 'skype-skypeforlinux', 'gnome-control-center', 'libreoffice-calc', 'chromium-browser', 'sublime-text-subl']
 
 [gnome/desktop/notifications/application/obs-studio-obs-studio]
 application-id='obs-studio_obs-studio.desktop'
@@ -99,14 +99,17 @@ application-id='obs-studio_obs-studio.desktop'
 [gnome/desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
 
-[gnome/desktop/notifications/application/google-chrome]
-application-id='google-chrome.desktop'
-
 [gnome/desktop/notifications/application/firefox]
 application-id='firefox.desktop'
 
+[gnome/desktop/notifications/application/google-chrome]
+application-id='google-chrome.desktop'
+
 [gnome/desktop/notifications/application/gnome-control-center]
 application-id='gnome-control-center.desktop'
+
+[gnome/desktop/notifications/application/sublime-text-subl]
+application-id='sublime-text_subl.desktop'
 
 [gnome/desktop/notifications/application/gimp-gimp]
 application-id='gimp_gimp.desktop'
@@ -117,20 +120,23 @@ application-id='spotify_spotify.desktop'
 [gnome/desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
 
-[gnome/desktop/notifications/application/org-gnome-software]
-application-id='org.gnome.Software.desktop'
+[gnome/desktop/notifications/application/chromium-browser]
+application-id='chromium-browser.desktop'
 
-[gnome/desktop/notifications/application/spotify]
-application-id='spotify.desktop'
+[gnome/desktop/notifications/application/libreoffice-calc]
+application-id='libreoffice_calc.desktop'
 
 [gnome/desktop/notifications/application/org-gnome-terminal]
 application-id='org.gnome.Terminal.desktop'
 
-[gnome/desktop/notifications/application/update-manager]
-application-id='update-manager.desktop'
+[gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
 
 [gnome/desktop/notifications/application/chromium-chromium]
 application-id='chromium_chromium.desktop'
+
+[gnome/desktop/notifications/application/spotify]
+application-id='spotify.desktop'
 
 [gnome/desktop/notifications/application/apport-gtk]
 application-id='apport-gtk.desktop'
@@ -140,6 +146,9 @@ application-id='postman.desktop'
 
 [gnome/desktop/notifications/application/skype-skypeforlinux]
 application-id='skype_skypeforlinux.desktop'
+
+[gnome/desktop/notifications/application/update-manager]
+application-id='update-manager.desktop'
 
 [gnome/desktop/notifications/application/slack-slack]
 application-id='slack_slack.desktop'
@@ -227,13 +236,13 @@ auto-maximize=false
 workspaces-only-on-primary=false
 
 [gnome/software]
-check-timestamp=int64 1528545580
+check-timestamp=int64 1529928832
 
 [gtk/settings/file-chooser]
 sort-column='name'
 clock-format='12h'
 sidebar-width=196
-window-position=(284, 55)
+window-position=(292, 40)
 show-size-column=true
 show-hidden=false
 window-size=(910, 682)
