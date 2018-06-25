@@ -54,4 +54,4 @@ sudo apt autoremove --yes
 sudo usermod -aG docker ${USER}
 
 # temporary fix to keep git at a stable version
-sudo apt install --yes vim-gtk=2:8.0.1453-1ubuntu1 vim-common=2:8.0.1453-1ubuntu1 vim-gui-common=2:8.0.1453-1ubuntu1 vim-runtime=2:8.0.1453-1ubuntu1
+sudo apt install --yes --allow-downgrades vim-gtk=2:8.0.1453-1ubuntu1 vim-common=2:8.0.1453-1ubuntu1 vim-gui-common=2:8.0.1453-1ubuntu1 vim-runtime=2:8.0.1453-1ubuntu1
