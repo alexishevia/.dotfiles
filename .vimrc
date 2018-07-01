@@ -27,7 +27,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'ivalkeen/nerdtree-execute'
 
 " syntax checking
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
+Plug 'scrooloose/syntastic'
+Plug 'mtscout6/syntastic-local-eslint.vim'
 
 " lean & mean status/tabline
 Plug 'bling/vim-airline'
@@ -368,9 +370,12 @@ set noswapfile
 " use ,cf to copy the full path to the current file
 nnoremap <leader>cf :let @+=expand("%:p")<CR>
 
-" fix issue with ale where cursor disappears on error line
-" https://github.com/w0rp/ale/issues/1470
-let g:ale_echo_cursor = 0
+" syntastic settings
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_highlighting = 0
+let g:syntastic_python_checkers=['pylama']
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_coffee_checkers=['coffeelint']
 
 " --- javascript --- "
 
