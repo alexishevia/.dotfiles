@@ -368,6 +368,10 @@ set noswapfile
 " use ,cf to copy the full path to the current file
 nnoremap <leader>cf :let @+=expand("%:p")<CR>
 
+" fix issue with ale where cursor disappears on error line
+" https://github.com/w0rp/ale/issues/1470
+let g:ale_echo_cursor = 0
+
 " --- javascript --- "
 
 augroup javascript
