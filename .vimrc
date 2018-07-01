@@ -60,12 +60,14 @@ Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'ajorgensen/vim-markdown-toc'
+Plug 'xolox/vim-misc'
 
 " Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " color schemes
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'xolox/vim-colorscheme-switcher'
 
 " utility functions
 Plug 'tomtom/tlib_vim'
