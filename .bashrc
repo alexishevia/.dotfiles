@@ -77,6 +77,9 @@ export LC_ALL=en_US.UTF-8
 # add alias for fox vpn
 alias foxvpn='sudo openvpn --config ~/.fox.ovpn'
 
+# add alias for open
+alias open=xdg-open
+
 #---------------------------------------
 # JAVA
 #---------------------------------------
