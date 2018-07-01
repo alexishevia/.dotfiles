@@ -69,7 +69,7 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " color schemes
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'xolox/vim-colorscheme-switcher'
+" Plug 'xolox/vim-colorscheme-switcher'
 
 " utility functions
 Plug 'tomtom/tlib_vim'
