@@ -43,7 +43,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   dkms libgconf-2-4 libxcb-xtest0 ttf-ancient-fonts python-pip python3-pip    \
   docker.io docker-compose gnome-screensaver virtualbox-5.2 mdbus2            \
   gnome-tweak-tool openvpn network-manager-openvpn-gnome spotify-client       \
-  adobe-flashplugin mongodb-clients flameshot chromium-browser
+  adobe-flashplugin mongodb-clients flameshot chromium-browser vim-gtk
 
 # apt cleanup
 sudo apt upgrade --yes
@@ -52,6 +52,3 @@ sudo apt autoremove --yes
 
 # add user to the docker group
 sudo usermod -aG docker ${USER}
-
-# temporary fix to keep git at a stable version
-sudo apt install --yes --allow-downgrades vim-gtk=2:8.0.1453-1ubuntu1 vim-common=2:8.0.1453-1ubuntu1 vim-gui-common=2:8.0.1453-1ubuntu1 vim-runtime=2:8.0.1453-1ubuntu1
