@@ -2,10 +2,6 @@
 
 set -e # exit if any command fails
 
-# vim
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C927EBE00F1B0520
-sudo add-apt-repository --yes ppa:jonathonf/vim
-
 # veracrypt
 sudo add-apt-repository --yes ppa:unit193/encryption
 
