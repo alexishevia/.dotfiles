@@ -12,6 +12,7 @@ then
     # editor window
     tmux new -s clients -n editor -d
     tmux send-keys -t clients:editor 'cd ~/Dropbox/clients' C-m
+    tmux send-keys -t clients:editor 'source ./env_vars.sh' C-m
     tmux send-keys -t clients:editor 'vim .' C-m
     tmux send-keys -t clients:editor ',t' C-m
     tmux send-keys -t clients:editor ':edit ~/Dropbox/clients/worklog.md' C-m
