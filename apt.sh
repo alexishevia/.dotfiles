@@ -39,7 +39,8 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   dkms libgconf-2-4 libxcb-xtest0 ttf-ancient-fonts python-pip python3-pip    \
   docker.io docker-compose gnome-screensaver virtualbox-5.2 mdbus2            \
   gnome-tweak-tool openvpn network-manager-openvpn-gnome spotify-client       \
-  adobe-flashplugin mongodb-clients flameshot chromium-browser vim-gtk
+  adobe-flashplugin mongodb-clients flameshot chromium-browser vim-gtk        \
+  redis-tools
 
 # apt cleanup
 sudo apt upgrade --yes
