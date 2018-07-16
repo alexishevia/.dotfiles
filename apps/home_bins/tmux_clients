@@ -3,7 +3,6 @@
 # if 'clients' session exists, attach to it.
 # otherwise, create it with the following windows:
 #   - editor: vim
-#   - ppp: ppp-cli (https://www.npmjs.com/package/ppp-cli)
 
 tmux has-session -t clients
 
@@ -16,14 +15,7 @@ then
     tmux send-keys -t clients:editor 'vim .' C-m
     tmux send-keys -t clients:editor ',t' C-m
     tmux send-keys -t clients:editor ':edit ~/Dropbox/clients/worklog.md' C-m
-
-    # ppp window
-    tmux new-window -t clients -n ppp
-    tmux send-keys -t clients:ppp 'npx ppp-cli' C-m
 fi
-
-# select window 'ppp'
-tmux select-window -t clients:ppp
 
 # attach to session
 tmux ls | grep attached
