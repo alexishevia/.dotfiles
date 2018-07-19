@@ -28,7 +28,7 @@ then
     tmux send-keys -t fox:tail 'clear' C-m
     tmux send-keys -t fox:tail 'rm .env' C-m
     tmux send-keys -t fox:tail 'ln -s ./env/core/vpn.env .env' C-m
-    tmux send-keys -t fox:tail 'bin/setup && bin/build && docker-compose up -d && docker-compose stop e2e && docker-compose up -d nsolid-console && docker-compose logs -f | grep -v health'
+    tmux send-keys -t fox:tail 'bin/setup && bin/build && docker-compose up -d && docker-compose stop e2e && docker-compose logs -f | grep -v health'
 
     # test window
     tmux new-window -t fox -n test
