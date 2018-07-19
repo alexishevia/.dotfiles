@@ -40,7 +40,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   docker.io docker-compose gnome-screensaver virtualbox-5.2 mdbus2            \
   gnome-tweak-tool openvpn network-manager-openvpn-gnome spotify-client       \
   adobe-flashplugin mongodb-clients flameshot chromium-browser vim-gtk        \
-  redis-tools libavahi-compat-libdnssd1
+  redis-tools libavahi-compat-libdnssd1 net-tools openssh-server
 
 # apt cleanup
 sudo apt upgrade --yes
