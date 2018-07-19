@@ -15,6 +15,7 @@ set -e # exit if any command fails
 ./apps/postman.sh
 ./apps/zoom.sh
 ./apps/minikube.sh
+./apps/synergy.sh
 ./apps/sp.sh
 ./python.sh
 ./encrypted.sh restore
