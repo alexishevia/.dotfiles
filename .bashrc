@@ -108,7 +108,7 @@ source ~/.nvm/nvm.sh
 complete -A command npx
 
 # save ~/.npmrc authToken value into an NPM_TOKEN env variable
-export NPM_TOKEN=$(grep -oP 'authToken=\K.*' ~/.npmrc)
+export NPM_TOKEN=$(cat ~/.npmrc)
 
 #---------------------------------------
 # Go Lang
