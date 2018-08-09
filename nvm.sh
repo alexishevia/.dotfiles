@@ -12,7 +12,7 @@ git pull
 popd
 
 
-versions='8.11.1 8.11.3'
+versions='8.10.0 8.11.1 8.11.3'
 
 for version in $versions; do
   nvm install $version
