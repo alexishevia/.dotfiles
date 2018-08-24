@@ -39,15 +39,15 @@ then
 
     # vpn/flow window
     tmux new-window -t fox -n vpn/flow
-    tmux send-keys -t fox:vpn/flow 'foxvpn' C-m
+    tmux send-keys -t fox:vpn/flow 'foxvpn'
     tmux split-window -t fox:vpn/flow
     tmux send-keys -t fox:vpn/flow.1 'cd $HOME/Projects/FOX/dcgapi-services' C-m
     tmux send-keys -t fox:vpn/flow.1 'ctags -R packages' C-m
     tmux send-keys -t fox:vpn/flow.1 'bin/flow' C-m
 fi
 
-# select 'flow' pane
-tmux select-pane -t fox:vpn/flow.0
+# select 'tail' window
+tmux select-window -t fox:tail
 
 # attach to session
 tmux ls | grep attached
