@@ -14,6 +14,7 @@ set -e # exit if any command fails
 ./apps/peek.sh
 ./apps/postman.sh
 ./apps/zoom.sh
+./apps/expressvpn.sh
 ./apps/minikube.sh
 ./apps/synergy.sh
 ./apps/sp.sh
