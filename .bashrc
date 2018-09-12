@@ -136,8 +136,8 @@ if [[ $PWD/ = $HOME/Projects/FOX/* ]];
     source $HOME/Projects/FOX/.aws_keys;
     nvm use;
 fi
-if [[ $PWD/ = $HOME/Dropbox/clients/* ]];
+if [[ $PWD/ = $HOME/Dropbox/* ]];
   then
-    source $HOME/Dropbox/clients/env_vars.sh;
+    source $HOME/Dropbox/env_vars.sh;
     nvm use;
 fi
