@@ -351,8 +351,8 @@ set softtabstop=2
 " convert tabs to spaces
 set expandtab
 
-" replace '[check]' with an actual checkmark
-iabbrev [check] 🗸
+" replace 'ck' with a checkmark
+iabbrev ck 🗸
 
 " replace '[bullet]' with an actual bullet
 iabbrev [bullet] ∙
