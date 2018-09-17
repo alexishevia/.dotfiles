@@ -19,7 +19,7 @@ then
     # mdo window
     tmux new-window -t todo -n mdo
     tmux send-keys -t todo:mdo 'cd ~/Dropbox/todo' C-m
-    tmux send-keys -t todo:mdo '~/Projects/Personales/mdo/cli ~/Dropbox/todo/'
+    tmux send-keys -t todo:mdo 'mdo'
 fi
 
 # attach to session
