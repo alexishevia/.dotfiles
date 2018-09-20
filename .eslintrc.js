@@ -4,20 +4,12 @@ module.exports = {
     indent: ['error', 2, {
       MemberExpression: 0, // indent the multi-line property chains with 0 spaces
     }],
-    'require-jsdoc': ['warn', {
-      require: {
-        FunctionDeclaration: true,
-        MethodDefinition: true,
-        ClassDeclaration: true,
-        ArrowFunctionExpression: true,
-        FunctionExpression: true,
-      }
-    }],
+    'require-jsdoc': [0],
     'valid-jsdoc': ['warn'],
     'no-param-reassign': ['error', {
       props: true,
       ignorePropertyModificationsFor: ['memo', 'acc'], // allow reducer accumulators to be modified
     }],
-    'complexity': ['error', 5], // allow max cyclomatic complexity of 5
+    'complexity': ['error', 10], // allow max cyclomatic complexity of 10
   },
 };
