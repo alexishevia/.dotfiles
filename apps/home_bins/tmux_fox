@@ -27,7 +27,7 @@ then
     tmux send-keys -t fox:tail 'source ../.aws_keys' C-m
     tmux send-keys -t fox:tail 'clear' C-m
     tmux send-keys -t fox:tail 'ln -sf ./env/d2c/local.env .env' C-m
-    tmux send-keys -t fox:tail 'bin/setup && bin/build && docker-compose up -d && docker-compose stop e2e && docker-compose stop e2e_base && docker-compose logs -f | grep -v health'
+    tmux send-keys -t fox:tail 'bin/setup && bin/build && docker-compose up -d && docker-compose stop e2e && docker-compose stop e2e_base && docker-compose logs -f | grep error'
 
     # test window
     tmux new-window -t fox -n test
@@ -39,15 +39,15 @@ then
 
     # vpn/flow window
     tmux new-window -t fox -n vpn/flow
-    tmux send-keys -t fox:vpn/flow 'foxvpn'
+    tmux send-keys -t fox:vpn/flow 'foxvpn' C-m
     tmux split-window -t fox:vpn/flow
     tmux send-keys -t fox:vpn/flow.1 'cd $HOME/Projects/FOX/dcgapi-services' C-m
     tmux send-keys -t fox:vpn/flow.1 'ctags -R packages' C-m
     tmux send-keys -t fox:vpn/flow.1 'bin/flow' C-m
 fi
 
-# select 'editor' window
-tmux select-window -t fox:editor
+# select 'vpn' pane
+tmux select-pane -t fox:vpn/flow.0
 
 # attach to session
 tmux ls | grep attached
