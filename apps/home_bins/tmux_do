@@ -3,7 +3,6 @@
 # if 'todo' session exists, attach to it.
 # otherwise, create it with the following windows:
 #   - editor
-#   - mdo
 
 tmux has-session -t todo
 
@@ -15,11 +14,6 @@ then
     tmux send-keys -t todo:editor 'vim .' C-m
     tmux send-keys -t todo:editor ',t' C-m
     tmux send-keys -t todo:editor ':edit ~/Dropbox/todo/todo.md' C-m
-
-    # mdo window
-    tmux new-window -t todo -n mdo
-    tmux send-keys -t todo:mdo 'cd ~/Dropbox/todo' C-m
-    tmux send-keys -t todo:mdo 'mdo'
 fi
 
 # attach to session
