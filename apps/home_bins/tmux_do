@@ -1,25 +1,25 @@
 #!/bin/bash
 
-# if 'todo' session exists, attach to it.
+# if '_todo' session exists, attach to it.
 # otherwise, create it with the following windows:
 #   - editor
 
-tmux has-session -t todo
+tmux has-session -t _todo
 
 if [ $? != 0 ]
 then
     # editor window
-    tmux new -s todo -n editor -d
-    tmux send-keys -t todo:editor 'cd ~/Dropbox' C-m
-    tmux send-keys -t todo:editor 'vim .' C-m
-    tmux send-keys -t todo:editor ',t' C-m
-    tmux send-keys -t todo:editor ':edit ~/Dropbox/todo/todo.md' C-m
+    tmux new -s _todo -n editor -d
+    tmux send-keys -t _todo:editor 'cd ~/Dropbox' C-m
+    tmux send-keys -t _todo:editor 'vim .' C-m
+    tmux send-keys -t _todo:editor ',t' C-m
+    tmux send-keys -t _todo:editor ':edit ~/Dropbox/todo/todo.md' C-m
 fi
 
 # attach to session
 tmux ls | grep attached
 if [ $? == 0 ]; then
-    tmux switch -t todo
+    tmux switch -t _todo
 else
-    tmux attach -t todo
+    tmux attach -t _todo
 fi
