@@ -377,11 +377,11 @@ let g:syntastic_python_checkers=['pylama']
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_coffee_checkers=['coffeelint']
 
-" run mdo on todo.md files
+" run mdo on todo files
 augroup mdo
   autocmd!
 
-  autocmd BufWritePost todo.md !mdo %
+  autocmd BufWritePost *todo/*.md !~/Projects/Personales/mdo/cli %
 augroup END
 
 " --- javascript --- "

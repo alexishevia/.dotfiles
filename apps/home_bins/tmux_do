@@ -13,7 +13,9 @@ then
     tmux send-keys -t _todo:editor 'cd ~/Dropbox' C-m
     tmux send-keys -t _todo:editor 'vim .' C-m
     tmux send-keys -t _todo:editor ',t' C-m
-    tmux send-keys -t _todo:editor ':edit ~/Dropbox/todo/todo.md' C-m
+    tmux send-keys -t _todo:editor ':edit ~/Dropbox/todo/work.md' C-m
+    tmux send-keys -t _todo:editor ',t' C-m
+    tmux send-keys -t _todo:editor ':edit ~/Dropbox/todo/home.md' C-m
 fi
 
 # attach to session
