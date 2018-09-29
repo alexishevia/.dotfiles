@@ -381,7 +381,7 @@ let g:syntastic_coffee_checkers=['coffeelint']
 augroup mdo
   autocmd!
 
-  autocmd BufWritePost *todo/*.md !~/Projects/Personales/mdo/cli %
+  autocmd BufWritePre *todo/*.md %!~/Projects/Personales/mdo/cli
 augroup END
 
 " --- javascript --- "
