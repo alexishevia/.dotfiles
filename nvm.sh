@@ -12,7 +12,7 @@ git pull
 popd
 
 
-versions='8.10.0 8.11.1 8.11.3'
+versions='8.12.0'
 
 for version in $versions; do
   nvm install $version
@@ -20,5 +20,5 @@ for version in $versions; do
   npm install -g npm yarn lerna timezones-cli ppp-cli json eslint eslint-config-airbnb commitizen eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-import flow-bin @foxdcg/is-commit-deployed @foxdcg/reindex-mpx-item @mprokopowicz/sqs-monitor elasticdump mdo-cli
 done
 
-nvm alias default 8.11.1
-nvm use 8.11.1
+nvm alias default 8.12.0
+nvm use 8.12.0
