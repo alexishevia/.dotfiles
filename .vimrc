@@ -67,6 +67,9 @@ Plug 'xolox/vim-misc'
 " Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
+" Reason plugin
+Plug 'reasonml-editor/vim-reason-plus'
+
 " color schemes
 Plug 'rafi/awesome-vim-colorschemes'
 " Plug 'xolox/vim-colorscheme-switcher'
