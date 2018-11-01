@@ -49,7 +49,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   gnome-tweak-tool openvpn network-manager-openvpn-gnome spotify-client       \
   adobe-flashplugin mongodb-clients flameshot chromium-browser vim-gtk        \
   redis-tools libavahi-compat-libdnssd1 net-tools openssh-server              \
-  indicator-sound-switcher awscli apt-transport-https code
+  indicator-sound-switcher awscli apt-transport-https code ocaml
 
 # apt cleanup
 sudo apt upgrade --yes
