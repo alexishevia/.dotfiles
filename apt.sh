@@ -23,7 +23,12 @@ echo "deb https://download.virtualbox.org/virtualbox/debian ${codename} contrib"
 
 # spotify
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0DF731E45CE24F27EEEB1450EFDC8610341D9410 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
-echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+echo 'deb http://repository.spotify.com stable non-free' | sudo tee /etc/apt/sources.list.d/spotify.list
+
+# vs code
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /tmp/microsoft.gpg
+sudo install -o root -g root -m 644 /tmp/microsoft.gpg /etc/apt/trusted.gpg.d/
+echo 'deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main' | sudo tee /etc/apt/sources.list.d/vscode.list
 
 # apt update
 sudo apt update
@@ -44,7 +49,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   gnome-tweak-tool openvpn network-manager-openvpn-gnome spotify-client       \
   adobe-flashplugin mongodb-clients flameshot chromium-browser vim-gtk        \
   redis-tools libavahi-compat-libdnssd1 net-tools openssh-server              \
-  indicator-sound-switcher awscli
+  indicator-sound-switcher awscli apt-transport-https code
 
 # apt cleanup
 sudo apt upgrade --yes
