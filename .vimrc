@@ -408,15 +408,10 @@ function! Preserve(command)
   call setpos('.', cursor_position)
 endfunction
 
-" Run MDo on the whole buffer.
-function! MDo()
-  call Preserve('%!~/Projects/Personales/mdo/cli')
-endfunction
-
-" run mdo on todo files
+" on save, run MDo on any markdown file living inside a `todo/` folder
 augroup mdo
   autocmd!
-  autocmd BufWritePre *todo/*.md call MDo()
+  autocmd BufWritePre *todo/*.md call Preserve('%!~/Projects/Personales/mdo/cli')
 augroup END
 
 " --- javascript --- "
