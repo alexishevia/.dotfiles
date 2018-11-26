@@ -27,9 +27,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'ivalkeen/nerdtree-execute'
 
 " syntax checking
-" Plug 'w0rp/ale'
 Plug 'scrooloose/syntastic'
 Plug 'mtscout6/syntastic-local-eslint.vim'
+Plug 'Quramy/tsuquyomi'
 
 " lean & mean status/tabline
 Plug 'bling/vim-airline'
@@ -378,8 +378,9 @@ let g:syntastic_check_on_open=1
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_python_checkers=['pylama']
 let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_typescript_checkers=['tslint']
+let g:syntastic_typescript_checkers=['tsuquyomi']
 let g:syntastic_coffee_checkers=['coffeelint']
+let g:tsuquyomi_disable_quickfix = 1
 
 " Restore cursor position, window position, and last search after running a
 " command.
