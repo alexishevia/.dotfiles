@@ -133,6 +133,7 @@ PATH=$PATH:/usr/lib/go-1.10/bin:/home/alexishevia/go/bin
 #---------------------------------------
 if [[ $PWD/ = $HOME/Projects/FOX/* ]];
   then
+    source $HOME/Dropbox/env_vars.sh;
     source $HOME/Projects/FOX/.aws_keys;
     nvm use;
 fi
