@@ -4,8 +4,7 @@
 # otherwise, create it with the following windows:
 # - editor: vim
 # - tail: docker-compose up
-# - test: bin/unit-test
-# - vpn/flow: foxvpn and flow server
+# - vpn/test: foxvpn and bin/unit-test
 
 tmux has-session -t fox
 
@@ -29,25 +28,19 @@ then
     tmux send-keys -t fox:tail 'ln -sf ./env/d2c/local.env .env' C-m
     tmux send-keys -t fox:tail 'bin/setup && bin/build && docker-compose up -d && docker-compose stop admin && docker-compose logs -f | grep -v health'
 
-    # test window
-    tmux new-window -t fox -n test
-    tmux send-keys -t fox:test 'cd $HOME/Projects/FOX/dcgapi-services' C-m
-    tmux send-keys -t fox:test 'nvm use' C-m
-    tmux send-keys -t fox:test 'source ../.aws_keys' C-m
-    tmux send-keys -t fox:test 'clear' C-m
-    tmux send-keys -t fox:test 'bin/unit-test -p service-video -P'
-
-    # vpn/flow window
-    tmux new-window -t fox -n vpn/flow
-    tmux send-keys -t fox:vpn/flow 'foxvpn' C-m
-    tmux split-window -t fox:vpn/flow
-    tmux send-keys -t fox:vpn/flow.1 'cd $HOME/Projects/FOX/dcgapi-services' C-m
-    tmux send-keys -t fox:vpn/flow.1 'ctags -R packages' C-m
-    tmux send-keys -t fox:vpn/flow.1 'bin/flow' C-m
+    # vpn/test window
+    tmux new-window -t fox -n vpn/test
+    tmux send-keys -t fox:vpn/test 'foxvpn' C-m
+    tmux split-window -t fox:vpn/test
+    tmux send-keys -t fox:vpn/test.1 'cd $HOME/Projects/FOX/dcgapi-services' C-m
+    tmux send-keys -t fox:vpn/test.1 'nvm use' C-m
+    tmux send-keys -t fox:vpn/test.1 'source ../.aws_keys' C-m
+    tmux send-keys -t fox:vpn/test.1 'clear' C-m
+    tmux send-keys -t fox:vpn/test.1 'bin/unit-test -p service-video -P'
 fi
 
 # select 'vpn' pane
-tmux select-pane -t fox:vpn/flow.0
+tmux select-pane -t fox:vpn/test.0
 
 # attach to session
 tmux ls | grep attached
