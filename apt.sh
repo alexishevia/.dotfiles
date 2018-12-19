@@ -27,6 +27,10 @@ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /tmp/mi
 sudo install -o root -g root -m 644 /tmp/microsoft.gpg /etc/apt/trusted.gpg.d/
 echo 'deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main' | sudo tee /etc/apt/sources.list.d/vscode.list
 
+# google chrome
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+
 # apt update
 sudo apt update
 
@@ -44,7 +48,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   dkms libgconf-2-4 libxcb-xtest0 ttf-ancient-fonts python-pip python3-pip    \
   docker.io docker-compose gnome-screensaver virtualbox-5.2 mdbus2            \
   gnome-tweak-tool openvpn network-manager-openvpn-gnome spotify-client       \
-  adobe-flashplugin mongodb-clients flameshot chromium-browser vim-gtk        \
+  adobe-flashplugin mongodb-clients flameshot google-chrome-stable vim-gtk    \
   redis-tools libavahi-compat-libdnssd1 net-tools openssh-server              \
   awscli apt-transport-https code ocaml
 
