@@ -98,10 +98,6 @@ let maplocalleader = "-"
 " use jk instead of Escape
 inoremap jk <esc>
 
-" make j & k move up/down a single row in the screen (not on a linewise basis)
-nnoremap j gj
-nnoremap k gk
-
 " load theme
 colorscheme PaperColor
 
