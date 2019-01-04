@@ -232,11 +232,6 @@ let g:vim_markdown_folding_disabled = 1
 " close :Toc on <Enter>
 nnoremap <expr><enter> &ft=="qf" ? "<cr>:lcl<cr>" : (getpos(".")[2]==1 ? "i<cr><esc>": "i<cr><esc>l")
 
-" Start recording keystrokes by typing qq.
-" End recording with q (first press Escape if you are in insert mode).
-" Play the recorded keystrokes by hitting space.
-nnoremap <Space> @q
-
 " detect utf-8
 if has("multi_byte")
   set encoding=utf-8                     " better default than latin1
