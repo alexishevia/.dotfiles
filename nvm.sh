@@ -12,7 +12,7 @@ git pull
 popd
 
 
-versions='8.12.0 10.15.0'
+versions='8.14.0 10.15.0'
 
 for version in $versions; do
   nvm install $version
@@ -23,5 +23,5 @@ for version in $versions; do
   eslint eslint-config-prettier eslint-plugin-require-path-exists
 done
 
-nvm alias default 8.12.0
-nvm use 8.12.0
+nvm alias default 8.14.0
+nvm use 8.14.0
