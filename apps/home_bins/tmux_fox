@@ -32,6 +32,7 @@ then
 
     # vpn/test window
     tmux new-window -t fox -n vpn/test
+    tmux send-keys -t fox:vpn/test 'cd $HOME/Projects/FOX/dcgapi-services' C-m
     tmux send-keys -t fox:vpn/test 'foxvpn' C-m
     tmux split-window -t fox:vpn/test
     tmux send-keys -t fox:vpn/test.1 'cd $HOME/Projects/FOX/dcgapi-services' C-m
