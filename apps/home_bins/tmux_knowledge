@@ -12,8 +12,6 @@ then
     tmux new -s knowledge -n editor -d
     tmux send-keys -t knowledge:editor 'cd ~/knowledge' C-m
     tmux send-keys -t knowledge:editor 'vim .' C-m
-    tmux send-keys -t knowledge:editor ',t' C-m
-    tmux send-keys -t knowledge:editor ':edit ~/knowledge/Learning.md' C-m
 fi
 
 # select window 'editor'
