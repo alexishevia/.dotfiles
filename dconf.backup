@@ -1,4 +1,14 @@
+[blueman/general]
+window-properties=[815, 475, 347, 104]
+
+[blueman/plugins/recentconns]
+recent-connections='eNprYPJmiC1kaCtk1AMAEQ4Cwg=='
+
+[blueman/transfer]
+shared-path='/home/alexishevia/Downloads'
+
 [gnome/settings-daemon/plugins/power]
+power-button-action='suspend'
 sleep-inactive-ac-timeout=3600
 sleep-inactive-ac-type='nothing'
 
@@ -16,10 +26,14 @@ volume-up='<Primary>Up'
 hinting='slight'
 
 [gnome/settings-daemon/peripherals/keyboard]
-numlock-state='off'
+numlock-state='on'
+
+[gnome/shell/extensions/dash-to-dock]
+dock-fixed=true
 
 [gnome/shell]
-favorite-apps=['chromium-browser.desktop', 'org.gnome.Terminal.desktop', 'spotify.desktop', 'org.gnome.Nautilus.desktop']
+favorite-apps=['org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'spotify.desktop', 'postman.desktop', 'charles-proxy.desktop', 'Zoom.desktop']
+had-bluetooth-devices-setup=false
 
 [gnome/shell/app-switcher]
 current-workspace-only=true
@@ -28,7 +42,7 @@ current-workspace-only=true
 show-tabs-mode='auto'
 
 [gnome/gedit/plugins/filebrowser]
-virtual-root='file:///home/alexishevia/Desktop'
+virtual-root='file:///home/alexishevia/Desktop/tzdata2018i'
 tree-view=true
 root='file:///'
 
@@ -36,7 +50,7 @@ root='file:///'
 active-plugins=['docinfo', 'spell', 'modelines', 'filebrowser', 'time']
 
 [gnome/gedit/state/window]
-size=(900, 699)
+size=(1373, 741)
 state=87168
 bottom-panel-size=140
 side-panel-size=200
@@ -46,7 +60,7 @@ side-panel-active-page='GeditWindowDocumentsPanel'
 include-pointer=false
 include-border=true
 border-effect='none'
-delay=0
+delay=4
 last-save-directory='file:///home/alexishevia/Desktop'
 
 [gnome/nautilus/preferences]
@@ -56,8 +70,12 @@ search-filter-time-type='last_modified'
 
 [gnome/nautilus/window-state]
 sidebar-width=196
-geometry='890x482+445+225'
+start-with-sidebar=true
+geometry='1011x526+242+270'
 maximized=false
+
+[gnome/nautilus/compression]
+default-compression-format='zip'
 
 [gnome/power-manager]
 info-history-type='charge'
@@ -74,24 +92,31 @@ show-path=false
 
 [gnome/file-roller/ui]
 sidebar-width=200
-window-height=480
-window-width=600
+window-height=699
+window-width=1301
 
 [gnome/evince/default]
-window-ratio=(1.4493464052287581, 0.88257575757575757)
+window-ratio=(2.1082515790888317, 0.73525044839587117)
 
 [gnome/evolution-data-server]
 network-monitor-gio-name=''
 migrated=true
+
+[gnome/yelp]
+show-cursor=false
 
 [gnome/desktop/interface]
 clock-show-date=true
 clock-format='12h'
 clock-show-seconds=false
 gtk-im-module='gtk-im-context-simple'
+toolkit-accessibility=false
 
 [gnome/desktop/notifications]
-application-children=['update-manager', 'org-gnome-nautilus', 'firefox', 'google-chrome', 'spotify-spotify', 'slack-slack', 'org-gnome-software', 'org-gnome-terminal', 'gnome-network-panel', 'apport-gtk', 'obs-studio-obs-studio', 'chromium-chromium', 'gimp-gimp', 'spotify', 'postman', 'skype-skypeforlinux', 'gnome-control-center', 'libreoffice-calc', 'chromium-browser', 'sublime-text-subl']
+application-children=['update-manager', 'org-gnome-nautilus', 'firefox', 'google-chrome', 'spotify-spotify', 'slack-slack', 'org-gnome-software', 'org-gnome-terminal', 'gnome-network-panel', 'apport-gtk', 'obs-studio-obs-studio', 'chromium-chromium', 'gimp-gimp', 'spotify', 'postman', 'skype-skypeforlinux', 'gnome-control-center', 'libreoffice-calc', 'chromium-browser', 'sublime-text-subl', 'synergy', 'org-gnome-tweaks', 'flameshot', 'org-gnome-screenshot', 'eog', 'blueman-manager', 'zoom', 'org-gnome-shell-portalhelper', 'veracrypt']
+
+[gnome/desktop/notifications/application/org-gnome-tweaks]
+application-id='org.gnome.tweaks.desktop'
 
 [gnome/desktop/notifications/application/obs-studio-obs-studio]
 application-id='obs-studio_obs-studio.desktop'
@@ -105,17 +130,38 @@ application-id='firefox.desktop'
 [gnome/desktop/notifications/application/google-chrome]
 application-id='google-chrome.desktop'
 
+[gnome/desktop/notifications/application/blueman-manager]
+application-id='blueman-manager.desktop'
+
 [gnome/desktop/notifications/application/gnome-control-center]
 application-id='gnome-control-center.desktop'
+
+[gnome/desktop/notifications/application/flameshot]
+application-id='flameshot.desktop'
+
+[gnome/desktop/notifications/application/org-gnome-terminal]
+application-id='org.gnome.Terminal.desktop'
 
 [gnome/desktop/notifications/application/sublime-text-subl]
 application-id='sublime-text_subl.desktop'
 
+[gnome/desktop/notifications/application/veracrypt]
+application-id='veracrypt.desktop'
+
+[gnome/desktop/notifications/application/slack-slack]
+application-id='slack_slack.desktop'
+
+[gnome/desktop/notifications/application/zoom]
+application-id='Zoom.desktop'
+
 [gnome/desktop/notifications/application/gimp-gimp]
 application-id='gimp_gimp.desktop'
 
-[gnome/desktop/notifications/application/spotify-spotify]
-application-id='spotify_spotify.desktop'
+[gnome/desktop/notifications/application/synergy]
+application-id='synergy.desktop'
+
+[gnome/desktop/notifications/application/org-gnome-shell-portalhelper]
+application-id='org.gnome.Shell.PortalHelper.desktop'
 
 [gnome/desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
@@ -126,11 +172,14 @@ application-id='chromium-browser.desktop'
 [gnome/desktop/notifications/application/libreoffice-calc]
 application-id='libreoffice_calc.desktop'
 
-[gnome/desktop/notifications/application/org-gnome-terminal]
-application-id='org.gnome.Terminal.desktop'
+[gnome/desktop/notifications/application/eog]
+application-id='eog.desktop'
 
 [gnome/desktop/notifications/application/org-gnome-software]
 application-id='org.gnome.Software.desktop'
+
+[gnome/desktop/notifications/application/spotify-spotify]
+application-id='spotify_spotify.desktop'
 
 [gnome/desktop/notifications/application/chromium-chromium]
 application-id='chromium_chromium.desktop'
@@ -144,14 +193,14 @@ application-id='apport-gtk.desktop'
 [gnome/desktop/notifications/application/postman]
 application-id='postman.desktop'
 
-[gnome/desktop/notifications/application/skype-skypeforlinux]
-application-id='skype_skypeforlinux.desktop'
+[gnome/desktop/notifications/application/org-gnome-screenshot]
+application-id='org.gnome.Screenshot.desktop'
 
 [gnome/desktop/notifications/application/update-manager]
 application-id='update-manager.desktop'
 
-[gnome/desktop/notifications/application/slack-slack]
-application-id='slack_slack.desktop'
+[gnome/desktop/notifications/application/skype-skypeforlinux]
+application-id='skype_skypeforlinux.desktop'
 
 [gnome/desktop/app-folders]
 folder-children=['Utilities', 'Sundry', 'YaST']
@@ -181,11 +230,11 @@ natural-scroll=false
 speed=0.28057553956834536
 accel-profile='adaptive'
 
-[gnome/desktop/session]
-idle-delay=uint32 900
-
 [gnome/desktop/search-providers]
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
+
+[gnome/desktop/session]
+idle-delay=uint32 0
 
 [gnome/desktop/wm/preferences]
 mouse-button-modifier='<Alt>'
@@ -196,8 +245,17 @@ focus-mode='click'
 move-to-monitor-right=['<Alt>Right']
 move-to-monitor-left=['<Alt>Left']
 
+[gnome/desktop/a11y]
+always-show-universal-access-status=false
+
+[gnome/desktop/a11y/applications]
+screen-keyboard-enabled=false
+
+[gnome/desktop/datetime]
+automatic-timezone=false
+
 [gnome/desktop/background]
-picture-uri='file:///home/alexishevia/Pictures/Wallpapers/wallpaper_desktop_16x9_neuroimaging.png'
+picture-uri='file:///home/alexishevia/Pictures/Wallpapers/wallpaper_desktop_16x9_killerwhales_2.png'
 show-desktop-icons=true
 color-shading-type='solid'
 primary-color='#000000'
@@ -205,15 +263,27 @@ picture-options='zoom'
 secondary-color='#000000'
 
 [gnome/desktop/input-sources]
-sources=[('xkb', 'us+intl')]
+sources=[('xkb', 'us+intl'), ('xkb', 'latam')]
+mru-sources=[('xkb', 'us+intl'), ('xkb', 'latam')]
 xkb-options=@as []
 
+[gnome/cheese]
+photo-y-resolution=480
+burst-delay=1000
+video-y-resolution=480
+camera='Integrated_Webcam_FHD: Integrat'
+photo-x-resolution=640
+video-x-resolution=640
+
 [gnome/control-center]
-last-panel='sound'
+last-panel='display'
 
 [gnome/eog/view]
 background-color='rgb(0,0,0)'
 use-background-color=true
+
+[gnome/eog/ui]
+sidebar=false
 
 [gnome/terminal/legacy]
 schema-version=uint32 3
@@ -235,17 +305,28 @@ dynamic-workspaces=false
 auto-maximize=false
 workspaces-only-on-primary=false
 
+[gnome/gnome-system-monitor]
+show-dependencies=false
+current-tab='resources'
+maximized=false
+show-whose-processes='user'
+window-state=(700, 500, 91, 76)
+
+[gnome/gnome-system-monitor/disktreenew]
+col-6-visible=true
+col-6-width=0
+
 [gnome/software]
-check-timestamp=int64 1529928832
+check-timestamp=int64 1551192633
 
 [gtk/settings/file-chooser]
 sort-column='name'
 clock-format='12h'
 sidebar-width=196
-window-position=(292, 40)
+window-position=(766, 157)
 show-size-column=true
-show-hidden=false
-window-size=(910, 682)
+show-hidden=true
+window-size=(788, 550)
 sort-directories-first=true
 date-format='regular'
 sort-order='ascending'
