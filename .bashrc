@@ -9,6 +9,10 @@
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
+# append to history on every command
+# see: https://superuser.com/questions/788428/how-to-port-my-current-bash-history-over-when-opening-a-tmux-session
+export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -24,7 +28,7 @@ shopt -s checkwinsize
 # match all files and zero or more directories and subdirectories.
 shopt -s globstar
 
-# make less more friendly for non-text input files, see lesspipe(1)
+# make `less` more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
