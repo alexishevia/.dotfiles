@@ -39,6 +39,7 @@ then
     tmux send-keys -t fox:vpn/test.1 'nvm use' C-m
     tmux send-keys -t fox:vpn/test.1 'source ../.aws_keys' C-m
     tmux send-keys -t fox:vpn/test.1 'source $HOME/Dropbox/env_vars.sh' C-m
+    tmux send-keys -t fox:vpn/test.1 'ctags -R .' C-m
     tmux send-keys -t fox:vpn/test.1 'clear' C-m
     tmux send-keys -t fox:vpn/test.1 'bin/unit-test -p service-video -P'
 fi
