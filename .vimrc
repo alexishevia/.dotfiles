@@ -404,7 +404,7 @@ endfunction
 " on save, run MDo on any markdown file living inside a `todo/` folder
 augroup mdo
   autocmd!
-  autocmd BufWritePre *todo/*.md call Preserve('%!~/Projects/Personales/mdo/cli')
+  autocmd BufWritePre *todo/*.md call Preserve('%!mdo')
 augroup END
 
 " --- javascript --- "
