@@ -19,5 +19,11 @@ if ! [ -x "$(command -v dep)" ]; then
   curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 fi
 
+# install glide (golang)
+if ! [ -x "$(command -v glide)" ]; then
+  curl https://glide.sh/get | sh
+fi
+
+
 # map gnome-open to xdg-open
 ln -s /usr/bin/xdg-open ~/bin/gnome-open
