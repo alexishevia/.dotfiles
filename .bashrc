@@ -78,9 +78,6 @@ PATH=$PATH:~/bin
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# add alias for fox vpn
-alias foxvpn='sudo openvpn --config ~/.fox.ovpn'
-
 # add alias for open
 alias open=xdg-open
 
@@ -146,3 +143,9 @@ if [[ $PWD/ = $HOME/Dropbox/* ]];
     source $HOME/Dropbox/env_vars.sh;
     nvm use;
 fi
+
+# add alias for fox vpn
+alias foxvpn='sudo openvpn --config ~/.fox.ovpn'
+
+# add alias to cd into foxbroadcasting golang directory
+alias gofox="cd $GOPATH/src/github.com/foxbroadcasting/"
