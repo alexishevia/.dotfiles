@@ -98,6 +98,9 @@ let maplocalleader = "-"
 " use jk instead of Escape
 inoremap jk <esc>
 
+" disable built-in mapping of Q to enter Ex mode
+map Q <Nop>
+
 " load theme
 colorscheme PaperColor
 
