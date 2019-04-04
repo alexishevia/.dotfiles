@@ -64,7 +64,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'ajorgensen/vim-markdown-toc'
 Plug 'xolox/vim-misc'
 
-" Go development plugin for Vim
+" Golang development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " Reason plugin
@@ -431,6 +431,9 @@ nnoremap <buffer> <localleader>d <Ctrl>]
 
 " auto :GoMetaLinter on save
 let g:go_metalinter_autosave = 1
+
+" configure the height of the location list created by :GoMetaLinter
+let g:go_list_height = 5
 
 augroup golang
   autocmd!
