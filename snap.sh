@@ -11,7 +11,7 @@ sudo snap install kubectl --classic
 sudo snap install sublime-text --classic
 sudo snap install heroku --classic
 sudo snap install http jq robomongo gimp inkscape libreoffice \
-  vlc postgresql10 obs-studio simplescreenrecorder ngrok
+  vlc postgresql10 obs-studio simplescreenrecorder ngrok chromium
 
 # refresh already installed snaps
 sudo snap refresh
