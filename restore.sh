@@ -17,6 +17,7 @@ set -e # exit if any command fails
 ./apps/expressvpn.sh
 ./apps/minikube.sh
 ./apps/synergy.sh
+./apps/swagger.sh
 ./apps/sp.sh
 ./python.sh
 ./encrypted.sh restore
