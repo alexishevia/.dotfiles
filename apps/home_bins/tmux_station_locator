@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# if 'station-locator' session exists, attach to it.
+# otherwise, create it with the following windows:
+# - editor: vim
+# - make: make run-local
+# - ssh/swagger: ssh to cpe-dev-fwd + swagger-editor
+
+tmux has-session -t station-locator
+
+if [ $? != 0 ]
+then
+    # editor window
+    tmux new -s station-locator -n editor -d
+    tmux send-keys -t station-locator:editor 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-station-locator' C-m
+    tmux send-keys -t station-locator:editor 'git pull' C-m
+    tmux send-keys -t station-locator:editor 'vim .'
+
+    # make window
+    tmux new-window -t station-locator -n make
+    tmux send-keys -t station-locator:make 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-station-locator' C-m
+    tmux send-keys -t station-locator:make 'glide install && make run-local'
+
+    # ssh/swagger
+    tmux new-window -t station-locator -n ssh/swagger
+    tmux send-keys -t station-locator:ssh/swagger 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-station-locator' C-m
+    tmux send-keys -t station-locator:ssh/swagger 'okta-awscli --okta-profile dcg_dev --profile dcg_dev' C-m
+    tmux send-keys -t station-locator:ssh/swagger 'ssh cpe-dev-fwd' C-m
+    tmux split-window -t station-locator:ssh/swagger
+    tmux send-keys -t station-locator:ssh/swagger.1 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-station-locator' C-m
+    tmux send-keys -t station-locator:ssh/swagger.1 'fresh-chrome &' C-m
+    tmux send-keys -t station-locator:ssh/swagger.1 'swagger-editor' C-m
+fi
+
+# select 'ssh/swagger' pane
+tmux select-pane -t station-locator:ssh/swagger.0
+
+# attach to session
+tmux ls | grep attached
+if [ $? == 0 ]; then
+    tmux switch -t station-locator
+else
+    tmux attach -t station-locator
+fi
