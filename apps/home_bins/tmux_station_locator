@@ -24,8 +24,7 @@ then
     # ssh/swagger
     tmux new-window -t station-locator -n ssh/swagger
     tmux send-keys -t station-locator:ssh/swagger 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-station-locator' C-m
-    tmux send-keys -t station-locator:ssh/swagger 'okta-awscli --okta-profile dcg_dev --profile dcg_dev' C-m
-    tmux send-keys -t station-locator:ssh/swagger 'ssh cpe-dev-fwd' C-m
+    tmux send-keys -t station-locator:ssh/swagger 'okta-awscli --okta-profile dcg_dev --profile dcg_dev && ssh cpe-dev-fwd' C-m
     tmux split-window -t station-locator:ssh/swagger
     tmux send-keys -t station-locator:ssh/swagger.1 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-station-locator' C-m
     tmux send-keys -t station-locator:ssh/swagger.1 'fresh-chrome &' C-m
