@@ -21,7 +21,7 @@ for version in $versions; do
     eslint eslint-config-prettier eslint-plugin-require-path-exists \
     timezones-cli ppp-cli json @mdo-org/mdo-cli @mdo-org/mdo-flow-live-in-the-moment \
     @foxdcg/reindex-mpx-item @mprokopowicz/sqs-monitor \
-    docsify-cli
+    docsify-cli onchange
 done
 
 nvm alias default 8.14.0

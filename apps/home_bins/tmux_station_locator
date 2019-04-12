@@ -19,7 +19,8 @@ then
     # make window
     tmux new-window -t station-locator -n make
     tmux send-keys -t station-locator:make 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-station-locator' C-m
-    tmux send-keys -t station-locator:make 'glide install && make run-local'
+    tmux send-keys -t station-locator:make 'glide install' C-m
+    tmux send-keys -t station-locator:make 'onchange -i -k "**/*.go" -- make run-local'
 
     # ssh/swagger
     tmux new-window -t station-locator -n ssh/swagger
