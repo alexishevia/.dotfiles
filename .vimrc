@@ -435,6 +435,10 @@ let g:go_metalinter_autosave = 1
 " configure the height of the location list created by :GoMetaLinter
 let g:go_list_height = 5
 
+" required for vim-go to work properly
+" see: https://github.com/fatih/vim-go/blob/master/doc/vim-go.txt
+filetype plugin indent on
+
 augroup golang
   autocmd!
 
