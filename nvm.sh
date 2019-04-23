@@ -19,7 +19,7 @@ for version in $versions; do
   nvm use $version
   npm install -g npm yarn lerna commitizen typescript flow-bin elasticdump \
     eslint eslint-config-prettier eslint-plugin-require-path-exists \
-    timezones-cli ppp-cli json @mdo-org/mdo-cli @mdo-org/mdo-flow-live-in-the-moment \
+    timezones-cli ppp-cli json @mdo-org/mdo-cli \
     @foxdcg/reindex-mpx-item @mprokopowicz/sqs-monitor \
     docsify-cli onchange
 done
