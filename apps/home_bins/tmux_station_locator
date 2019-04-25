@@ -3,7 +3,7 @@
 # if 'station-locator' session exists, attach to it.
 # otherwise, create it with the following windows:
 # - editor: vim
-# - make: make run-local
+# - make/test: make run-local + go test
 # - ssh/swagger: ssh to cpe-dev-fwd + swagger-editor
 
 tmux has-session -t station-locator
@@ -17,10 +17,13 @@ then
     tmux send-keys -t station-locator:editor 'vim .'
 
     # make window
-    tmux new-window -t station-locator -n make
-    tmux send-keys -t station-locator:make 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-station-locator' C-m
-    tmux send-keys -t station-locator:make 'glide install' C-m
-    tmux send-keys -t station-locator:make 'onchange -i -k "**/*.go" -- make run-local'
+    tmux new-window -t station-locator -n make/test
+    tmux send-keys -t station-locator:make/test 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-station-locator' C-m
+    tmux send-keys -t station-locator:make/test 'glide install' C-m
+    tmux send-keys -t station-locator:make/test 'onchange -i -k "**/*.go" -- make run-local'
+    tmux split-window -t station-locator:make/test
+    tmux send-keys -t station-locator:make/test.1 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-station-locator' C-m
+    tmux send-keys -t station-locator:make/test.1 'go test ./...'
 
     # ssh/swagger
     tmux new-window -t station-locator -n ssh/swagger
