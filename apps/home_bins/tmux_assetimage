@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# if 'assetimage' session exists, attach to it.
+# otherwise, create it with the following windows:
+# - editor: vim
+# - make/test: make run-local + go test
+# - ssh/swagger: ssh to cpe-dev-fwd + swagger-editor
+
+tmux has-session -t assetimage
+
+if [ $? != 0 ]
+then
+    # editor window
+    tmux new -s assetimage -n editor -d
+    tmux send-keys -t assetimage:editor 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
+    tmux send-keys -t assetimage:editor 'git pull' C-m
+    tmux send-keys -t assetimage:editor 'vim .'
+
+    # make window
+    tmux new-window -t assetimage -n make/test
+    tmux send-keys -t assetimage:make/test 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
+    tmux send-keys -t assetimage:make/test 'glide install' C-m
+    tmux send-keys -t assetimage:make/test 'onchange -i -k "**/*.go" -- make run-local'
+    tmux split-window -t assetimage:make/test
+    tmux send-keys -t assetimage:make/test.1 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
+    tmux send-keys -t assetimage:make/test.1 'go test ./...'
+
+    # ssh/swagger
+    tmux new-window -t assetimage -n ssh/swagger
+    tmux send-keys -t assetimage:ssh/swagger 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
+    tmux send-keys -t assetimage:ssh/swagger 'okta-awscli --okta-profile dcg_dev --profile dcg_dev && ssh cpe-dev-fwd -N' C-m
+    tmux split-window -t assetimage:ssh/swagger
+    tmux send-keys -t assetimage:ssh/swagger.1 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
+    tmux send-keys -t assetimage:ssh/swagger.1 'fresh-chrome &' C-m
+    tmux send-keys -t assetimage:ssh/swagger.1 'swagger-editor' C-m
+fi
+
+# select 'ssh/swagger' pane
+tmux select-pane -t assetimage:ssh/swagger.0
+
+# attach to session
+tmux ls | grep attached
+if [ $? == 0 ]; then
+    tmux switch -t assetimage
+else
+    tmux attach -t assetimage
+fi
