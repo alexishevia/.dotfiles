@@ -16,23 +16,26 @@ then
     tmux send-keys -t assetimage:editor 'git pull' C-m
     tmux send-keys -t assetimage:editor 'vim .'
 
-    # make window
-    tmux new-window -t assetimage -n make/test
-    tmux send-keys -t assetimage:make/test 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
-    tmux send-keys -t assetimage:make/test 'glide install' C-m
-    tmux send-keys -t assetimage:make/test 'onchange -i -k "**/*.go" -- make run-local'
-    tmux split-window -t assetimage:make/test
-    tmux send-keys -t assetimage:make/test.1 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
-    tmux send-keys -t assetimage:make/test.1 'go test ./...'
+    # make/test window
+    top=$(tmux new-window -t assetimage -n make/test -P -F "#{pane_id}")
+    bottom=$(tmux split-window -t assetimage:make/test -P -F "#{pane_id}")
+    tmux send-keys -t assetimage:make/test.$top 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
+    tmux send-keys -t assetimage:make/test.$top 'glide install' C-m
+    tmux send-keys -t assetimage:make/test.$top 'onchange -i -k "**/*.go" -- make run-local'
+    tmux send-keys -t assetimage:make/test.$bottom 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
+    tmux send-keys -t assetimage:make/test.$bottom 'go test ./...'
 
-    # ssh/swagger
-    tmux new-window -t assetimage -n ssh/swagger
-    tmux send-keys -t assetimage:ssh/swagger 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
-    tmux send-keys -t assetimage:ssh/swagger 'okta-awscli --okta-profile dcg_dev --profile dcg_dev && ssh cpe-dev-fwd -N' C-m
-    tmux split-window -t assetimage:ssh/swagger
-    tmux send-keys -t assetimage:ssh/swagger.1 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
-    tmux send-keys -t assetimage:ssh/swagger.1 'fresh-chrome &' C-m
-    tmux send-keys -t assetimage:ssh/swagger.1 'swagger-editor' C-m
+    # ssh/swagger window
+    top_left=$(tmux new-window -t assetimage -n ssh/swagger -P -F "#{pane_id}")
+    bottom=$(tmux split-window -t assetimage:ssh/swagger.$top_left -P -F "#{pane_id}")
+    top_right=$(tmux split-window -h -t assetimage:ssh/swagger.$top_left -P -F "#{pane_id}")
+    tmux send-keys -t assetimage:ssh/swagger.$top_left 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
+    tmux send-keys -t assetimage:ssh/swagger.$top_left 'okta-awscli --okta-profile dcg_dev --profile dcg_dev && ssh cpe-dev-fwd -N' C-m
+    tmux send-keys -t assetimage:ssh/swagger.$top_right 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
+    tmux send-keys -t assetimage:ssh/swagger.$top_right 'foxvpn' C-m
+    tmux send-keys -t assetimage:ssh/swagger.$bottom 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
+    tmux send-keys -t assetimage:ssh/swagger.$bottom 'fresh-chrome &' # C-m
+    tmux send-keys -t assetimage:ssh/swagger.$bottom 'swagger-editor' C-m
 fi
 
 # select 'ssh/swagger' pane
