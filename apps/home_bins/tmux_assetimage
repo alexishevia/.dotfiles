@@ -23,7 +23,7 @@ then
     tmux send-keys -t assetimage:make/test.$top 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
     tmux send-keys -t assetimage:make/test.$top 'source $HOME/Dropbox/env_vars.sh' C-m
     tmux send-keys -t assetimage:make/test.$top 'glide install' C-m
-    tmux send-keys -t assetimage:make/test.$top 'onchange -i -k "**/*.go" -- make run-local'
+    tmux send-keys -t assetimage:make/test.$top 'USE_LOCAL_APIKEYS=~/Downloads/apikeys.json onchange -i -k "**/*.go" -- make run-local'
     tmux send-keys -t assetimage:make/test.$bottom 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
     tmux send-keys -t assetimage:make/test.$bottom 'source $HOME/Dropbox/env_vars.sh' C-m
     tmux send-keys -t assetimage:make/test.$bottom 'go test ./...'
