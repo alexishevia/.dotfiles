@@ -143,6 +143,10 @@ if [[ $PWD/ = $HOME/Dropbox/* ]];
     source $HOME/Dropbox/env_vars.sh;
     nvm use;
 fi
+if [[ $PWD/ = $HOME/go/src/github.com/foxbroadcasting/* ]];
+  then
+    source $HOME/Dropbox/env_vars.sh;
+fi
 
 # add alias for fox vpn
 alias foxvpn='sudo openvpn --config ~/.fox.ovpn'
