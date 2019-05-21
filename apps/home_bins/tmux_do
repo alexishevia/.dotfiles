@@ -2,7 +2,8 @@
 
 # if '_todo' session exists, attach to it.
 # otherwise, create it with the following windows:
-#   - editor
+#   - editor: open work.md and home.md
+#   - gofox: connect to foxvpn + ssh to cpe-dev-fwd + open swagger-editor
 
 tmux has-session -t _todo
 
@@ -16,7 +17,25 @@ then
     tmux send-keys -t _todo:editor ':edit ~/Dropbox/todo/work.md' C-m
     tmux send-keys -t _todo:editor ',t' C-m
     tmux send-keys -t _todo:editor ':edit ~/Dropbox/todo/home.md' C-m
+
+    # gofox window
+    top_left=$(tmux new-window -t _todo -n gofox -P -F "#{pane_id}")
+    bottom=$(tmux split-window -t _todo:gofox.$top_left -P -F "#{pane_id}")
+    top_right=$(tmux split-window -h -t _todo:gofox.$top_left -P -F "#{pane_id}")
+
+    tmux send-keys -t _todo:gofox.$top_left 'source $HOME/Dropbox/env_vars.sh' C-m
+    tmux send-keys -t _todo:gofox.$top_left 'okta-awscli --okta-profile dcg_dev --profile dcg_dev && ssh cpe-dev-fwd -N'
+
+    tmux send-keys -t _todo:gofox.$top_right 'source $HOME/Dropbox/env_vars.sh' C-m
+    tmux send-keys -t _todo:gofox.$top_right 'foxvpn'
+
+    tmux send-keys -t _todo:gofox.$bottom 'source $HOME/Dropbox/env_vars.sh' C-m
+    tmux send-keys -t _todo:gofox.$bottom 'fresh-chrome http://localhost:3001 &' C-m
+    tmux send-keys -t _todo:gofox.$bottom 'swagger-editor' C-m
 fi
+
+# select 'editor' pane
+tmux select-pane -t _todo:editor
 
 # attach to session
 tmux ls | grep attached

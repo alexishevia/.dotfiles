@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# if 'dma' session exists, attach to it.
+# otherwise, create it with the following windows:
+# - editor: vim
+# - make/test: make run-local + go test
+
+tmux has-session -t dma
+
+if [ $? != 0 ]
+then
+    # editor window
+    tmux new -s dma -n editor -d
+    tmux send-keys -t dma:editor 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-dma' C-m
+    tmux send-keys -t dma:editor 'git pull' C-m
+    tmux send-keys -t dma:editor 'vim .'
+
+    # make/test window
+    tmux new-window -t dma -n make/test
+    tmux send-keys -t dma:make/test 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-dma' C-m
+    tmux send-keys -t dma:make/test 'glide install' C-m
+    tmux send-keys -t dma:make/test 'onchange -i -k "**/*.go" -- make run-local'
+    tmux split-window -t dma:make/test
+    tmux send-keys -t dma:make/test.1 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-dma' C-m
+    tmux send-keys -t dma:make/test.1 'go test ./...'
+fi
+
+# select 'editor' pane
+tmux select-pane -t dma:editor
+
+# attach to session
+tmux ls | grep attached
+if [ $? == 0 ]; then
+    tmux switch -t dma
+else
+    tmux attach -t dma
+fi

@@ -27,25 +27,10 @@ then
     tmux send-keys -t assetimage:make/test.$bottom 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
     tmux send-keys -t assetimage:make/test.$bottom 'source $HOME/Dropbox/env_vars.sh' C-m
     tmux send-keys -t assetimage:make/test.$bottom 'go test ./...'
-
-    # ssh/swagger window
-    top_left=$(tmux new-window -t assetimage -n ssh/swagger -P -F "#{pane_id}")
-    bottom=$(tmux split-window -t assetimage:ssh/swagger.$top_left -P -F "#{pane_id}")
-    top_right=$(tmux split-window -h -t assetimage:ssh/swagger.$top_left -P -F "#{pane_id}")
-    tmux send-keys -t assetimage:ssh/swagger.$top_left 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
-    tmux send-keys -t assetimage:ssh/swagger.$top_left 'source $HOME/Dropbox/env_vars.sh' C-m
-    tmux send-keys -t assetimage:ssh/swagger.$top_left 'okta-awscli --okta-profile dcg_dev --profile dcg_dev && ssh cpe-dev-fwd -N' C-m
-    tmux send-keys -t assetimage:ssh/swagger.$top_right 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
-    tmux send-keys -t assetimage:ssh/swagger.$top_right 'source $HOME/Dropbox/env_vars.sh' C-m
-    tmux send-keys -t assetimage:ssh/swagger.$top_right 'foxvpn' C-m
-    tmux send-keys -t assetimage:ssh/swagger.$bottom 'cd $GOPATH/src/github.com/foxbroadcasting/cpe-assetimage' C-m
-    tmux send-keys -t assetimage:ssh/swagger.$bottom 'source $HOME/Dropbox/env_vars.sh' C-m
-    tmux send-keys -t assetimage:ssh/swagger.$bottom 'fresh-chrome &' # C-m
-    tmux send-keys -t assetimage:ssh/swagger.$bottom 'swagger-editor' C-m
 fi
 
-# select 'ssh/swagger' pane
-tmux select-pane -t assetimage:ssh/swagger.0
+# select 'editor' pane
+tmux select-pane -t assetimage:editor
 
 # attach to session
 tmux ls | grep attached
