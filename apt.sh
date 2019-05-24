@@ -37,7 +37,7 @@ sudo apt remove --yes avahi-daemon vim vim-gnome terminator gimp inkscape     \
 # install apt packages I use
 sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   ncurses-term xclip dconf-tools unzip libjpeg62 libwebkitgtk-1.0-0 unrar     \
-  android-tools-adb android-tools-fastboot rbenv tidy exuberant-ctags         \
+  rbenv tidy exuberant-ctags                                                  \
   synapse charles-proxy silversearcher-ag sni-qt:i386 veracrypt               \
   gnupg2 libzmq5 libzmq3-dev screenruler apt-transport-https mono-complete    \
   dkms libgconf-2-4 libxcb-xtest0 ttf-ancient-fonts python-pip python3-pip    \
@@ -45,7 +45,9 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   gnome-tweak-tool openvpn network-manager-openvpn-gnome spotify-client       \
   adobe-flashplugin mongodb-clients flameshot google-chrome-stable vim-gtk    \
   redis-tools libavahi-compat-libdnssd1 net-tools openssh-server              \
-  awscli apt-transport-https ocaml golang-1.10 gpick
+  awscli apt-transport-https ocaml golang-1.10 gpick                          \
+  cpu-checker qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils             \
+  virt-viewer virt-manager
 
 # apt cleanup
 sudo apt upgrade --yes
