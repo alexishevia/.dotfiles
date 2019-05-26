@@ -24,5 +24,5 @@ for version in $versions; do
     docsify-cli onchange expo-cli
 done
 
-nvm alias default 8.14.0
-nvm use 8.14.0
+nvm alias default 10.15.0
+nvm use 10.15.0
