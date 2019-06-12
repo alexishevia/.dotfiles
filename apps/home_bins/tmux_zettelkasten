@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# if 'zettelkasten' session exists, attach to it.
+# otherwise, create it
+
+tmux has-session -t zettelkasten
+
+if [ $? != 0 ]
+then
+    tmux new -s zettelkasten -n editor -d
+    tmux send-keys -t zettelkasten:editor 'cd ~/Projects/Personales/zettelkasten' C-m
+    tmux send-keys -t zettelkasten:editor 'vim .' C-m
+fi
+
+# select window 'editor'
+tmux select-window -t zettelkasten:editor
+
+# attach to session
+tmux ls | grep attached
+if [ $? == 0 ]; then
+    tmux switch -t zettelkasten
+else
+    tmux attach -t zettelkasten
+fi
