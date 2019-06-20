@@ -39,6 +39,7 @@ Plug 'junegunn/vim-easy-align'
 
 " a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 " visually display indent levels in code
 Plug 'nathanaelkane/vim-indent-guides'
