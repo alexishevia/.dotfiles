@@ -119,6 +119,12 @@ export GOPATH=/home/alexishevia/go
 PATH=$PATH:/usr/lib/go-1.10/bin:/home/alexishevia/go/bin
 
 #---------------------------------------
+# Android
+#---------------------------------------
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+
+#---------------------------------------
 # PHP
 #---------------------------------------
 # source ~/.phpbrew/bashrc
