@@ -6,7 +6,7 @@ set -e # exit if any command fails
 ./apt.sh
 ./snap.sh
 ./vim.sh
-./apps/bin.sh
+./bins.sh
 ./apps/dropbox.sh
 ./apps/prey.sh
 ./apps/fiddler.sh

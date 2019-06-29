@@ -5,10 +5,7 @@ set -e # exit if any command fails
 if [ -d ~/bin ]; then
   rm -r ~/bin
 fi
-cp -r ./apps/home_bins ~/bin
-
-# add desktop entry for 'hotlist' command
-cat ./apps/hotlist.desktop > ~/.local/share/applications/hotlist.desktop
+cp -r ./home_bins ~/bin
 
 # add desktop entry for 'fresh-chrome' command
 sudo cp ./apps/chromium.png /usr/share/icons/chromium.png
