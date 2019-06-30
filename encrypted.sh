@@ -43,6 +43,7 @@ then
   cp ~/.ppprc.json /tmp/backupmountdir/.ppprc.json
   cp ~/.okta-aws /tmp/backupmountdir/.okta-aws
   cp ~/Projects/FOX/.aws_keys /tmp/backupmountdir/.fox_aws_keys
+  cp ~/Projects/Personales/mdo-native/mdo.jks /tmp/backupmountdir/mdo.jks
 
   # unmount all veracrypt volumes
   veracrypt -t -d
@@ -88,6 +89,7 @@ then
   cp /tmp/backupmountdir/.ppprc.json ~/.ppprc.json
   cp /tmp/backupmountdir/.okta-aws ~/.okta-aws
   cp /tmp/backupmountdir/.fox_aws_keys ~/Projects/FOX/.aws_keys
+  cp /tmp/backupmountdir/mdo.jks ~/Projects/Personales/mdo-native/mdo.jks
 
   # unmount all veracrypt volumes
   veracrypt -t -d
