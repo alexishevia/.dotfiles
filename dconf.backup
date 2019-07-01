@@ -32,7 +32,7 @@ numlock-state='on'
 dock-fixed=true
 
 [gnome/shell]
-favorite-apps=['org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'spotify.desktop', 'postman.desktop', 'charles-proxy.desktop', 'Zoom.desktop']
+favorite-apps=['org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'postman.desktop', 'charles-proxy.desktop', 'Zoom.desktop']
 had-bluetooth-devices-setup=true
 
 [gnome/shell/app-switcher]
@@ -42,7 +42,7 @@ current-workspace-only=true
 show-tabs-mode='auto'
 
 [gnome/gedit/plugins/filebrowser]
-virtual-root='file:///home/alexishevia/Desktop'
+virtual-root='file:///home/alexishevia/Dropbox/todo'
 tree-view=true
 root='file:///'
 
@@ -50,7 +50,7 @@ root='file:///'
 active-plugins=['docinfo', 'spell', 'modelines', 'filebrowser', 'time']
 
 [gnome/gedit/state/window]
-size=(1562, 895)
+size=(1169, 627)
 state=87168
 bottom-panel-size=140
 side-panel-size=200
@@ -71,7 +71,7 @@ search-filter-time-type='last_modified'
 [gnome/nautilus/window-state]
 sidebar-width=211
 start-with-sidebar=true
-geometry='1231x646+209+118'
+geometry='1185x616+89+151'
 maximized=false
 
 [gnome/nautilus/compression]
@@ -99,7 +99,7 @@ window-height=699
 window-width=1301
 
 [gnome/evince/default]
-window-ratio=(2.7892156862745097, 1.226010101010101)
+window-ratio=(1.4997312911460434, 1.0300826917593384)
 
 [gnome/evolution-data-server]
 network-monitor-gio-name=''
@@ -116,7 +116,7 @@ gtk-im-module='ibus'
 toolkit-accessibility=false
 
 [gnome/desktop/notifications]
-application-children=['update-manager', 'org-gnome-nautilus', 'firefox', 'google-chrome', 'spotify-spotify', 'slack-slack', 'org-gnome-software', 'org-gnome-terminal', 'gnome-network-panel', 'apport-gtk', 'obs-studio-obs-studio', 'chromium-chromium', 'gimp-gimp', 'spotify', 'postman', 'skype-skypeforlinux', 'gnome-control-center', 'libreoffice-calc', 'chromium-browser', 'sublime-text-subl', 'synergy', 'org-gnome-tweaks', 'flameshot', 'org-gnome-screenshot', 'eog', 'blueman-manager', 'zoom', 'org-gnome-shell-portalhelper', 'veracrypt', 'inkscape-inkscape', 'libreoffice-writer']
+application-children=['update-manager', 'org-gnome-nautilus', 'firefox', 'google-chrome', 'spotify-spotify', 'slack-slack', 'org-gnome-software', 'org-gnome-terminal', 'gnome-network-panel', 'apport-gtk', 'obs-studio-obs-studio', 'chromium-chromium', 'gimp-gimp', 'spotify', 'postman', 'skype-skypeforlinux', 'gnome-control-center', 'libreoffice-calc', 'chromium-browser', 'sublime-text-subl', 'synergy', 'org-gnome-tweaks', 'flameshot', 'org-gnome-screenshot', 'eog', 'blueman-manager', 'zoom', 'org-gnome-shell-portalhelper', 'veracrypt', 'inkscape-inkscape', 'libreoffice-writer', 'android-studio-android-studio']
 
 [gnome/desktop/notifications/application/firefox]
 application-id='firefox.desktop'
@@ -208,6 +208,9 @@ application-id='google-chrome.desktop'
 [gnome/desktop/notifications/application/org-gnome-software]
 application-id='org.gnome.Software.desktop'
 
+[gnome/desktop/notifications/application/android-studio-android-studio]
+application-id='android-studio_android-studio.desktop'
+
 [gnome/desktop/notifications/application/blueman-manager]
 application-id='blueman-manager.desktop'
 
@@ -294,6 +297,10 @@ use-background-color=true
 [gnome/eog/ui]
 sidebar=false
 
+[gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+default-size-columns=140
+default-size-rows=38
+
 [gnome/terminal/legacy]
 schema-version=uint32 3
 
@@ -330,13 +337,13 @@ col-6-visible=true
 col-6-width=0
 
 [gnome/software]
-check-timestamp=int64 1560424700
+check-timestamp=int64 1561903557
 
 [gtk/settings/file-chooser]
 sort-column='name'
 clock-format='12h'
 sidebar-width=247
-window-position=(489, 171)
+window-position=(189, 106)
 show-size-column=true
 show-hidden=true
 window-size=(1150, 583)

@@ -1,7 +1,7 @@
 # dotfiles
 scripts to configure my dev environment
 
-These scripts should allow me to reconstruct my entire development environment on a blank Ubuntu 18.04 (Bionic Beaver) machine.
+These scripts should allow me to reconstruct my entire development environment on a blank Ubuntu 19.10 (Disco Dingo) machine.
 
 ## Usage
 ```sh
