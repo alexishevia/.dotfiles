@@ -33,8 +33,8 @@ then
     tmux send-keys -t _todo:gofox.$bottom 'swagger-editor'
 fi
 
-# select 'editor' pane
-tmux select-pane -t _todo:editor
+# select 'editor' window
+tmux select-window -t _todo:editor
 
 # attach to session
 tmux ls | grep attached
