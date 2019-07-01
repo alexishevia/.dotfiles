@@ -37,7 +37,7 @@ sudo apt remove --yes avahi-daemon vim vim-gnome terminator gimp inkscape     \
 # install apt packages I use
 sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   ncurses-term xclip unzip libjpeg62 libwebkitgtk-1.0-0 unrar                 \
-  rbenv tidy exuberant-ctags tmux                                             \
+  rbenv tidy exuberant-ctags tmux easytag                                     \
   synapse charles-proxy silversearcher-ag sni-qt:i386 veracrypt               \
   gnupg2 libzmq5 libzmq3-dev screenruler apt-transport-https mono-complete    \
   dkms libgconf-2-4 libxcb-xtest0 ttf-ancient-fonts python-pip python3-pip    \
