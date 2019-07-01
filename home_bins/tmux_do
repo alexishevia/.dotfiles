@@ -30,8 +30,7 @@ then
     tmux send-keys -t _todo:gofox.$top_right 'foxvpn'
 
     tmux send-keys -t _todo:gofox.$bottom 'source $HOME/Dropbox/env_vars.sh' C-m
-    tmux send-keys -t _todo:gofox.$bottom 'fresh-chrome http://localhost:3001 &' C-m
-    tmux send-keys -t _todo:gofox.$bottom 'swagger-editor' C-m
+    tmux send-keys -t _todo:gofox.$bottom 'swagger-editor'
 fi
 
 # select 'editor' pane
