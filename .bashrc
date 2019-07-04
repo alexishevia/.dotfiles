@@ -159,3 +159,6 @@ alias foxvpn='sudo openvpn --config ~/.fox.ovpn'
 
 # add alias to cd into foxbroadcasting golang directory
 alias gofox="cd $GOPATH/src/github.com/foxbroadcasting/"
+
+# add alias for ag (silver searcher) inside fox projects
+alias agf="ag --ignore 'docker/*' --ignore '*spec.js'"
