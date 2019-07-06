@@ -19,6 +19,7 @@ set -e # exit if any command fails
 ./apps/synergy.sh
 ./apps/swagger.sh
 ./apps/sp.sh
+./apps/react-native-debugger.sh
 ./python.sh
 ./encrypted.sh restore
 ./nvm.sh
