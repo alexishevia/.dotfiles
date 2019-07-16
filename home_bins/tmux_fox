@@ -27,8 +27,8 @@ then
     tmux send-keys -t fox:tail 'source ../.aws_keys' C-m
     tmux send-keys -t fox:tail 'source $HOME/Dropbox/env_vars.sh' C-m
     tmux send-keys -t fox:tail 'clear' C-m
-    tmux send-keys -t fox:tail 'ln -sf ./env/d2c/local.env .env' C-m
-    tmux send-keys -t fox:tail 'bin/setup && bin/build && docker-compose up -d && docker-compose logs -f | grep -v health'
+    tmux send-keys -t fox:tail 'ln -sf ./env/d2c/vpn.env .env' C-m
+    tmux send-keys -t fox:tail 'bin/setup && bin/build && docker-compose up -d && docker-compose logs -f | grep -v health | grep -v nsolid'
 
     # vpn/test window
     tmux new-window -t fox -n vpn/test
