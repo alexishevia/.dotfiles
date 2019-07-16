@@ -1,0 +1,6 @@
+[
+  {
+    "key": "ctrl+m ctrl+d",
+    "command": "extension.runMDo"
+  }
+]

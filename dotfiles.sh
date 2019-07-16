@@ -11,3 +11,6 @@ for df in $dotfiles; do
   fi
   cp $df ~/$df
 done
+
+
+./apps/vscode/vscode.sh
