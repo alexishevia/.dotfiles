@@ -10,4 +10,4 @@ pip3 install neovim
 pip2 install pipenv
 
 # install okta-awscli
-pip2 install --user git+https://github.com/foxbroadcasting/okta-awscli.git
+pip3 install --user okta-awscli
