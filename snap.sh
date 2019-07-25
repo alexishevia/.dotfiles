@@ -9,7 +9,6 @@ sudo snap install asciinema --classic
 sudo snap install kubectl --classic
 sudo snap install sublime-text --classic
 sudo snap install heroku --classic
-sudo snap install code --classic # VS Code
 sudo snap install android-studio --classic
 
 PACKAGES="http jq robomongo gimp inkscape libreoffice vlc obs-studio simplescreenrecorder ngrok chromium"
