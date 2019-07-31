@@ -41,7 +41,7 @@ then
     tmux send-keys -t fox:vpn/test.1 'source $HOME/Dropbox/env_vars.sh' C-m
     tmux send-keys -t fox:vpn/test.1 'ctags -R .' C-m
     tmux send-keys -t fox:vpn/test.1 'clear' C-m
-    tmux send-keys -t fox:vpn/test.1 'bin/unit-test -p service-video -P'
+    tmux send-keys -t fox:vpn/test.1 'bin/unit-test -p service-video-d2c -P'
 fi
 
 # select 'vpn' pane
