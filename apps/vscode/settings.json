@@ -1,6 +1,24 @@
 {
   "editor.rulers": [80,120],
   "editor.minimap.enabled": false,
+  "workbench.editor.enablePreview": false,
+
+  // default launch.json settings
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Launch FOX Golang Package",
+        "type": "go",
+        "request": "launch",
+        "mode": "auto",
+        "program": "${fileDirname}/main.go",
+        "env": {
+          "AWS_PROFILE": "dcg_dev"
+        }
+      }
+    ]
+  }
 
   // vim
   "vim.leader": ",",
@@ -53,6 +71,6 @@
   ],
   "vim.useCtrlKeys": false,
   "vim.foldfix": true,
-  "vim.hlsearch": true,
-  "workbench.editor.enablePreview": false
+  "vim.hlsearch": true
 }
+

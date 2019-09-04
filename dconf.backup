@@ -4,7 +4,7 @@ show-size-column=true
 show-hidden=false
 sidebar-width=247
 clock-format='12h'
-window-position=(637, 143)
+window-position=(575, 154)
 sort-column='name'
 location-mode='path-bar'
 sort-directories-first=true
@@ -64,7 +64,7 @@ migrated=true
 network-monitor-gio-name=''
 
 [gnome/evince/default]
-window-ratio=(2.238562091503268, 0.91035353535353536)
+window-ratio=(2.2386806395270726, 0.91127269270981837)
 
 [gnome/shell/extensions/dash-to-dock]
 dock-fixed=true
@@ -363,7 +363,7 @@ last-save-directory='file:///home/alexishevia/Desktop'
 border-effect='none'
 
 [gnome/software]
-check-timestamp=int64 1566393386
+check-timestamp=int64 1566916586
 
 [gnome/terminal/legacy]
 schema-version=uint32 3
