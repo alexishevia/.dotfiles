@@ -18,7 +18,7 @@
         }
       }
     ]
-  }
+  },
 
   // vim
   "vim.leader": ",",
@@ -38,6 +38,20 @@
       "before": [ "K" ],
       "after": [ "5", "k" ]
     },
+    // remap semicolon to colon (no need to use Shift + ;)
+    {
+      "before": [ ";" ],
+      "after": [ ":" ]
+    },
+    // use gr and gt to cycle between tabs
+    {
+      "before": ["g", "t"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["workbench.action.previousEditor"]
+    },
     // map u and U to VS code's undo and redo
     {
       "before": ["u"],
@@ -53,17 +67,22 @@
       "before": ["\\"],
       "commands": [":nohlsearch"]
     },
+    // use ,p to look for a file
+    {
+      "before": [",", "p"],
+      "commands": ["workbench.action.quickOpen"],
+    },
     // use ,r to open current file on NERDTree
     {
       "before": ["leader", "r"],
       "commands": ["workbench.files.action.showActiveFileInExplorer"]
     },
-    // use -f to follow a definition
+    // use ,f to follow a definition
     {
       "before": ["leader", "f"],
       "commands": ["editor.action.revealDefinition"]
     },
-    // use -F to go back after following a definition
+    // use ,F to go back after following a definition
     {
       "before": ["leader", "F"],
       "commands": ["workbench.action.navigateBack"]
@@ -73,4 +92,3 @@
   "vim.foldfix": true,
   "vim.hlsearch": true
 }
-
