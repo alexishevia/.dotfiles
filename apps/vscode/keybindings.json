@@ -1,4 +1,15 @@
 [
+  // use f8/f9 to move tab left/right
+  {
+    "key": "f8",
+    "command": "workbench.action.moveEditorLeftInGroup"
+  },
+  {
+    "key": "f9",
+    "command": "workbench.action.moveEditorRightInGroup"
+  },
+
+  // use ctrl+hjkl  to move between workbenches
   {
     "key": "ctrl+h",
     "command": "workbench.action.navigateLeft",
@@ -15,6 +26,11 @@
     "key": "ctrl+l",
     "command": "workbench.action.navigateRight",
   },
+  {
+    "key": "ctrl+o",
+    "commands": ["workbench.action.toggleMaximizedPanel"]
+  },
+  // use ctrml+m ctrl+d to run MDo
   {
     "key": "ctrl+m ctrl+d",
     "command": "extension.runMDo"
