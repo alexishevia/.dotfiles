@@ -1,6 +1,7 @@
 {
   "editor.rulers": [80,120],
   "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
   "workbench.editor.enablePreview": false,
 
   // default launch.json settings
@@ -80,7 +81,7 @@
     // use ,f to follow a definition
     {
       "before": ["leader", "f"],
-      "commands": ["editor.action.revealDefinition"]
+      "commands": ["editor.action.revealDefinitionAside"]
     },
     // use ,F to go back after following a definition
     {
@@ -90,5 +91,6 @@
   ],
   "vim.useCtrlKeys": false,
   "vim.foldfix": true,
-  "vim.hlsearch": true
+  "vim.hlsearch": true,
+  "window.zoomLevel": 0
 }

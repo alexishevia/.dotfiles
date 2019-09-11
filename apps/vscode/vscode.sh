@@ -10,5 +10,5 @@ for file in $files; do
   then
     rm $path/$file
   fi
-  cp ./apps/vscode/$file $path/$file
+  ln -s "$PWD/apps/vscode/$file" $path/$file
 done
