@@ -81,6 +81,9 @@ export LC_ALL=en_US.UTF-8
 # add alias for open
 alias open=xdg-open
 
+# add alias to find out who is using a given port
+alias whoisusing='netstat -tulpn | grep'
+
 #---------------------------------------
 # JAVA
 #---------------------------------------
