@@ -32,12 +32,6 @@ if ! [ -x "$(command -v spotify)" ]; then
   echo 'deb http://repository.spotify.com stable non-free' | sudo tee /etc/apt/sources.list.d/spotify.list
 fi
 
-# google chrome
-if ! [ -x "$(command -v google-chrome)" ]; then
-  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-  echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-fi
-
 # vs code
 if ! [ -x "$(command -v code)" ]; then
   curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /tmp/microsoft.gpg
@@ -62,7 +56,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   dkms libgconf-2-4 libxcb-xtest0 ttf-ancient-fonts python-pip python3-pip    \
   docker.io docker-compose gnome-screensaver virtualbox-6.0                   \
   gnome-tweak-tool openvpn network-manager-openvpn-gnome spotify-client       \
-  adobe-flashplugin mongodb-clients flameshot google-chrome-stable vim-gtk    \
+  adobe-flashplugin mongodb-clients flameshot vim-gtk                         \
   redis-tools libavahi-compat-libdnssd1 net-tools openssh-server              \
   awscli apt-transport-https ocaml golang-1.10 gpick                          \
   cpu-checker qemu-kvm bridge-utils                                           \
