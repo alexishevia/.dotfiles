@@ -17,6 +17,8 @@ then
     tmux send-keys -t _todo:editor ':edit ~/Dropbox/todo/work.md' C-m
     tmux send-keys -t _todo:editor ',t' C-m
     tmux send-keys -t _todo:editor ':edit ~/Dropbox/todo/home.md' C-m
+    tmux send-keys -t _todo:editor ',t' C-m
+    tmux send-keys -t _todo:editor ':edit ~/Dropbox/todo/bounties.md' C-m
 
     # gofox window
     top_left=$(tmux new-window -t _todo -n gofox -P -F "#{pane_id}")
