@@ -39,6 +39,16 @@ if ! [ -x "$(command -v code)" ]; then
   echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
 fi
 
+# kdenlive
+if ! [ -x "$(command -v kdenlive)" ]; then
+  sudo add-apt-repository ppa:kdenlive/kdenlive-stable
+fi
+
+# java
+if ! [ -x "$(command -v java)" ]; then
+  sudo add-apt-repository ppa:linuxuprising/java
+fi
+
 # apt update
 sudo apt update
 
@@ -49,7 +59,7 @@ sudo apt remove --yes avahi-daemon vim vim-gnome terminator gimp inkscape     \
 
 # install apt packages I use
 sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
-  ncurses-term xclip unzip libjpeg62 libwebkitgtk-1.0-0 unrar                 \
+  ncurses-term xclip unzip libjpeg62 unrar kdenlive                           \
   rbenv tidy exuberant-ctags tmux easytag code                                \
   synapse charles-proxy silversearcher-ag sni-qt:i386 veracrypt               \
   gnupg2 libzmq5 libzmq3-dev screenruler apt-transport-https mono-complete    \
@@ -60,7 +70,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   redis-tools libavahi-compat-libdnssd1 net-tools openssh-server              \
   awscli apt-transport-https ocaml golang-1.10 gpick                          \
   cpu-checker qemu-kvm bridge-utils                                           \
-  virt-viewer virt-manager
+  virt-viewer virt-manager oracle-java12-installer
 
 # apt cleanup
 sudo apt upgrade --yes
