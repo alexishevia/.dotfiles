@@ -5,20 +5,34 @@
 #   - editor: open work.md and home.md
 #   - gofox: connect to foxvpn + ssh to cpe-dev-fwd + open swagger-editor
 
+set -- $(stty size) # $1 = rows $2 = columns
+
 tmux has-session -t _todo
 
 if [ $? != 0 ]
 then
     # editor window
-    tmux new -s _todo -n editor -d
+    tmux new -s _todo -n editor -d -x "$2" -y "$(($1 - 1))" # https://superuser.com/questions/354844/cannot-resize-tmux-pane-from-bash-script
     tmux send-keys -t _todo:editor 'cd ~/Dropbox' C-m
-    tmux send-keys -t _todo:editor 'vim .' C-m
-    tmux send-keys -t _todo:editor ',t' C-m
-    tmux send-keys -t _todo:editor ':edit ~/Dropbox/todo/work.md' C-m
-    tmux send-keys -t _todo:editor ',t' C-m
-    tmux send-keys -t _todo:editor ':edit ~/Dropbox/todo/home.md' C-m
-    tmux send-keys -t _todo:editor ',t' C-m
-    tmux send-keys -t _todo:editor ':edit ~/Dropbox/todo/bounties.md' C-m
+    tmux send-keys -t _todo:editor 'vim ~/Dropbox/working-on.md' C-m
+
+    tmux split-window -t _todo:editor -p 88
+
+    tmux send-keys -t _todo:editor.0 ':AirlineToggle' C-m
+    tmux send-keys -t _todo:editor.0 ':set noshowmode' C-m
+    tmux send-keys -t _todo:editor.0 ':set noruler' C-m
+    tmux send-keys -t _todo:editor.0 ':set laststatus=0' C-m
+    tmux send-keys -t _todo:editor.0 ':set noshowcmd' C-m
+    tmux send-keys -t _todo:editor.0 ':set shortmess=F' C-m
+
+    tmux send-keys -t _todo:editor.1 'cd ~/Dropbox' C-m
+    tmux send-keys -t _todo:editor.1 'vim .' C-m
+    tmux send-keys -t _todo:editor.1 ',t' C-m
+    tmux send-keys -t _todo:editor.1 ':edit ~/Dropbox/todo/work.md' C-m
+    tmux send-keys -t _todo:editor.1 ',t' C-m
+    tmux send-keys -t _todo:editor.1 ':edit ~/Dropbox/todo/home.md' C-m
+    tmux send-keys -t _todo:editor.1 ',t' C-m
+    tmux send-keys -t _todo:editor.1 ':edit ~/Dropbox/todo/bounties.md' C-m
 
     # gofox window
     top_left=$(tmux new-window -t _todo -n gofox -P -F "#{pane_id}")
@@ -37,6 +51,7 @@ fi
 
 # select 'editor' window
 tmux select-window -t _todo:editor
+tmux select-pane -t _todo:editor.0
 
 # attach to session
 tmux ls | grep attached
