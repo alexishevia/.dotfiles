@@ -216,6 +216,18 @@ nnoremap <leader>t :tabnew<Enter>
 " use gr to go to previous tab
 nnoremap gr :tabp<Enter>
 
+" use ,- to split horizontally
+nnoremap <leader>- :split<Enter>
+
+" use ,| to split vertically
+nnoremap <leader>\| :vsplit<Enter>
+
+" resize split with ,HJKL
+nnoremap <leader>J :res +5<Enter>
+nnoremap <leader>K :res -5<Enter>
+nnoremap <leader>L :vertical resize +5<Enter>
+nnoremap <leader>H :vertical resize -5<Enter>
+
 " yank and paste with the system clipboard
 
     " linux
