@@ -9,7 +9,11 @@ for df in $dotfiles; do
   then
     rm ~/$df
   fi
-  cp $df ~/$df
+  if [ -L ~/$df ]
+  then
+    rm ~/$df
+  fi
+  ln -s "$PWD/$df" ~/$df
 done
 
 
