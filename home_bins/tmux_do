@@ -42,7 +42,7 @@ then
     tmux send-keys -t _todo:gofox.$top 'foxvpn'
 
     tmux send-keys -t _todo:gofox.$bottom 'source $HOME/Dropbox/env_vars.sh' C-m
-    tmux send-keys -t _todo:gofox.$bottom 'okta-awscli --okta-profile dcg_dev --profile dcg_dev && ssh cpe-dev-fwd -N'
+    tmux send-keys -t _todo:gofox.$bottom 'okta-awscli --okta-profile cpe-dev1 --profile cpe-dev1 && ssh cpe-dev-fwd -N'
 fi
 
 # select 'editor' window

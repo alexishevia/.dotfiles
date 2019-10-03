@@ -3,19 +3,34 @@
   "editor.minimap.enabled": false,
   "editor.lineNumbers": "relative",
   "workbench.editor.enablePreview": false,
+  "window.zoomLevel": 0,
+  "workbench.startupEditor": "newUntitledFile",
+  "terminal.integrated.fontSize": 13,
 
   // default launch.json settings
   "launch": {
     "version": "0.2.0",
     "configurations": [
       {
-        "name": "Launch FOX Golang Package",
+        "name": "Launch FOX Golang Package from workspace",
+        "type": "go",
+        "request": "launch",
+        "mode": "auto",
+        "program": "${workspaceFolder}/main.go",
+        "env": {
+          "AWS_PROFILE": "cpe-dev1",
+          "ENVIRONMENT": "dev1"
+        }
+      },
+      {
+        "name": "Launch FOX Golang Package from directory",
         "type": "go",
         "request": "launch",
         "mode": "auto",
         "program": "${fileDirname}/main.go",
         "env": {
-          "AWS_PROFILE": "dcg_dev"
+          "AWS_PROFILE": "cpe-dev1",
+          "ENVIRONMENT": "dev1"
         }
       }
     ]
@@ -91,7 +106,5 @@
   ],
   "vim.useCtrlKeys": false,
   "vim.foldfix": true,
-  "vim.hlsearch": true,
-  "window.zoomLevel": 0,
-  "workbench.startupEditor": "newUntitledFile"
+  "vim.hlsearch": true
 }
