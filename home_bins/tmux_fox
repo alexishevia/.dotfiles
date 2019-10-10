@@ -4,7 +4,7 @@
 # otherwise, create it with the following windows:
 # - editor: vim
 # - tail: docker-compose up
-# - vpn/test: foxvpn and bin/unit-test
+# - test: bin/unit-test
 
 tmux has-session -t fox
 
@@ -30,22 +30,19 @@ then
     tmux send-keys -t fox:tail 'ln -sf ./env/d2c/vpn.env .env' C-m
     tmux send-keys -t fox:tail 'bin/setup && bin/build && docker-compose up -d video liveplayer vodplayer && docker-compose logs -f | grep -v health | grep -v nsolid'
 
-    # vpn/test window
-    tmux new-window -t fox -n vpn/test
-    tmux send-keys -t fox:vpn/test 'cd $HOME/Projects/FOX/cpe-node-services' C-m
-    tmux send-keys -t fox:vpn/test 'foxvpn' C-m
-    tmux split-window -t fox:vpn/test
-    tmux send-keys -t fox:vpn/test.1 'cd $HOME/Projects/FOX/cpe-node-services' C-m
-    tmux send-keys -t fox:vpn/test.1 'nvm use' C-m
-    tmux send-keys -t fox:vpn/test.1 'source ../.aws_keys' C-m
-    tmux send-keys -t fox:vpn/test.1 'source $HOME/Dropbox/env_vars.sh' C-m
-    tmux send-keys -t fox:vpn/test.1 'ctags -R .' C-m
-    tmux send-keys -t fox:vpn/test.1 'clear' C-m
-    tmux send-keys -t fox:vpn/test.1 'bin/unit-test -p service-video-d2c -P'
+    # test window
+    tmux new-window -t fox -n test
+    tmux send-keys -t fox:test 'cd $HOME/Projects/FOX/cpe-node-services' C-m
+    tmux send-keys -t fox:test 'nvm use' C-m
+    tmux send-keys -t fox:test 'source ../.aws_keys' C-m
+    tmux send-keys -t fox:test 'source $HOME/Dropbox/env_vars.sh' C-m
+    tmux send-keys -t fox:test 'ctags -R .' C-m
+    tmux send-keys -t fox:test 'clear' C-m
+    tmux send-keys -t fox:test 'bin/unit-test -p service-video-d2c -P'
 fi
 
-# select 'vpn' pane
-tmux select-pane -t fox:vpn/test.0
+# select 'tail' window
+tmux select-window -t fox:tail
 
 # attach to session
 tmux ls | grep attached
