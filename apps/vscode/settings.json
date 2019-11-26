@@ -18,7 +18,7 @@
         "mode": "auto",
         "program": "${workspaceFolder}/main.go",
         "env": {
-          "AWS_PROFILE": "cpe-dev1",
+          "AWS_PROFILE": "dcg_dev",
           "ENVIRONMENT": "dev1"
         }
       },
@@ -29,9 +29,21 @@
         "mode": "auto",
         "program": "${fileDirname}/main.go",
         "env": {
-          "AWS_PROFILE": "cpe-dev1",
+          "AWS_PROFILE": "dcg_dev",
           "ENVIRONMENT": "dev1"
         }
+      },
+      {
+        "name": "Launch via npm",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "runtimeExecutable": "npm",
+        "runtimeArgs": [
+          "run-script",
+          "debug"
+        ],
+        "port": 9229
       }
     ]
   },
@@ -106,5 +118,9 @@
   ],
   "vim.useCtrlKeys": false,
   "vim.foldfix": true,
-  "vim.hlsearch": true
+  "vim.hlsearch": true,
+  "git.autofetch": true,
+  "go.useLanguageServer": true,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false
 }
