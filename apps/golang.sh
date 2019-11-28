@@ -7,3 +7,7 @@ if ! [ -x "$(command -v go)" ]; then
   sudo tar -xzf /tmp/golang.tar.gz -C /usr/local
   mkdir -p $HOME/go/bin
 fi
+
+if ! [ -x "$(command -v glide)" ]; then
+  curl https://glide.sh/get | sh
+fi
