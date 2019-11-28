@@ -12,13 +12,14 @@ then
     tmux send-keys -t finance:editor 'vim .'
 fi
 
+# attach to session
+# The TMUX environment variable will tell you if the current process is running
+# under tmux or not (and whether to attach to tmux or just switch session)
+if [ -z "$TMUX" ]; then
+    tmux attach -t finance
+else
+    tmux switch -t finance
+fi
+
 # select window 'editor'
 tmux select-window -t finance:editor
-
-# attach to session
-tmux ls | grep attached
-if [ $? == 0 ]; then
-    tmux switch -t finance
-else
-    tmux attach -t finance
-fi

@@ -20,13 +20,14 @@ then
     tmux send-keys -t knowledge:docsify 'docsify serve .' C-m
 fi
 
+# attach to session
+# The TMUX environment variable will tell you if the current process is running
+# under tmux or not (and whether to attach to tmux or just switch session)
+if [ -z "$TMUX" ]; then
+    tmux attach -t knowledge
+else
+    tmux switch -t knowledge
+fi
+
 # select window 'editor'
 tmux select-window -t knowledge:editor
-
-# attach to session
-tmux ls | grep attached
-if [ $? == 0 ]; then
-    tmux switch -t knowledge
-else
-    tmux attach -t knowledge
-fi

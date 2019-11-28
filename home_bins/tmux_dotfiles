@@ -9,16 +9,17 @@ if [ $? != 0 ]
 then
     tmux new -s dotfiles -n editor -d
     tmux send-keys -t dotfiles:editor 'cd ~/.dotfiles' C-m
-    tmux send-keys -t dotfiles:editor 'vim .'
+    tmux send-keys -t dotfiles:editor 'vim .' C-m
+fi
+
+# attach to session
+# The TMUX environment variable will tell you if the current process is running
+# under tmux or not (and whether to attach to tmux or just switch session)
+if [ -z "$TMUX" ]; then
+    tmux attach -t dotfiles
+else
+    tmux switch -t dotfiles
 fi
 
 # select window 'editor'
 tmux select-window -t dotfiles:editor
-
-# attach to session
-tmux ls | grep attached
-if [ $? == 0 ]; then
-    tmux switch -t dotfiles
-else
-    tmux attach -t dotfiles
-fi

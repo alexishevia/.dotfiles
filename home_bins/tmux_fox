@@ -41,13 +41,14 @@ then
     tmux send-keys -t fox:test 'bin/unit-test -p service-video-d2c -P'
 fi
 
+# attach to session
+# The TMUX environment variable will tell you if the current process is running
+# under tmux or not (and whether to attach to tmux or just switch session)
+if [ -z "$TMUX" ]; then
+    tmux attach -t fox
+else
+    tmux switch -t fox
+fi
+
 # select 'tail' window
 tmux select-window -t fox:tail
-
-# attach to session
-tmux ls | grep attached
-if [ $? == 0 ]; then
-    tmux switch -t fox
-else
-    tmux attach -t fox
-fi

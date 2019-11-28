@@ -34,14 +34,15 @@ then
     tmux send-keys -t _todo:editor.1 ':edit ~/Dropbox/todo/bounties.md' C-m
 fi
 
+# attach to session
+# The TMUX environment variable will tell you if the current process is running
+# under tmux or not (and whether to attach to tmux or just switch session)
+if [ -z "$TMUX" ]; then
+    tmux attach -t _todo
+else
+    tmux switch -t _todo
+fi
+
 # select 'editor' window
 tmux select-window -t _todo:editor
 tmux select-pane -t _todo:editor.0
-
-# attach to session
-tmux ls | grep attached
-if [ $? == 0 ]; then
-    tmux switch -t _todo
-else
-    tmux attach -t _todo
-fi
