@@ -1,108 +1,83 @@
-[gtk/settings/file-chooser]
-date-format='regular'
-show-size-column=true
-show-hidden=false
-sidebar-width=247
-clock-format='12h'
-window-position=(575, 154)
-sort-column='name'
-location-mode='path-bar'
-sort-directories-first=true
-sort-order='descending'
-window-size=(1150, 590)
+[blueman/general]
+window-properties=[815, 475, 347, 104]
 
-[gnome/yelp]
-show-cursor=false
+[blueman/plugins/recentconns]
+recent-connections='eNprYPJmiC1kaCtk1AMAEQ4Cwg=='
 
-[gnome/gnome-system-monitor]
-show-dependencies=false
-show-whose-processes='user'
-current-tab='resources'
-maximized=false
-window-state=(700, 500, 91, 76)
-
-[gnome/gnome-system-monitor/disktreenew]
-col-6-width=0
-col-6-visible=true
-
-[gnome/nautilus/compression]
-default-compression-format='zip'
-
-[gnome/nautilus/icon-view]
-default-zoom-level='small'
-
-[gnome/nautilus/window-state]
-sidebar-width=189
-start-with-sidebar=true
-initial-size=(1151, 665)
-geometry='1185x616+89+151'
-maximized=false
-
-[gnome/nautilus/preferences]
-search-view='list-view'
-default-folder-viewer='icon-view'
-search-filter-time-type='last_modified'
-
-[gnome/nm-applet/eap/753df619-aa33-4f43-9cc5-0db9598660bc]
-ignore-ca-cert=false
-ignore-phase2-ca-cert=false
-
-[gnome/nm-applet/eap/fd171644-3477-4e7d-9c05-556278df8c94]
-ignore-ca-cert=false
-ignore-phase2-ca-cert=false
-
-[gnome/nm-applet/eap/83953a89-ce8a-4a2f-9b7d-bff6aabcd465]
-ignore-ca-cert=false
-ignore-phase2-ca-cert=false
-
-[gnome/nm-applet/eap/00d98a79-f402-434c-84f7-97737b5f6649]
-ignore-ca-cert=false
-ignore-phase2-ca-cert=false
-
-[gnome/evolution-data-server]
-migrated=true
-network-monitor-gio-name=''
-
-[gnome/evince/default]
-window-ratio=(2.2386806395270726, 0.91127269270981837)
-
-[gnome/shell/extensions/dash-to-dock]
-dock-fixed=true
-
-[gnome/shell]
-favorite-apps=['org.gnome.Terminal.desktop', 'google-chrome.desktop', 'postman.desktop', 'org.gnome.Nautilus.desktop', 'charles-proxy.desktop', 'Zoom.desktop']
-had-bluetooth-devices-setup=true
-
-[gnome/shell/app-switcher]
-current-workspace-only=true
+[blueman/transfer]
+shared-path='/home/alexishevia/Downloads'
 
 [gnome/cheese]
-camera='Integrated_Webcam_FHD: Integrat'
-video-x-resolution=640
-video-y-resolution=480
 burst-delay=1000
+camera='Integrated_Webcam_FHD: Integrat'
 photo-x-resolution=640
 photo-y-resolution=480
+video-x-resolution=640
+video-y-resolution=480
 
-[gnome/power-manager]
-info-page-number=3
-info-stats-type='discharge-accuracy'
-info-history-type='charge'
-info-last-device='wakeups'
+[gnome/control-center]
+last-panel='background'
 
-[gnome/desktop/peripherals/touchscreens/03eb:8453]
-display=['LGD', '0x049f', '0x00000000']
+[gnome/desktop/a11y]
+always-show-universal-access-status=false
 
-[gnome/desktop/peripherals/mouse]
-natural-scroll=false
-speed=0.079136690647481966
-accel-profile='adaptive'
+[gnome/desktop/a11y/applications]
+screen-keyboard-enabled=false
+
+[gnome/desktop/app-folders]
+folder-children=['Utilities', 'Sundry', 'YaST']
+
+[gnome/desktop/app-folders/folders/Sundry]
+apps=['alacarte.desktop', 'authconfig.desktop', 'ca.desrt.dconf-editor.desktop', 'fedora-release-notes.desktop', 'firewall-config.desktop', 'flash-player-properties.desktop', 'gconf-editor.desktop', 'gnome-abrt.desktop', 'gnome-power-statistics.desktop', 'ibus-setup-anthy.desktop', 'ibus-setup.desktop', 'ibus-setup-hangul.desktop', 'ibus-setup-libbopomofo.desktop', 'ibus-setup-libpinyin.desktop', 'ibus-setup-m17n.desktop', 'ibus-setup-typing-booster.desktop', 'im-chooser.desktop', 'itweb-settings.desktop', 'jhbuild.desktop', 'javaws.desktop', 'java-1.7.0-openjdk-jconsole.desktop', 'java-1.7.0-openjdk-policytool.desktop', 'log4j-chainsaw.desktop', 'log4j-logfactor5.desktop', 'nm-connection-editor.desktop', 'orca.desktop', 'setroubleshoot.desktop', 'system-config-date.desktop', 'system-config-firewall.desktop', 'system-config-keyboard.desktop', 'system-config-language.desktop', 'system-config-printer.desktop', 'system-config-users.desktop', 'vino-preferences.desktop']
+categories=['X-GNOME-Sundry']
+name='X-GNOME-Sundry.directory'
+translate=true
+
+[gnome/desktop/app-folders/folders/Utilities]
+apps=['org.gnome.baobab.desktop', 'deja-dup-preferences.desktop', 'eog.desktop', 'evince.desktop', 'org.gnome.FileRoller.desktop', 'gnome-calculator.desktop', 'gnome-dictionary.desktop', 'org.gnome.Characters.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Screenshot.desktop', 'gnome-system-log.desktop', 'gnome-system-monitor.desktop', 'gnome-tweak-tool.desktop', 'gucharmap.desktop', 'seahorse.desktop', 'vinagre.desktop', 'yelp.desktop']
+categories=['X-GNOME-Utilities']
+name='X-GNOME-Utilities.directory'
+translate=true
+
+[gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[gnome/desktop/background]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/warty-final-ubuntu.png'
+primary-color='#2c001e'
+secondary-color='#2c001e'
+show-desktop-icons=true
+
+[gnome/desktop/datetime]
+automatic-timezone=false
+
+[gnome/desktop/input-sources]
+mru-sources=[('xkb', 'us+intl'), ('xkb', 'latam')]
+sources=[('xkb', 'us+intl'), ('xkb', 'latam')]
+xkb-options=['grp_led:scroll']
+
+[gnome/desktop/interface]
+clock-format='12h'
+clock-show-date=true
+clock-show-seconds=false
+gtk-im-module='gtk-im-context-simple'
+toolkit-accessibility=false
 
 [gnome/desktop/notifications]
 application-children=['update-manager', 'org-gnome-nautilus', 'firefox', 'google-chrome', 'spotify-spotify', 'slack-slack', 'org-gnome-software', 'org-gnome-terminal', 'gnome-network-panel', 'apport-gtk', 'obs-studio-obs-studio', 'chromium-chromium', 'gimp-gimp', 'spotify', 'postman', 'skype-skypeforlinux', 'gnome-control-center', 'libreoffice-calc', 'chromium-browser', 'sublime-text-subl', 'synergy', 'org-gnome-tweaks', 'flameshot', 'org-gnome-screenshot', 'eog', 'blueman-manager', 'zoom', 'org-gnome-shell-portalhelper', 'veracrypt', 'inkscape-inkscape', 'libreoffice-writer', 'android-studio-android-studio', 'gnome-power-panel', 'xdg-desktop-portal-gtk', 'org-gnome-gedit', 'gnome-printers-panel', 'react-native-debugger', 'cncra-cncra']
 
-[gnome/desktop/notifications/application/gnome-network-panel]
-application-id='gnome-network-panel.desktop'
+[gnome/desktop/notifications/application/android-studio-android-studio]
+application-id='android-studio_android-studio.desktop'
+
+[gnome/desktop/notifications/application/apport-gtk]
+application-id='apport-gtk.desktop'
+
+[gnome/desktop/notifications/application/blueman-manager]
+application-id='blueman-manager.desktop'
 
 [gnome/desktop/notifications/application/chromium-browser]
 application-id='chromium-browser.desktop'
@@ -110,285 +85,326 @@ application-id='chromium-browser.desktop'
 [gnome/desktop/notifications/application/chromium-chromium]
 application-id='chromium_chromium.desktop'
 
-[gnome/desktop/notifications/application/flameshot]
-application-id='flameshot.desktop'
-
-[gnome/desktop/notifications/application/google-chrome]
-application-id='google-chrome.desktop'
-
-[gnome/desktop/notifications/application/firefox]
-application-id='firefox.desktop'
-
-[gnome/desktop/notifications/application/org-gnome-software]
-application-id='org.gnome.Software.desktop'
-
-[gnome/desktop/notifications/application/org-gnome-shell-portalhelper]
-application-id='org.gnome.Shell.PortalHelper.desktop'
-
-[gnome/desktop/notifications/application/postman]
-application-id='postman.desktop'
-
-[gnome/desktop/notifications/application/transmission-gtk]
-application-id='transmission-gtk.desktop'
-
-[gnome/desktop/notifications/application/xdg-desktop-portal-gtk]
-application-id='xdg-desktop-portal-gtk.desktop'
-
-[gnome/desktop/notifications/application/spotify-spotify]
-application-id='spotify_spotify.desktop'
-
-[gnome/desktop/notifications/application/org-gnome-screenshot]
-application-id='org.gnome.Screenshot.desktop'
-
-[gnome/desktop/notifications/application/sublime-text-subl]
-application-id='sublime-text_subl.desktop'
-
-[gnome/desktop/notifications/application/org-gnome-tweaks]
-application-id='org.gnome.tweaks.desktop'
-
-[gnome/desktop/notifications/application/update-manager]
-application-id='update-manager.desktop'
-
-[gnome/desktop/notifications/application/android-studio-android-studio]
-application-id='android-studio_android-studio.desktop'
-
-[gnome/desktop/notifications/application/react-native-debugger]
-application-id='react-native-debugger.desktop'
-
-[gnome/desktop/notifications/application/veracrypt]
-application-id='veracrypt.desktop'
-
-[gnome/desktop/notifications/application/libreoffice-calc]
-application-id='libreoffice_calc.desktop'
-
-[gnome/desktop/notifications/application/spotify]
-application-id='spotify.desktop'
-
-[gnome/desktop/notifications/application/org-gnome-nautilus]
-application-id='org.gnome.Nautilus.desktop'
-
-[gnome/desktop/notifications/application/synergy]
-application-id='synergy.desktop'
-
-[gnome/desktop/notifications/application/inkscape-inkscape]
-application-id='inkscape_inkscape.desktop'
-
-[gnome/desktop/notifications/application/gnome-printers-panel]
-application-id='gnome-printers-panel.desktop'
-
-[gnome/desktop/notifications/application/zoom]
-application-id='Zoom.desktop'
-
-[gnome/desktop/notifications/application/org-gnome-gedit]
-application-id='org.gnome.gedit.desktop'
-
 [gnome/desktop/notifications/application/cncra-cncra]
 application-id='cncra_cncra.desktop'
-
-[gnome/desktop/notifications/application/apport-gtk]
-application-id='apport-gtk.desktop'
-
-[gnome/desktop/notifications/application/gimp-gimp]
-application-id='gimp_gimp.desktop'
-
-[gnome/desktop/notifications/application/libreoffice-writer]
-application-id='libreoffice_writer.desktop'
-
-[gnome/desktop/notifications/application/org-gnome-terminal]
-application-id='org.gnome.Terminal.desktop'
-
-[gnome/desktop/notifications/application/blueman-manager]
-application-id='blueman-manager.desktop'
-
-[gnome/desktop/notifications/application/slack-slack]
-application-id='slack_slack.desktop'
-
-[gnome/desktop/notifications/application/gnome-control-center]
-application-id='gnome-control-center.desktop'
 
 [gnome/desktop/notifications/application/eog]
 application-id='eog.desktop'
 
+[gnome/desktop/notifications/application/firefox]
+application-id='firefox.desktop'
+
+[gnome/desktop/notifications/application/flameshot]
+application-id='flameshot.desktop'
+
+[gnome/desktop/notifications/application/gimp-gimp]
+application-id='gimp_gimp.desktop'
+
+[gnome/desktop/notifications/application/gnome-control-center]
+application-id='gnome-control-center.desktop'
+
+[gnome/desktop/notifications/application/gnome-network-panel]
+application-id='gnome-network-panel.desktop'
+
+[gnome/desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
+
+[gnome/desktop/notifications/application/gnome-printers-panel]
+application-id='gnome-printers-panel.desktop'
+
+[gnome/desktop/notifications/application/google-chrome]
+application-id='google-chrome.desktop'
+
+[gnome/desktop/notifications/application/inkscape-inkscape]
+application-id='inkscape_inkscape.desktop'
+
+[gnome/desktop/notifications/application/libreoffice-calc]
+application-id='libreoffice_calc.desktop'
+
+[gnome/desktop/notifications/application/libreoffice-writer]
+application-id='libreoffice_writer.desktop'
+
 [gnome/desktop/notifications/application/obs-studio-obs-studio]
 application-id='obs-studio_obs-studio.desktop'
+
+[gnome/desktop/notifications/application/org-gnome-gedit]
+application-id='org.gnome.gedit.desktop'
+
+[gnome/desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
+[gnome/desktop/notifications/application/org-gnome-screenshot]
+application-id='org.gnome.Screenshot.desktop'
+
+[gnome/desktop/notifications/application/org-gnome-shell-portalhelper]
+application-id='org.gnome.Shell.PortalHelper.desktop'
+
+[gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
+[gnome/desktop/notifications/application/org-gnome-terminal]
+application-id='org.gnome.Terminal.desktop'
+
+[gnome/desktop/notifications/application/org-gnome-tweaks]
+application-id='org.gnome.tweaks.desktop'
+
+[gnome/desktop/notifications/application/postman]
+application-id='postman.desktop'
+
+[gnome/desktop/notifications/application/react-native-debugger]
+application-id='react-native-debugger.desktop'
 
 [gnome/desktop/notifications/application/skype-skypeforlinux]
 application-id='skype_skypeforlinux.desktop'
 
-[gnome/desktop/notifications/application/gnome-power-panel]
-application-id='gnome-power-panel.desktop'
+[gnome/desktop/notifications/application/slack-slack]
+application-id='slack_slack.desktop'
+
+[gnome/desktop/notifications/application/spotify-spotify]
+application-id='spotify_spotify.desktop'
+
+[gnome/desktop/notifications/application/spotify]
+application-id='spotify.desktop'
+
+[gnome/desktop/notifications/application/sublime-text-subl]
+application-id='sublime-text_subl.desktop'
+
+[gnome/desktop/notifications/application/synergy]
+application-id='synergy.desktop'
+
+[gnome/desktop/notifications/application/transmission-gtk]
+application-id='transmission-gtk.desktop'
+
+[gnome/desktop/notifications/application/update-manager]
+application-id='update-manager.desktop'
+
+[gnome/desktop/notifications/application/veracrypt]
+application-id='veracrypt.desktop'
+
+[gnome/desktop/notifications/application/xdg-desktop-portal-gtk]
+application-id='xdg-desktop-portal-gtk.desktop'
+
+[gnome/desktop/notifications/application/zoom]
+application-id='Zoom.desktop'
+
+[gnome/desktop/peripherals/mouse]
+accel-profile='adaptive'
+natural-scroll=false
+speed=0.079136690647481966
+
+[gnome/desktop/peripherals/touchscreens/03eb:8453]
+display=['LGD', '0x049f', '0x00000000']
+
+[gnome/desktop/privacy]
+disable-microphone=false
+report-technical-problems=true
+
+[gnome/desktop/screensaver]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/ubuntu-default-greyscale-wallpaper.png'
+primary-color='#333333'
+secondary-color='#333333'
+
+[gnome/desktop/search-providers]
+sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
+
+[gnome/desktop/session]
+idle-delay=uint32 0
+
+[gnome/desktop/sound]
+allow-volume-above-100-percent=false
 
 [gnome/desktop/wm/keybindings]
 move-to-monitor-left=['<Alt>Left']
 move-to-monitor-right=['<Alt>Right']
 
 [gnome/desktop/wm/preferences]
+auto-raise=true
 focus-mode='click'
 mouse-button-modifier='<Alt>'
-auto-raise=true
 
-[gnome/desktop/sound]
-allow-volume-above-100-percent=false
+[gnome/easytag]
+default-path=b'/home/alexishevia/Music'
+sort-mode='ascending-track-number'
 
-[gnome/desktop/datetime]
-automatic-timezone=false
-
-[gnome/desktop/background]
-picture-options='zoom'
-color-shading-type='solid'
-show-desktop-icons=true
-secondary-color='#000000'
-picture-uri='file:///home/alexishevia/Pictures/Wallpapers/wallpaper_desktop_16x9_killerwhales_2.png'
-primary-color='#000000'
-
-[gnome/desktop/a11y/applications]
-screen-keyboard-enabled=false
-
-[gnome/desktop/a11y]
-always-show-universal-access-status=false
-
-[gnome/desktop/app-folders/folders/YaST]
-translate=true
-categories=['X-SuSE-YaST']
-name='suse-yast.directory'
-
-[gnome/desktop/app-folders/folders/Utilities]
-translate=true
-categories=['X-GNOME-Utilities']
-name='X-GNOME-Utilities.directory'
-apps=['org.gnome.baobab.desktop', 'deja-dup-preferences.desktop', 'eog.desktop', 'evince.desktop', 'org.gnome.FileRoller.desktop', 'gnome-calculator.desktop', 'gnome-dictionary.desktop', 'org.gnome.Characters.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Screenshot.desktop', 'gnome-system-log.desktop', 'gnome-system-monitor.desktop', 'gnome-tweak-tool.desktop', 'gucharmap.desktop', 'seahorse.desktop', 'vinagre.desktop', 'yelp.desktop']
-
-[gnome/desktop/app-folders/folders/Sundry]
-translate=true
-categories=['X-GNOME-Sundry']
-name='X-GNOME-Sundry.directory'
-apps=['alacarte.desktop', 'authconfig.desktop', 'ca.desrt.dconf-editor.desktop', 'fedora-release-notes.desktop', 'firewall-config.desktop', 'flash-player-properties.desktop', 'gconf-editor.desktop', 'gnome-abrt.desktop', 'gnome-power-statistics.desktop', 'ibus-setup-anthy.desktop', 'ibus-setup.desktop', 'ibus-setup-hangul.desktop', 'ibus-setup-libbopomofo.desktop', 'ibus-setup-libpinyin.desktop', 'ibus-setup-m17n.desktop', 'ibus-setup-typing-booster.desktop', 'im-chooser.desktop', 'itweb-settings.desktop', 'jhbuild.desktop', 'javaws.desktop', 'java-1.7.0-openjdk-jconsole.desktop', 'java-1.7.0-openjdk-policytool.desktop', 'log4j-chainsaw.desktop', 'log4j-logfactor5.desktop', 'nm-connection-editor.desktop', 'orca.desktop', 'setroubleshoot.desktop', 'system-config-date.desktop', 'system-config-firewall.desktop', 'system-config-keyboard.desktop', 'system-config-language.desktop', 'system-config-printer.desktop', 'system-config-users.desktop', 'vino-preferences.desktop']
-
-[gnome/desktop/app-folders]
-folder-children=['Utilities', 'Sundry', 'YaST']
-
-[gnome/desktop/search-providers]
-sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
-
-[gnome/desktop/interface]
-gtk-im-module='gtk-im-context-simple'
-clock-format='12h'
-clock-show-date=true
-toolkit-accessibility=false
-clock-show-seconds=false
-
-[gnome/desktop/input-sources]
-mru-sources=[('xkb', 'us+intl'), ('xkb', 'latam')]
-sources=[('xkb', 'us+intl'), ('xkb', 'latam')]
-xkb-options=['grp_led:scroll']
-
-[gnome/desktop/session]
-idle-delay=uint32 0
-
-[gnome/control-center]
-last-panel='display'
+[gnome/eog/ui]
+sidebar=false
 
 [gnome/eog/view]
 background-color='rgb(0,0,0)'
 use-background-color=true
 
-[gnome/eog/ui]
-sidebar=false
+[gnome/evince/default]
+window-ratio=(2.2386806395270726, 0.91127269270981837)
 
-[gnome/settings-daemon/peripherals/keyboard]
-numlock-state='on'
+[gnome/evolution-data-server]
+migrated=true
+network-monitor-gio-name=''
 
-[gnome/settings-daemon/plugins/color]
-night-light-schedule-from=20.0
-night-light-enabled=true
-night-light-schedule-to=6.0
-night-light-schedule-automatic=false
+[gnome/file-roller/listing]
+list-mode='as-folder'
+name-column-width=250
+show-path=false
+sort-method='name'
+sort-type='ascending'
 
-[gnome/settings-daemon/plugins/media-keys]
-volume-down='<Primary>Down'
-volume-up='<Primary>Up'
-
-[gnome/settings-daemon/plugins/xsettings]
-hinting='slight'
-
-[gnome/settings-daemon/plugins/power]
-power-button-action='suspend'
-sleep-inactive-ac-timeout=3600
-sleep-inactive-ac-type='nothing'
-
-[gnome/mutter]
-auto-maximize=false
-workspaces-only-on-primary=false
-dynamic-workspaces=false
-
-[gnome/gedit/plugins/filebrowser]
-tree-view=true
-virtual-root='file:///home/alexishevia/Dropbox/FOX'
-root='file:///'
+[gnome/file-roller/ui]
+sidebar-width=200
+window-height=699
+window-width=1301
 
 [gnome/gedit/plugins]
-active-plugins=['docinfo', 'spell', 'modelines', 'filebrowser', 'time']
+active-plugins=['docinfo', 'modelines', 'filebrowser', 'spell', 'time']
+
+[gnome/gedit/plugins/filebrowser]
+root='file:///'
+tree-view=true
+virtual-root='file:///home/alexishevia/Desktop'
 
 [gnome/gedit/preferences/ui]
 show-tabs-mode='auto'
 
 [gnome/gedit/state/window]
 bottom-panel-size=140
-side-panel-size=200
 side-panel-active-page='GeditWindowDocumentsPanel'
+side-panel-size=200
 size=(1169, 627)
 state=87168
 
-[gnome/easytag]
-sort-mode='ascending-track-number'
-default-path=b'/home/alexishevia/Music'
-
-[gnome/file-roller/ui]
-sidebar-width=200
-window-width=1301
-window-height=699
-
-[gnome/file-roller/listing]
-sort-method='name'
-sort-type='ascending'
-list-mode='as-folder'
-name-column-width=250
-show-path=false
-
 [gnome/gnome-screenshot]
-include-pointer=false
-include-border=true
-delay=4
-last-save-directory='file:///home/alexishevia/Desktop'
 border-effect='none'
+delay=4
+include-border=true
+include-pointer=false
+last-save-directory='file:///home/alexishevia/Desktop'
+
+[gnome/gnome-system-monitor]
+current-tab='resources'
+maximized=false
+show-dependencies=false
+show-whose-processes='user'
+window-state=(700, 500, 91, 76)
+
+[gnome/gnome-system-monitor/disktreenew]
+col-6-visible=true
+col-6-width=0
+
+[gnome/mutter]
+auto-maximize=false
+dynamic-workspaces=false
+workspaces-only-on-primary=false
+
+[gnome/nautilus/compression]
+default-compression-format='zip'
+
+[gnome/nautilus/icon-view]
+default-zoom-level='small'
+
+[gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+search-view='list-view'
+
+[gnome/nautilus/window-state]
+geometry='1185x616+89+151'
+initial-size=(1151, 665)
+maximized=false
+sidebar-width=189
+start-with-sidebar=true
+
+[gnome/nm-applet/eap/00d98a79-f402-434c-84f7-97737b5f6649]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[gnome/nm-applet/eap/753df619-aa33-4f43-9cc5-0db9598660bc]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[gnome/nm-applet/eap/83953a89-ce8a-4a2f-9b7d-bff6aabcd465]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[gnome/nm-applet/eap/fd171644-3477-4e7d-9c05-556278df8c94]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[gnome/power-manager]
+info-history-type='charge'
+info-last-device='wakeups'
+info-page-number=3
+info-stats-type='discharge-accuracy'
+
+[gnome/settings-daemon/peripherals/keyboard]
+numlock-state='on'
+
+[gnome/settings-daemon/plugins/color]
+night-light-enabled=true
+night-light-schedule-automatic=false
+night-light-schedule-from=20.0
+night-light-schedule-to=6.0
+
+[gnome/settings-daemon/plugins/media-keys]
+volume-down=['<Primary>Down']
+volume-up=['<Primary>Up']
+
+[gnome/settings-daemon/plugins/power]
+power-button-action='suspend'
+sleep-inactive-ac-timeout=3600
+sleep-inactive-ac-type='nothing'
+
+[gnome/settings-daemon/plugins/xsettings]
+hinting='slight'
+
+[gnome/shell]
+favorite-apps=['org.gnome.Terminal.desktop', 'firefox.desktop', 'postman.desktop', 'org.gnome.Nautilus.desktop', 'charles-proxy.desktop', 'Zoom.desktop']
+had-bluetooth-devices-setup=false
+
+[gnome/shell/app-switcher]
+current-workspace-only=true
+
+[gnome/shell/extensions/dash-to-dock]
+dock-fixed=true
 
 [gnome/software]
-check-timestamp=int64 1566916586
+check-timestamp=int64 1575766599
+
+[gnome/system/location]
+enabled=false
 
 [gnome/terminal/legacy]
 schema-version=uint32 3
 
 [gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
-default-size-rows=38
 default-size-columns=140
+default-size-rows=38
 
-[blueman/transfer]
-shared-path='/home/alexishevia/Downloads'
+[gnome/yelp]
+show-cursor=false
 
-[blueman/general]
-window-properties=[815, 475, 347, 104]
-
-[blueman/plugins/recentconns]
-recent-connections='eNprYPJmiC1kaCtk1AMAEQ4Cwg=='
+[gtk/settings/file-chooser]
+clock-format='12h'
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=247
+sort-column='name'
+sort-directories-first=true
+sort-order='descending'
+type-format='category'
+window-position=(575, 154)
+window-size=(1150, 590)
 
 [virt-manager/virt-manager]
-manager-window-width=550
 manager-window-height=550
+manager-window-width=550
+
+[virt-manager/virt-manager/connections]
+autoconnect=['qemu:///system']
+uris=['qemu:///system']
 
 [virt-manager/virt-manager/vmlist-fields]
 disk-usage=false
 network-traffic=false
-
-[virt-manager/virt-manager/connections]
-uris=['qemu:///system']
-autoconnect=['qemu:///system']
