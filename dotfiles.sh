@@ -16,5 +16,8 @@ for df in $dotfiles; do
   ln -s "$PWD/$df" ~/$df
 done
 
+if [ -x "$(command -v code)" ]; then
+  ./apps/vscode/vscode.sh
+fi
 
-./apps/vscode/vscode.sh
+. ~/.bashrc

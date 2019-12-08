@@ -5,6 +5,10 @@ set -e # exit if any command fails
 files='settings.json keybindings.json'
 path="$HOME/.config/Code/User"
 
+if ! [ -e $path ]; then
+   mkdir -p $path
+fi
+
 for file in $files; do
   if [ -e $path/$file ]
   then

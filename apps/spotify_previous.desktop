@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Previous Spotify Song
-Exec=sp prev
-Icon=/usr/share/icons/HighContrast/48x48/actions/media-skip-backward.png
-Terminal=false
-Type=Application
-Categories=Utilities;

@@ -5,10 +5,11 @@ set -e # exit if any command fails
 ./dotfiles.sh
 ./apt.sh
 ./snap.sh
-./vim.sh
+./apps/dropbox.sh
+./encrypted.sh restore
+./apps/golang.sh
 ./bins.sh
 ./apps/google-chrome.sh
-./apps/dropbox.sh
 ./apps/prey.sh
 ./apps/fiddler.sh
 ./apps/openshot.sh
@@ -17,13 +18,11 @@ set -e # exit if any command fails
 ./apps/zoom.sh
 ./apps/expressvpn.sh
 ./apps/minikube.sh
-./apps/synergy.sh
+./nvm.sh
 ./apps/swagger.sh
-./apps/sp.sh
 ./apps/react-native-debugger.sh
 ./python.sh
-./encrypted.sh restore
-./nvm.sh
+./vim.sh
 ./git.sh
 ./hosts.sh
 

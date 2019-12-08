@@ -116,10 +116,12 @@ complete -A command npx
 export NPM_TOKEN=$(grep -oP 'authToken=\K.*' ~/.npmrc)
 
 #---------------------------------------
-# Go Lang
+# Golang
 #---------------------------------------
-export GOPATH=/home/alexishevia/go
-PATH=$PATH:/usr/lib/go-1.10/bin:/home/alexishevia/go/bin
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
 #---------------------------------------
 # Android

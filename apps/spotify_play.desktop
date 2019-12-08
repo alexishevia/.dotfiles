@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Play Spotify
-Exec=sp play
-Icon=/usr/share/icons/HighContrast/48x48/actions/media-playback-start.png
-Terminal=false
-Type=Application
-Categories=Utilities;

@@ -43,7 +43,7 @@ then
   cp ~/.ppprc.json /tmp/backupmountdir/.ppprc.json
   cp ~/.okta-aws /tmp/backupmountdir/.okta-aws
   cp ~/Projects/FOX/.aws_keys /tmp/backupmountdir/.fox_aws_keys
-  cp ~/Projects/Personales/mdo-native/mdo.jks /tmp/backupmountdir/mdo.jks
+  cp ~/Projects/Personales/mdo.jks /tmp/backupmountdir/mdo.jks
 
   # unmount all veracrypt volumes
   veracrypt -t -d
@@ -60,7 +60,7 @@ then
   # wait until backup file exists
   while [ ! -f ~/Dropbox/backup.tc ]
   do
-    echo -n 'Waiting for ~/Dropbox/backup.tc to be ready'
+    echo -n '\nWaiting for ~/Dropbox/backup.tc to be ready'
     echo -n '.'; sleep 1;
     echo -n '.'; sleep 1;
     echo -n '.'; sleep 1;
@@ -84,12 +84,14 @@ then
   popd;
 
   # copy sensitive files to their correct location
+  mkdir -p ~/Projects/FOX/
+  mkdir -p ~/Projects/Personales/
   cp /tmp/backupmountdir/.npmrc ~/.npmrc
   cp /tmp/backupmountdir/.fox.ovpn ~/.fox.ovpn
   cp /tmp/backupmountdir/.ppprc.json ~/.ppprc.json
   cp /tmp/backupmountdir/.okta-aws ~/.okta-aws
   cp /tmp/backupmountdir/.fox_aws_keys ~/Projects/FOX/.aws_keys
-  cp /tmp/backupmountdir/mdo.jks ~/Projects/Personales/mdo-native/mdo.jks
+  cp /tmp/backupmountdir/mdo.jks ~/Projects/Personales/mdo.jks
 
   # unmount all veracrypt volumes
   veracrypt -t -d
