@@ -30,8 +30,6 @@ then
     tmux send-keys -t _todo:editor.1 ':edit ~/Dropbox/todo/work.md' C-m
     tmux send-keys -t _todo:editor.1 ',t' C-m
     tmux send-keys -t _todo:editor.1 ':edit ~/Dropbox/todo/home.md' C-m
-    tmux send-keys -t _todo:editor.1 ',t' C-m
-    tmux send-keys -t _todo:editor.1 ':edit ~/Dropbox/todo/bounties.md' C-m
 fi
 
 # attach to session
