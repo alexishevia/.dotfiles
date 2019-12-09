@@ -11,7 +11,7 @@ sudo snap install sublime-text --classic
 sudo snap install heroku --classic
 sudo snap install android-studio --classic
 
-PACKAGES="http jq robomongo gimp inkscape libreoffice vlc obs-studio simplescreenrecorder ngrok chromium"
+PACKAGES="http jq robomongo gimp inkscape libreoffice vlc obs-studio simplescreenrecorder ngrok chromium spotify"
 for pkg in $PACKAGES; do
   if ! [ -x "$(command -v $pkg)" ]; then
     sudo snap install $pkg
