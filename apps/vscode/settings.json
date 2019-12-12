@@ -38,6 +38,13 @@
 
   // vim
   "vim.leader": ",",
+
+  // since release 1.12, vscodevim supports reading a .vimrc file, but has no support for vim plugins.
+  // My existing .vimrc does not work correctly because it depends on vim plugins.
+  // I might try using a vscode-specific .vimrc in the future.
+  // For now, I'm just disabling this feature.
+  "vim.vimrc.enable": false, 
+
   "vim.insertModeKeyBindingsNonRecursive": [
     {
       "before": [ "j", "k" ],
