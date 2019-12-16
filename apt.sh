@@ -27,8 +27,11 @@ fi
 
 # java
 if ! [ -x "$(command -v java)" ]; then
-  sudo add-apt-repository ppa:linuxuprising/java
+  sudo add-apt-repository --yes ppa:linuxuprising/java
 fi
+
+# yubikey manager
+# sudo add-apt-repository --yes ppa:yubico/stable
 
 # apt update
 sudo apt update
@@ -46,12 +49,11 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   dkms libgconf-2-4 libxcb-xtest0 python-pip python3-pip python-gtk2          \
   docker.io docker-compose gnome-screensaver                                  \
   gnome-tweak-tool openvpn network-manager-openvpn-gnome                      \
-  mongodb-clients flameshot vim-gtk                                           \
+  mongodb-clients flameshot vim-gtk yubikey-manager-qt                        \
   redis-tools libavahi-compat-libdnssd1 net-tools openssh-server              \
   awscli apt-transport-https ocaml gpick                                      \
   cpu-checker qemu-kvm bridge-utils scrot streamer mpg123                     \
   virt-viewer virt-manager oracle-java13-installer virtualbox
-
 
 # apt cleanup
 sudo apt upgrade --yes
