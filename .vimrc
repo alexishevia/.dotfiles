@@ -295,7 +295,7 @@ augroup matchit
 augroup END
 
 " remap semicolon to colon (no need to use Shift + ;)
-nnoremap ; :
+noremap ; :
 
 " set secure mode for reading .vimrc
 set secure
