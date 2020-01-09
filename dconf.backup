@@ -32,7 +32,7 @@ video-x-resolution=640
 video-y-resolution=480
 
 [gnome/control-center]
-last-panel='background'
+last-panel='display'
 
 [gnome/desktop/a11y]
 always-show-universal-access-status=false
@@ -80,11 +80,11 @@ xkb-options=['grp_led:scroll']
 clock-format='12h'
 clock-show-date=true
 clock-show-seconds=false
-gtk-im-module='gtk-im-context-simple'
+gtk-im-module='ibus'
 toolkit-accessibility=false
 
 [gnome/desktop/notifications]
-application-children=['update-manager', 'org-gnome-nautilus', 'firefox', 'google-chrome', 'spotify-spotify', 'slack-slack', 'org-gnome-software', 'org-gnome-terminal', 'gnome-network-panel', 'apport-gtk', 'obs-studio-obs-studio', 'chromium-chromium', 'gimp-gimp', 'spotify', 'postman', 'skype-skypeforlinux', 'gnome-control-center', 'libreoffice-calc', 'chromium-browser', 'sublime-text-subl', 'synergy', 'org-gnome-tweaks', 'flameshot', 'org-gnome-screenshot', 'eog', 'blueman-manager', 'zoom', 'org-gnome-shell-portalhelper', 'veracrypt', 'inkscape-inkscape', 'libreoffice-writer', 'android-studio-android-studio', 'gnome-power-panel', 'xdg-desktop-portal-gtk', 'org-gnome-gedit', 'gnome-printers-panel', 'react-native-debugger', 'cncra-cncra']
+application-children=['update-manager', 'org-gnome-nautilus', 'firefox', 'google-chrome', 'spotify-spotify', 'slack-slack', 'org-gnome-software', 'org-gnome-terminal', 'gnome-network-panel', 'apport-gtk', 'obs-studio-obs-studio', 'chromium-chromium', 'gimp-gimp', 'spotify', 'postman', 'skype-skypeforlinux', 'gnome-control-center', 'libreoffice-calc', 'chromium-browser', 'sublime-text-subl', 'synergy', 'org-gnome-tweaks', 'flameshot', 'org-gnome-screenshot', 'eog', 'blueman-manager', 'zoom', 'org-gnome-shell-portalhelper', 'veracrypt', 'inkscape-inkscape', 'libreoffice-writer', 'android-studio-android-studio', 'gnome-power-panel', 'xdg-desktop-portal-gtk', 'org-gnome-gedit', 'gnome-printers-panel', 'react-native-debugger', 'cncra-cncra', 'vlc-vlc']
 
 [gnome/desktop/notifications/application/android-studio-android-studio]
 application-id='android-studio_android-studio.desktop'
@@ -197,6 +197,9 @@ application-id='update-manager.desktop'
 [gnome/desktop/notifications/application/veracrypt]
 application-id='veracrypt.desktop'
 
+[gnome/desktop/notifications/application/vlc-vlc]
+application-id='vlc_vlc.desktop'
+
 [gnome/desktop/notifications/application/xdg-desktop-portal-gtk]
 application-id='xdg-desktop-portal-gtk.desktop'
 
@@ -252,7 +255,7 @@ background-color='rgb(0,0,0)'
 use-background-color=true
 
 [gnome/evince/default]
-window-ratio=(2.2386806395270726, 0.91127269270981837)
+window-ratio=(2.2386806395270726, 0.91008459271932318)
 
 [gnome/evolution-data-server]
 migrated=true
@@ -373,7 +376,7 @@ sleep-inactive-ac-type='nothing'
 hinting='slight'
 
 [gnome/shell]
-favorite-apps=['firefox.desktop', 'org.gnome.Terminal.desktop', 'code.desktop', 'postman.desktop', 'org.gnome.Nautilus.desktop', 'charles-proxy.desktop', 'Zoom.desktop']
+favorite-apps=['google-chrome.desktop', 'org.gnome.Terminal.desktop', 'code.desktop', 'postman.desktop', 'org.gnome.Nautilus.desktop', 'charles-proxy.desktop', 'Zoom.desktop']
 had-bluetooth-devices-setup=false
 
 [gnome/shell/app-switcher]
@@ -383,7 +386,7 @@ current-workspace-only=true
 dock-fixed=true
 
 [gnome/software]
-check-timestamp=int64 1575812430
+check-timestamp=int64 1578577923
 
 [gnome/system/location]
 enabled=false
@@ -410,8 +413,8 @@ sort-column='name'
 sort-directories-first=true
 sort-order='descending'
 type-format='category'
-window-position=(193, 207)
-window-size=(1150, 590)
+window-position=(385, 244)
+window-size=(1150, 588)
 
 [virt-manager/virt-manager]
 manager-window-height=550
