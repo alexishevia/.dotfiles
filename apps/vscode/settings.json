@@ -118,4 +118,6 @@
   "go.useLanguageServer": true,
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
+  "markdown-toc.depthFrom": 2,
+  "markdown-toc.detectAndAutoSetSection": false,
 }
