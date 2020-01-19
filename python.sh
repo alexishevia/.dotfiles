@@ -11,3 +11,6 @@ pip2 install pipenv
 
 # install okta-awscli
 pip3 install --user okta-awscli
+
+# install yq
+pip3 install yq
