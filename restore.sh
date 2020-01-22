@@ -18,6 +18,7 @@ set -e # exit if any command fails
 ./apps/zoom.sh
 ./apps/expressvpn.sh
 ./apps/minikube.sh
+./apps/zettlr.sh
 ./nvm.sh
 ./apps/swagger.sh
 ./apps/react-native-debugger.sh
