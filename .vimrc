@@ -204,6 +204,9 @@ nnoremap <leader>r :NERDTreeFind<cr>
 " enable line numbers in NERDTree
 let NERDTreeShowLineNumbers=1
 
+" when following links using gf, open them in a new tab
+nnoremap gf <C-w>gf
+
 " make sure relative line numbers are used in NERDTree
 augroup relativenumber
   autocmd!
