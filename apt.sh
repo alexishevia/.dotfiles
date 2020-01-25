@@ -53,7 +53,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   redis-tools libavahi-compat-libdnssd1 net-tools openssh-server              \
   awscli apt-transport-https ocaml gpick                                      \
   cpu-checker qemu-kvm bridge-utils scrot streamer mpg123                     \
-  virt-viewer virt-manager oracle-java13-installer virtualbox
+  virt-viewer virt-manager oracle-java13-installer virtualbox lmms
 
 # apt cleanup
 sudo apt upgrade --yes
