@@ -170,3 +170,7 @@ alias gofox="cd $GOPATH/src/github.com/foxbroadcasting/"
 
 # add alias for ag (silver searcher) inside fox projects
 alias agf="ag --ignore 'docker/*' --ignore '*spec.js' --ignore *fixtures* --ignore *stub*"
+export http_proxy=''
+export https_proxy=''
+export ftp_proxy=''
+export socks_proxy=''
