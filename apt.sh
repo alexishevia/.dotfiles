@@ -52,7 +52,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   mongodb-clients flameshot vim-gtk yubikey-manager-qt                        \
   redis-tools libavahi-compat-libdnssd1 net-tools openssh-server              \
   awscli apt-transport-https ocaml gpick                                      \
-  cpu-checker qemu-kvm bridge-utils scrot streamer mpg123                     \
+  cpu-checker qemu-kvm bridge-utils scrot streamer mpg123 simple-scan         \
   virt-viewer virt-manager oracle-java13-installer virtualbox lmms
 
 # apt cleanup
