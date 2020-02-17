@@ -28,4 +28,5 @@ $HOME/go/src/github.com/foxbroadcasting/cpe-assetimage?git@github.com:foxbroadca
 $HOME/go/src/github.com/foxbroadcasting/cpe-contentsku?git@github.com:foxbroadcasting/cpe-contentsku
 $HOME/go/src/github.com/foxbroadcasting/cpe-foxentitlement?git@github.com:foxbroadcasting/cpe-foxentitlement.git
 $HOME/go/src/github.com/foxbroadcasting/cpe-canIplay?git@github.com:foxbroadcasting/cpe-canIplay
-$HOME/go/src/github.com/foxbroadcasting/cpe-cli?git@github.com:foxbroadcasting/cpe-cli.git"
+$HOME/go/src/github.com/foxbroadcasting/cpe-cli?git@github.com:foxbroadcasting/cpe-cli.git
+$HOME/go/src/github.com/foxbroadcasting/cpe-sportsplayer?git@github.com:foxbroadcasting/cpe-sportsplayer.git"
