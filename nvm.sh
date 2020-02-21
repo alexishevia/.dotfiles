@@ -12,7 +12,7 @@ git pull
 popd
 
 
-versions='10.15.0 10.15.2'
+versions='12.16.0'
 
 for version in $versions; do
   nvm install $version
@@ -24,5 +24,5 @@ for version in $versions; do
     docsify-cli onchange expo-cli vsce
 done
 
-nvm alias default 10.15.2
-nvm use 10.15.2
+nvm alias default 12.16.0
+nvm use 12.16.0
