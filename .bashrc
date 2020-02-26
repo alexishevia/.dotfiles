@@ -91,7 +91,7 @@ alias lstags="ag --nofilename --nobreak @@ | tr '@@' '\n' | sed 's/ //g' | sort 
 # JAVA
 #---------------------------------------
 # define JAVA_HOME
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export JAVA_HOME=/usr/lib/jvm/java-13-oracle
 
 #---------------------------------------
 # Docker
