@@ -42,9 +42,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb' " add Github support to vim-fugitive's :Gbrowse command
 Plug 'tommcdo/vim-fubitive' " add Bitbucket support to vim-fugitive's :Gbrowse command
 
-" visually display indent levels in code
-Plug 'nathanaelkane/vim-indent-guides'
-
 " language pack
 Plug 'sheerun/vim-polyglot'
 
@@ -194,6 +191,9 @@ set foldmethod=manual
 
 " use old folder markers (avoids issues with some terminals)
 let g:NERDTreeDirArrows=0
+
+" use ,ig to toggle cursorcolumn
+nnoremap <Leader>ig :set cursorcolumn!<Enter>
 
 " use ,n to toggle nerdtreetabs
 nnoremap <Leader>n :NERDTreeToggle<Enter>
