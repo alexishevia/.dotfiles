@@ -42,7 +42,7 @@ sudo apt remove --yes avahi-daemon vim vim-gnome terminator gimp inkscape     \
 
 # install apt packages I use
 sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
-  ncurses-term xclip unzip libjpeg62 unrar ttf-ancient-fonts                  \
+  ncurses-term xclip unzip libjpeg62 unrar ttf-ancient-fonts gparted          \
   rbenv tidy exuberant-ctags tmux easytag code libgl1-mesa-glx                \
   synapse charles-proxy silversearcher-ag veracrypt                           \
   gnupg2 libzmq5 libzmq3-dev screenruler apt-transport-https mono-complete    \

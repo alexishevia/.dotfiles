@@ -19,7 +19,8 @@
         "program": "${workspaceFolder}/main.go",
         "env": {
           "AWS_PROFILE": "dcg_dev",
-          "ENVIRONMENT": "dev1"
+          "ENVIRONMENT": "dev1",
+          // "USE_LOCAL_APIKEYS": "/home/alexishevia/Dropbox/FOX/apikeys.json"
         }
       },
       {
@@ -30,7 +31,9 @@
         "program": "${workspaceFolder}/main.go",
         "env": {
           "AWS_PROFILE": "dcg_qa",
-          "ENVIRONMENT": "qa1"
+          "ENVIRONMENT": "qa1",
+          "REGION": "uw2",
+          // "USE_LOCAL_APIKEYS": "/home/alexishevia/Dropbox/FOX/apikeys.json"
         }
       }
     ]
