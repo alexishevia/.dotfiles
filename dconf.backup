@@ -32,7 +32,7 @@ video-x-resolution=640
 video-y-resolution=480
 
 [gnome/control-center]
-last-panel='display'
+last-panel='sound'
 
 [gnome/desktop/a11y]
 always-show-universal-access-status=false
@@ -84,7 +84,7 @@ gtk-im-module='ibus'
 toolkit-accessibility=false
 
 [gnome/desktop/notifications]
-application-children=['update-manager', 'org-gnome-nautilus', 'firefox', 'google-chrome', 'spotify-spotify', 'slack-slack', 'org-gnome-software', 'org-gnome-terminal', 'gnome-network-panel', 'apport-gtk', 'obs-studio-obs-studio', 'chromium-chromium', 'gimp-gimp', 'spotify', 'postman', 'skype-skypeforlinux', 'gnome-control-center', 'libreoffice-calc', 'chromium-browser', 'sublime-text-subl', 'synergy', 'org-gnome-tweaks', 'flameshot', 'org-gnome-screenshot', 'eog', 'blueman-manager', 'zoom', 'org-gnome-shell-portalhelper', 'veracrypt', 'inkscape-inkscape', 'libreoffice-writer', 'android-studio-android-studio', 'gnome-power-panel', 'xdg-desktop-portal-gtk', 'org-gnome-gedit', 'gnome-printers-panel', 'react-native-debugger', 'cncra-cncra', 'vlc-vlc']
+application-children=['update-manager', 'org-gnome-nautilus', 'firefox', 'google-chrome', 'spotify-spotify', 'slack-slack', 'org-gnome-software', 'org-gnome-terminal', 'gnome-network-panel', 'apport-gtk', 'obs-studio-obs-studio', 'chromium-chromium', 'gimp-gimp', 'spotify', 'postman', 'skype-skypeforlinux', 'gnome-control-center', 'libreoffice-calc', 'chromium-browser', 'sublime-text-subl', 'synergy', 'org-gnome-tweaks', 'flameshot', 'org-gnome-screenshot', 'eog', 'blueman-manager', 'zoom', 'org-gnome-shell-portalhelper', 'veracrypt', 'inkscape-inkscape', 'libreoffice-writer', 'android-studio-android-studio', 'gnome-power-panel', 'xdg-desktop-portal-gtk', 'org-gnome-gedit', 'gnome-printers-panel', 'react-native-debugger', 'cncra-cncra', 'vlc-vlc', 'dropbox']
 
 [gnome/desktop/notifications/application/android-studio-android-studio]
 application-id='android-studio_android-studio.desktop'
@@ -103,6 +103,9 @@ application-id='chromium_chromium.desktop'
 
 [gnome/desktop/notifications/application/cncra-cncra]
 application-id='cncra_cncra.desktop'
+
+[gnome/desktop/notifications/application/dropbox]
+application-id='dropbox.desktop'
 
 [gnome/desktop/notifications/application/eog]
 application-id='eog.desktop'
@@ -206,10 +209,16 @@ application-id='xdg-desktop-portal-gtk.desktop'
 [gnome/desktop/notifications/application/zoom]
 application-id='Zoom.desktop'
 
+[gnome/desktop/peripherals/keyboard]
+numlock-state=true
+
 [gnome/desktop/peripherals/mouse]
 accel-profile='adaptive'
 natural-scroll=false
 speed=0.079136690647481966
+
+[gnome/desktop/peripherals/touchpad]
+two-finger-scrolling-enabled=true
 
 [gnome/desktop/peripherals/touchscreens/03eb:8453]
 display=['LGD', '0x049f', '0x00000000']
@@ -255,7 +264,7 @@ background-color='rgb(0,0,0)'
 use-background-color=true
 
 [gnome/evince/default]
-window-ratio=(2.2386806395270726, 0.91008459271932318)
+window-ratio=(2.0388284293967489, 0.88157019294743844)
 
 [gnome/evolution-data-server]
 migrated=true
@@ -327,7 +336,7 @@ search-view='list-view'
 
 [gnome/nautilus/window-state]
 geometry='1185x616+89+151'
-initial-size=(1151, 665)
+initial-size=(1151, 652)
 maximized=false
 sidebar-width=189
 start-with-sidebar=true
@@ -358,7 +367,7 @@ info-stats-type='discharge-accuracy'
 numlock-state='on'
 
 [gnome/settings-daemon/plugins/color]
-night-light-enabled=true
+night-light-enabled=false
 night-light-schedule-automatic=false
 night-light-schedule-from=20.0
 night-light-schedule-to=6.0
@@ -377,7 +386,7 @@ hinting='slight'
 
 [gnome/shell]
 favorite-apps=['google-chrome.desktop', 'org.gnome.Terminal.desktop', 'code.desktop', 'postman.desktop', 'org.gnome.Nautilus.desktop', 'charles-proxy.desktop', 'Zoom.desktop']
-had-bluetooth-devices-setup=false
+had-bluetooth-devices-setup=true
 
 [gnome/shell/app-switcher]
 current-workspace-only=true
@@ -385,8 +394,12 @@ current-workspace-only=true
 [gnome/shell/extensions/dash-to-dock]
 dock-fixed=true
 
+[gnome/simple-scan]
+document-type='photo'
+save-directory='/home/alexishevia/Desktop'
+
 [gnome/software]
-check-timestamp=int64 1578577923
+check-timestamp=int64 1586882974
 
 [gnome/system/location]
 enabled=false
@@ -408,13 +421,13 @@ location-mode='path-bar'
 show-hidden=false
 show-size-column=true
 show-type-column=true
-sidebar-width=247
+sidebar-width=170
 sort-column='name'
-sort-directories-first=true
+sort-directories-first=false
 sort-order='descending'
 type-format='category'
-window-position=(385, 244)
-window-size=(1150, 588)
+window-position=(190, 72)
+window-size=(1131, 652)
 
 [virt-manager/virt-manager]
 manager-window-height=550
