@@ -40,8 +40,8 @@ then
   # copy sensitive files into veracrypt volume
   cp ~/.npmrc /tmp/backupmountdir/.npmrc
   cp ~/.fox.ovpn /tmp/backupmountdir/.fox.ovpn
-  cp ~/.ppprc.json /tmp/backupmountdir/.ppprc.json
   cp ~/.okta-aws /tmp/backupmountdir/.okta-aws
+  cp ~/.cpe-cli.json /tmp/backupmountdir/.cpe-cli.json
   cp ~/Projects/FOX/.aws_keys /tmp/backupmountdir/.fox_aws_keys
   cp ~/Projects/Personales/mdo.jks /tmp/backupmountdir/mdo.jks
 
@@ -88,8 +88,8 @@ then
   mkdir -p ~/Projects/Personales/
   cp /tmp/backupmountdir/.npmrc ~/.npmrc
   cp /tmp/backupmountdir/.fox.ovpn ~/.fox.ovpn
-  cp /tmp/backupmountdir/.ppprc.json ~/.ppprc.json
   cp /tmp/backupmountdir/.okta-aws ~/.okta-aws
+  cp /tmp/backupmountdir/.cpe-cli.json ~/.cpe-cli.json
   cp /tmp/backupmountdir/.fox_aws_keys ~/Projects/FOX/.aws_keys
   cp /tmp/backupmountdir/mdo.jks ~/Projects/Personales/mdo.jks
 
