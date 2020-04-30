@@ -152,10 +152,10 @@ au CursorMoved * checktime
 au CursorMovedI * checktime
 
 " enable auto-complete on startup
-let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option('enable_at_startup', 1)
 
 " auto-complete use smartcase
-let g:deoplete#enable_smart_case = 1
+call deoplete#custom#option('enable_smart_case', 1)
 
 " auto-complete <CR> completion.
 inoremap <expr><CR> pumvisible() ? "\<C-n>" : "\<CR>"
