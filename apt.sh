@@ -30,9 +30,6 @@ if ! [ -x "$(command -v java)" ]; then
   sudo add-apt-repository --yes ppa:linuxuprising/java
 fi
 
-# yubikey manager
-# sudo add-apt-repository --yes ppa:yubico/stable
-
 # apt update
 sudo apt update
 
@@ -46,14 +43,14 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   rbenv tidy exuberant-ctags tmux easytag code libgl1-mesa-glx                \
   synapse charles-proxy silversearcher-ag veracrypt                           \
   gnupg2 libzmq5 libzmq3-dev screenruler apt-transport-https mono-complete    \
-  dkms libgconf-2-4 libxcb-xtest0 python-pip python3-pip python-gtk2          \
+  dkms libgconf-2-4 libxcb-xtest0 python3-pip python3-gpg                     \
   docker.io docker-compose gnome-screensaver                                  \
   gnome-tweak-tool openvpn network-manager-openvpn-gnome                      \
-  mongodb-clients flameshot vim-gtk yubikey-manager-qt                        \
+  mongodb-clients flameshot vim-gtk                                           \
   redis-tools libavahi-compat-libdnssd1 net-tools openssh-server              \
   awscli apt-transport-https ocaml gpick p7zip-full libc6-i386                \
   cpu-checker qemu-kvm bridge-utils scrot streamer mpg123 simple-scan         \
-  virt-viewer virt-manager oracle-java13-installer virtualbox lmms
+  virt-viewer virt-manager oracle-java14-installer virtualbox lmms
 
 # apt cleanup
 sudo apt upgrade --yes

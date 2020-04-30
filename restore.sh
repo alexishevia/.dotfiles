@@ -10,7 +10,7 @@ set -e # exit if any command fails
 ./apps/golang.sh
 ./bins.sh
 ./apps/google-chrome.sh
-./apps/prey.sh
+# ./apps/prey.sh # Current prey version depends on python-gtk2, which is not installable on Ubuntu 20.04
 ./apps/fiddler.sh
 ./apps/openshot.sh
 ./apps/peek.sh
@@ -18,7 +18,6 @@ set -e # exit if any command fails
 ./apps/zoom.sh
 ./apps/expressvpn.sh
 ./apps/minikube.sh
-./apps/tuxboot.sh
 ./nvm.sh
 ./apps/swagger.sh
 ./apps/react-native-debugger.sh
@@ -26,6 +25,7 @@ set -e # exit if any command fails
 ./vim.sh
 ./git.sh
 ./hosts.sh
+./apps/vscode/vscode.sh
 
 # restore dconf settings
 dconf load /org/ < ./dconf.backup

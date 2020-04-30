@@ -1,7 +1,7 @@
 # dotfiles
 scripts to configure my dev environment
 
-These scripts should allow me to reconstruct my entire development environment on a blank Ubuntu 19.10 (Disco Dingo) machine.
+These scripts should allow me to reconstruct my entire development environment on a blank Ubuntu 20.04 (Focal Fossa) machine.
 
 ## Usage
 ```sh

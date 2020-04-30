@@ -2,5 +2,8 @@
 
 set -e # exit if any command fails
 
-sudo rm /etc/hosts
-sudo cp ./hosts /etc/hosts
+if [ -e /etc/hosts ]
+then
+  sudo rm /etc/hosts
+fi
+sudo ln -s "$PWD/hosts" /etc/hosts
