@@ -138,6 +138,12 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
 
 #---------------------------------------
+# Python
+#---------------------------------------
+# When you `pip3 install` using the `--user` flag, the binary is added to the ~/.local/bin directory
+export PATH=$PATH:$HOME/.local/bin
+
+#---------------------------------------
 # PHP
 #---------------------------------------
 # source ~/.phpbrew/bashrc
