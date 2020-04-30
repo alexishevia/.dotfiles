@@ -9,6 +9,7 @@ $HOME/Projects/Personales/personal_finance?git@bitbucket.org:alexishevia/persona
 $HOME/Projects/Personales/zettelkasten?git@github.com:alexishevia/zettelkasten.git
 $HOME/Projects/Personales/izinput?git@github.com:alexishevia/izinput.git
 $HOME/Projects/FOX/cpe-node-services?git@github.com:foxbroadcasting/cpe-node-services.git
+$HOME/Projects/FOX/video-livestream-test-harness?git@github.com:foxbroadcasting/video-livestream-test-harness
 $HOME/go/src/github.com/foxbroadcasting/cpe-liveplayer?git@github.com:foxbroadcasting/cpe-liveplayer.git
 $HOME/go/src/github.com/foxbroadcasting/cpe-liveplayer?git@github.com:foxbroadcasting/cpe-liveplayer
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-listings?git@github.com:foxbroadcasting/cpe-lp-listings

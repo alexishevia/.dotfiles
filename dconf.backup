@@ -1,5 +1,5 @@
 [gnome/control-center]
-last-panel='sound'
+last-panel='display'
 
 [gnome/desktop/input-sources]
 sources=[('xkb', 'us+intl')]
@@ -71,6 +71,10 @@ had-bluetooth-devices-setup=true
 
 [gnome/system/location]
 enabled=false
+
+[gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+default-size-columns=150
+default-size-rows=41
 
 [gtk/settings/file-chooser]
 clock-format='12h'
