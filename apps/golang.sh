@@ -11,3 +11,7 @@ fi
 if ! [ -x "$(command -v glide)" ]; then
   curl https://glide.sh/get | sh
 fi
+
+if ! [ -x "$(command -v cpe-cli)" ]; then
+  go get github.com/foxbroadcasting/cpe-cli && go install github.com/foxbroadcasting/cpe-cli
+fi
