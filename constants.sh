@@ -11,6 +11,7 @@ $HOME/Projects/Personales/izinput?git@github.com:alexishevia/izinput.git
 $HOME/Projects/Personales/naratrujillo.com?git@bitbucket.org:alexishevia/naratrujillo.com.git
 $HOME/Projects/FOX/cpe-node-services?git@github.com:foxbroadcasting/cpe-node-services.git
 $HOME/Projects/FOX/video-livestream-test-harness?git@github.com:foxbroadcasting/video-livestream-test-harness
+$HOME/Projects/FOX/apigateway?git@github.com:foxbroadcasting/apigateway.git
 $HOME/go/src/github.com/foxbroadcasting/cpe-liveplayer?git@github.com:foxbroadcasting/cpe-liveplayer.git
 $HOME/go/src/github.com/foxbroadcasting/cpe-liveplayer?git@github.com:foxbroadcasting/cpe-liveplayer
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-listings?git@github.com:foxbroadcasting/cpe-lp-listings
