@@ -8,6 +8,7 @@ $HOME/Projects/Personales/mdo-native?git@github.com:mdo-org/mdo-native.git
 $HOME/Projects/Personales/personal_finance?git@bitbucket.org:alexishevia/personal_finance.git
 $HOME/Projects/Personales/zettelkasten?git@github.com:alexishevia/zettelkasten.git
 $HOME/Projects/Personales/izinput?git@github.com:alexishevia/izinput.git
+$HOME/Projects/Personales/naratrujillo.com?git@bitbucket.org:alexishevia/naratrujillo.com.git
 $HOME/Projects/FOX/cpe-node-services?git@github.com:foxbroadcasting/cpe-node-services.git
 $HOME/Projects/FOX/video-livestream-test-harness?git@github.com:foxbroadcasting/video-livestream-test-harness
 $HOME/go/src/github.com/foxbroadcasting/cpe-liveplayer?git@github.com:foxbroadcasting/cpe-liveplayer.git
