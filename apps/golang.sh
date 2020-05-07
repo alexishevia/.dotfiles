@@ -15,3 +15,7 @@ fi
 if ! [ -x "$(command -v cpe-cli)" ]; then
   go get github.com/foxbroadcasting/cpe-cli && go install github.com/foxbroadcasting/cpe-cli
 fi
+
+if ! [ -x "$(command -v go-template-mock)" ]; then
+  go get github.com/nlewo/consul-template-mock && go install github.com/nlewo/consul-template-mock
+fi
