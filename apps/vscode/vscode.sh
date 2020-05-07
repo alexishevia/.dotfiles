@@ -16,7 +16,7 @@ for file in $files; do
   ln -s "$PWD/apps/vscode/$file" $path/$file
 done
 
-extensions='vscodevim.vim ms-vscode.go eamodio.gitlens alanwalk.markdown-toc alexishevia.mdo-extension-code'
+extensions='vscodevim.vim ms-vscode.go eamodio.gitlens alanwalk.markdown-toc alexishevia.mdo-extension-code esbenp.prettier-vscode'
 for extension in $extensions; do
   code --install-extension $extension
 done
