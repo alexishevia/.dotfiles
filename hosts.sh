@@ -6,4 +6,4 @@ if [ -e /etc/hosts ]
 then
   sudo rm /etc/hosts
 fi
-sudo ln -s "$PWD/hosts" /etc/hosts
+sudo ln -i "$PWD/hosts" /etc/hosts
