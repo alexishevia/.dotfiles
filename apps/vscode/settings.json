@@ -20,6 +20,7 @@
         "env": {
           "AWS_PROFILE": "dcg_dev",
           "ENVIRONMENT": "dev1",
+          // "GO111MODULE": "on", // "on" to enable go modules
           // "USE_LOCAL_APIKEYS": "/home/alexishevia/Dropbox/FOX/apikeys.json"
         }
       },
@@ -33,6 +34,7 @@
           "AWS_PROFILE": "dcg_qa",
           "ENVIRONMENT": "qa1",
           "REGION": "uw2",
+          // "GO111MODULE": "on", // "on" to enable go modules
           // "USE_LOCAL_APIKEYS": "/home/alexishevia/Dropbox/FOX/apikeys.json"
         }
       }
@@ -125,4 +127,7 @@
   "markdown-toc.detectAndAutoSetSection": false,
   "markdown.extension.toc.githubCompatibility": true,
   "markdown.extension.toc.levels": "2..6",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
 }
