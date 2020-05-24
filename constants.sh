@@ -10,6 +10,7 @@ $HOME/Projects/Personales/zettelkasten?git@github.com:alexishevia/zettelkasten.g
 $HOME/Projects/Personales/izinput?git@github.com:alexishevia/izinput.git
 $HOME/Projects/Personales/izinput-pwa?git@github.com:alexishevia/izinput-pwa.git
 $HOME/Projects/Personales/izreducer?git@github.com:alexishevia/izreducer.git
+$HOME/Projects/Personales/invoice-zero?git@github.com:alexishevia/invoice-zero.git
 $HOME/Projects/Personales/naratrujillo.com?git@bitbucket.org:alexishevia/naratrujillo.com.git
 $HOME/Projects/FOX/cpe-node-services?git@github.com:foxbroadcasting/cpe-node-services.git
 $HOME/Projects/FOX/video-livestream-test-harness?git@github.com:foxbroadcasting/video-livestream-test-harness
