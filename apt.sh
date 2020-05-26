@@ -47,7 +47,7 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   docker.io docker-compose gnome-screensaver                                  \
   gnome-tweak-tool openvpn network-manager-openvpn-gnome                      \
   mongodb-clients flameshot vim-gtk                                           \
-  redis-tools libavahi-compat-libdnssd1 net-tools openssh-server              \
+  redis-server redis-tools libavahi-compat-libdnssd1 net-tools openssh-server \
   awscli apt-transport-https ocaml gpick p7zip-full libc6-i386                \
   cpu-checker qemu-kvm bridge-utils scrot streamer mpg123 simple-scan         \
   virt-viewer virt-manager oracle-java14-installer virtualbox lmms            \
