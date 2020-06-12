@@ -37,6 +37,29 @@
           // "GO111MODULE": "on", // "on" to enable go modules
           // "USE_LOCAL_APIKEYS": "/home/alexishevia/Dropbox/FOX/apikeys.json"
         }
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "FOX NodeJS Video Service",
+        "program": "${workspaceFolder}/packages/dcgapi-service-video-d2c/app.js",
+        "env": {
+          "DEFAULT_REDIS_HOST": "127.0.0.1",
+          "DEFAULT_REDIS_PORT": "6379",
+          "ELASTICSEARCH_HOST": "https://jumpbox-es.us-west-2.es.amazonaws.com:9200",
+          "NODE_TLS_REJECT_UNAUTHORIZED": "0",
+          // "LOG_LEVEL": "debug",
+          "LINKERD_IP": "127.0.0.1",
+          "SERVICE_NAME": "video_v1"
+        },
+        "runtimeArgs": [
+          "--inspect"
+        ],
+        "port": 9230,
+        "skipFiles": [
+          "<node_internals>/**/*.js"
+        ],
+        "outputCapture": "std",
       }
     ]
   },
@@ -130,4 +153,8 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "extensions.ignoreRecommendations": false,
 }
