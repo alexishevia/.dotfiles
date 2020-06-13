@@ -125,6 +125,18 @@ set hlsearch
 " use \ to clear highlight after a search
 nnoremap \ :nohlsearch<CR>
 
+" enable 'concealing' by default
+" also, define a ToggleConcealLevel() func to switch between concealed modes
+" see: https://alok.github.io/2018/04/26/using-vim-s-conceal-to-make-languages-more-tolerable/
+set conceallevel=2
+function! ToggleConcealLevel()
+    if &conceallevel == 0
+        setlocal conceallevel=2
+    else
+        setlocal conceallevel=0
+    endif
+endfunction
+
 " define a 'remove trailing whitespace' function:
 fun! <SID>TrimWhiteSpace()
   " Don't strip on these filetypes
