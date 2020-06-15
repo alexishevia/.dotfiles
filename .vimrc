@@ -390,9 +390,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" save backup files to a custom directory
-" set backupdir=~/.vim/backup
-
 " use ,cf to copy the full path to the current file
 nnoremap <leader>cf :let @+=expand("%:p")<CR>
 
@@ -439,86 +436,20 @@ augroup mdo
   autocmd BufWritePre *todo/*.md call Preserve('%!mdo')
 augroup END
 
-" --- javascript --- "
-
-augroup javascript
-  autocmd!
-
-  " use -f to follow ctags definition
-  autocmd FileType javascript,javascript.jsx nnoremap <buffer> <localleader>f <C-]>
-
-  " use -F to pop out from ctags definition
-  autocmd FileType javascript,javascript.jsx nnoremap <buffer> <localleader>F <C-T>
-
-  " use -p to open CtrlP in tag mode
-  autocmd FileType javascript,javascript.jsx nnoremap <buffer> <localleader>p :CtrlPTag<cr>
-augroup END
-
-nnoremap <buffer> <localleader>d <Ctrl>]
-
 " --- golang --- "
-
-" auto :GoMetaLinter on save
-let g:go_metalinter_autosave = 1
-
-" configure the height of the location list created by :GoMetaLinter
-let g:go_list_height = 5
-
-" required for vim-go to work properly
-" see: https://github.com/fatih/vim-go/blob/master/doc/vim-go.txt
-filetype plugin indent on
 
 augroup golang
   autocmd!
 
+  " auto :GoMetaLinter on save
+  autocmd FileType go let g:go_metalinter_autosave = 1
+
+  " configure the height of the location list created by :GoMetaLinter
+  autocmd FileType go let g:go_list_height = 5
+
+  " use gf to open definition on new tab
+  autocmd FileType go nmap <silent> gf <Plug>(go-def-tab)
+
   " do not display tabs and trailing spaces for go files
   autocmd FileType go setlocal nolist
-
-  " use -f for :GoDef
-  autocmd FileType go nnoremap <buffer> <localleader>f :GoDef<CR>
-
-  " use -F for :GoDefPop
-  autocmd FileType go nnoremap <buffer> <localleader>F :GoDefPop<CR>
-
-  "use -p to open CtrlP in tag mode
-  autocmd FileType go nnoremap <buffer> <localleader>p :GoDeclsDir<CR>
-
-  " use -b for :GoBuild
-  autocmd FileType go nnoremap <buffer> <localleader>b :GoBuild<CR>
-
-  " use -r for :GoRun
-  autocmd FileType go nnoremap <buffer> <localleader>r :GoRun<CR>
-
-  " use -t for :GoTest
-  autocmd FileType go nnoremap <buffer> <localleader>t :GoTest<CR>
-
-  " use -c for :GoCoverageToggle
-  autocmd FileType go nnoremap <buffer> <localleader>c :GoCoverageToggle<CR>
-
-  " use -l for :GoMetaLinter
-  autocmd FileType go nnoremap <buffer> <localleader>l :GoMetaLinter<CR>
-
-  " use -dS for :GoDebugStart
-  autocmd FileType go nnoremap <buffer> <localleader>dS :GoDebugStart<CR>
-
-  " use -db for :GoDebugBreakpoint
-  autocmd FileType go nnoremap <buffer> <localleader>db :GoDebugBreakpoint<CR>
-
-  " use -dc for :GoDebugContinue
-  autocmd FileType go nnoremap <buffer> <localleader>dc :GoDebugContinue<CR>
-
-  " use -dn for :GoDebugNext
-  autocmd FileType go nnoremap <buffer> <localleader>dn :GoDebugNext<CR>
-
-  " use -ds for :GoDebugStep
-  autocmd FileType go nnoremap <buffer> <localleader>ds :GoDebugStep<CR>
-
-  " use -do for :GoDebugStepOut
-  autocmd FileType go nnoremap <buffer> <localleader>do :GoDebugStepOut<CR>
-
-  " use -dp for :GoDebugPrint
-  autocmd FileType go nnoremap <buffer> <localleader>dp :GoDebugPrint
-
-  " use -dX for :GoDebugStop
-  autocmd FileType go nnoremap <buffer> <localleader>dX :GoDebugStop<CR>
 augroup END
