@@ -439,7 +439,7 @@ augroup golang
   autocmd!
 
   " auto :GoMetaLinter on save
-  autocmd FileType go let g:go_metalinter_autosave = 1
+  " autocmd FileType go let g:go_metalinter_autosave = 1
 
   " configure the height of the location list created by :GoMetaLinter
   autocmd FileType go let g:go_list_height = 5
