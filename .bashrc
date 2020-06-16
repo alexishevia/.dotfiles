@@ -126,6 +126,7 @@ export NPM_TOKEN=$(grep -oP 'authToken=\K.*' ~/.npmrc)
 #---------------------------------------
 # Golang
 #---------------------------------------
+alias go="grc go" # https://stackoverflow.com/questions/27242652/colorizing-golang-test-run-output
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin

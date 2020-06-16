@@ -51,7 +51,8 @@ sudo apt install --yes curl build-essential git git-core gitk ack-grep        \
   awscli apt-transport-https ocaml gpick p7zip-full libc6-i386                \
   cpu-checker qemu-kvm bridge-utils scrot streamer mpg123 simple-scan         \
   virt-viewer virt-manager oracle-java14-installer virtualbox lmms            \
-  libblockdev-crypto2 libblockdev-mdraid2
+  libblockdev-crypto2 libblockdev-mdraid2                                     \
+  grc # colouriser for beautifying your logfiles or output of commands
 
 # apt cleanup
 sudo apt upgrade --yes

@@ -2,7 +2,7 @@
 
 set -e # exit if any command fails
 
-dotfiles='.ackrc .bash_profile .bashrc .gitconfig .psqlrc .tmux.conf .vimrc .czrc .ctags .agignore'
+dotfiles='.ackrc .bash_profile .bashrc .gitconfig .psqlrc .tmux.conf .vimrc .czrc .ctags .agignore .grc'
 
 for df in $dotfiles; do
   if [ -e ~/$df ]
