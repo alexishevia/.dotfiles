@@ -169,9 +169,6 @@ call deoplete#custom#option('enable_at_startup', 1)
 " auto-complete use smartcase
 call deoplete#custom#option('enable_smart_case', 1)
 
-" auto-complete <CR> completion.
-inoremap <expr><CR> pumvisible() ? "\<C-n>" : "\<CR>"
-
 " use ,p to do fuzzy filename search
 nnoremap <Leader>p :CtrlP<Enter>
 
