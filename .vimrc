@@ -112,6 +112,9 @@ set guifont=Monaco:h12
 " enable statusline
 set laststatus=2
 
+" set filetype Markdown for .tpl files
+autocmd BufNewFile,BufRead *.tpl set syntax=make
+
 " make search case-insensitive except when you include upper-case characters
 set ignorecase
 set smartcase
