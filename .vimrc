@@ -106,9 +106,6 @@ colorscheme PaperColor
 " specify dark background (for plugins that don't read it properly from theme)
 set background=dark
 
-" set font
-set guifont=Monaco:h12
-
 " enable statusline
 set laststatus=2
 
