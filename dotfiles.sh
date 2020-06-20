@@ -5,7 +5,7 @@ set -e # exit if any command fails
 # make sure nvim config folder exists
 mkdir -p ~/.config/nvim
 
-dotfiles='.ackrc .bash_profile .bashrc .gitconfig .psqlrc .tmux.conf .vimrc .czrc .ctags .agignore .grc .config/nvim/init.vim'
+dotfiles='.ackrc .bash_profile .bashrc .gitconfig .psqlrc .tmux.conf .vimrc .czrc .ctags .agignore .grc .config/nvim/init.vim .config/nvim/coc-settings.json'
 
 for df in $dotfiles; do
   if [ -e ~/$df ]
