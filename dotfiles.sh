@@ -2,7 +2,10 @@
 
 set -e # exit if any command fails
 
-dotfiles='.ackrc .bash_profile .bashrc .gitconfig .psqlrc .tmux.conf .vimrc .czrc .ctags .agignore .grc'
+# make sure nvim config folder exists
+mkdir -p ~/.config/nvim
+
+dotfiles='.ackrc .bash_profile .bashrc .gitconfig .psqlrc .tmux.conf .vimrc .czrc .ctags .agignore .grc .config/nvim/init.vim'
 
 for df in $dotfiles; do
   if [ -e ~/$df ]
@@ -16,4 +19,5 @@ for df in $dotfiles; do
   ln -s "$PWD/$df" ~/$df
 done
 
+# source .bashrc
 . ~/.bashrc

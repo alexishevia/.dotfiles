@@ -43,6 +43,7 @@ sudo apt remove --yes avahi-daemon vim vim-gnome terminator gimp inkscape     \
 sudo apt install --yes \
   curl                    ` # command line tool for transferring data with URL syntax        ` \
   vim-gtk3                ` # Vi IMproved - enhanced vi editor - with GTK3 GUI               ` \
+  neovim                  ` # heavily refactored vim fork                                    ` \
   tmux                    ` # terminal multiplexer                                           ` \
   git git-core            ` # fast, scalable, distributed revision control system            ` \
   gitk                    ` # revision tree visualizer for git                               ` \
