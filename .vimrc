@@ -65,6 +65,7 @@ Plug 'xolox/vim-misc'
 
 " Golang development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'buoto/gotests-vim'
 
 " Reason plugin
 Plug 'reasonml-editor/vim-reason-plus'
