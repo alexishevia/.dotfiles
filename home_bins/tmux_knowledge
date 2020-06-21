@@ -2,7 +2,7 @@
 
 # if 'knowledge' session exists, attach to it.
 # otherwise, create it with the following windows:
-#   - editor: vim
+#   - editor: nvim
 #   - docsify: docsify serve
 
 tmux has-session -t knowledge
@@ -12,7 +12,7 @@ then
     # editor window
     tmux new -s knowledge -n editor -d
     tmux send-keys -t knowledge:editor 'cd ~/knowledge-base' C-m
-    tmux send-keys -t knowledge:editor 'vim .' C-m
+    tmux send-keys -t knowledge:editor 'nvim .' C-m
 
     # docsify window
     tmux new-window -t knowledge -n docsify

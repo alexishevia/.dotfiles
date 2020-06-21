@@ -9,7 +9,7 @@ if [ $? != 0 ]
 then
     tmux new -s zettelkasten -n editor -d
     tmux send-keys -t zettelkasten:editor 'cd ~/Projects/Personales/zettelkasten' C-m
-    tmux send-keys -t zettelkasten:editor 'vim .' C-m
+    tmux send-keys -t zettelkasten:editor 'nvim .' C-m
 fi
 
 # attach to session

@@ -9,7 +9,7 @@ if [ $? != 0 ]
 then
     tmux new -s dotfiles -n editor -d
     tmux send-keys -t dotfiles:editor 'cd ~/.dotfiles' C-m
-    tmux send-keys -t dotfiles:editor 'vim .' C-m
+    tmux send-keys -t dotfiles:editor 'nvim .' C-m
 fi
 
 # attach to session

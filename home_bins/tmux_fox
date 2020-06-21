@@ -2,7 +2,7 @@
 
 # if 'fox' session exists, attach to it.
 # otherwise, create it with the following windows:
-# - editor: vim
+# - editor: nvim
 # - tail: docker-compose up
 # - test: bin/unit-test
 
@@ -18,7 +18,7 @@ then
     tmux send-keys -t fox:editor 'source $HOME/Dropbox/env_vars.sh' C-m
     tmux send-keys -t fox:editor 'clear' C-m
     tmux send-keys -t fox:editor 'git pull' C-m
-    tmux send-keys -t fox:editor 'vim .'
+    tmux send-keys -t fox:editor 'nvim .'
 
     # tail window
     tmux new-window -t fox -n tail

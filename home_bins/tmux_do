@@ -13,7 +13,7 @@ then
     # editor window
     tmux new -s _todo -n editor -d -x "$2" -y "$(($1 - 1))" # https://superuser.com/questions/354844/cannot-resize-tmux-pane-from-bash-script
     tmux send-keys -t _todo:editor 'cd ~/Dropbox' C-m
-    tmux send-keys -t _todo:editor 'vim ~/Dropbox/working-on.md' C-m
+    tmux send-keys -t _todo:editor 'nvim ~/Dropbox/working-on.md' C-m
 
     tmux split-window -t _todo:editor -p 88
 
@@ -25,7 +25,7 @@ then
     tmux send-keys -t _todo:editor.0 ':set shortmess=F' C-m
 
     tmux send-keys -t _todo:editor.1 'cd ~/Dropbox' C-m
-    tmux send-keys -t _todo:editor.1 'vim .' C-m
+    tmux send-keys -t _todo:editor.1 'nvim .' C-m
     tmux send-keys -t _todo:editor.1 ',t' C-m
     tmux send-keys -t _todo:editor.1 ':edit ~/Dropbox/todo/work.md' C-m
     tmux send-keys -t _todo:editor.1 ',t' C-m
