@@ -25,6 +25,7 @@ set -e # exit if any command fails
 ./vim.sh
 ./git.sh
 ./hosts.sh
+./xkb.sh
 ./apps/vscode/vscode.sh
 
 # restore dconf settings
