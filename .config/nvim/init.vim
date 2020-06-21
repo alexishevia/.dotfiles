@@ -38,6 +38,12 @@ Plug 'tommcdo/vim-fubitive' " add Bitbucket support to vim-fugitive's :Gbrowse c
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" vim plugin to interact with tmux
+Plug 'benmills/vimux'
+
+" Run golang tests using vimux
+Plug 'benmills/vimux-golang'
+
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -242,6 +248,9 @@ nnoremap <expr><enter> &ft=="qf" ? "<cr>:lcl<cr>" : (getpos(".")[2]==1 ? "i<cr><
 
 " fugitive - force diff to use vertical split
 set diffopt=filler,vertical
+
+" vimux - percent of the screen the split pane Vimux will spawn should take up
+let g:VimuxHeight = "40"
 
 " -----------------------------------------------------------------------------
 " coc.nvim default settings
