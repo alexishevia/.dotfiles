@@ -15,4 +15,4 @@ wget -O ~/.config/nvim/autoload/plug.vim  https://raw.githubusercontent.com/june
 nvim -c PlugInstall -c q! -c q!
 
 # install coc extensions and exit
-nvim -c 'CocInstall -sync coc-css coc-eslint coc-go' -c q! -c q!
+nvim -c 'CocInstall -sync coc-css coc-eslint coc-go coc-json' -c q! -c q!

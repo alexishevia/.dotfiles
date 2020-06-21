@@ -142,9 +142,6 @@
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
   "markdown-toc.depthFrom": 2,
-  "markdown-toc.detectAndAutoSetSection": false,
-  "markdown.extension.toc.githubCompatibility": true,
-  "markdown.extension.toc.levels": "2..6",
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },

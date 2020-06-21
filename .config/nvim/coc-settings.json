@@ -1,1 +1,13 @@
-{}
+{
+  // automatically format on save
+  "coc.preferences.formatOnSaveFiletypes": [
+    "go",
+    "javascript",
+    "typescript",
+    "json"
+  ],
+  "go.goplsOptions": {
+    // make suggestions for packages that you do not currently import
+    "completeUnimported": true
+  }
+}

@@ -29,6 +29,11 @@ Plug 'plasticboy/vim-markdown'
 " easy comment/uncomment
 Plug 'tpope/vim-commentary'
 
+" a Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb' " add Github support to vim-fugitive's :Gbrowse command
+Plug 'tommcdo/vim-fubitive' " add Bitbucket support to vim-fugitive's :Gbrowse command
+
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -194,7 +199,7 @@ set foldmethod=manual
 colorscheme PaperColor
 
 " ctrlp - use ,p to do fuzzy filename search
-nnoremap <Leader>p :CtrlP<Enter>
+let g:ctrlp_map = '<Leader>p'
 
 " ctrlp - make ctrlp open files on new tab
 let g:ctrlp_prompt_mappings = {
