@@ -130,14 +130,9 @@
     },
     // use ,f to follow a definition
     {
-      "before": ["leader", "f"],
+      "before": ["g", "d"],
       "commands": ["editor.action.revealDefinitionAside"]
     },
-    // use ,F to go back after following a definition
-    {
-      "before": ["leader", "F"],
-      "commands": ["workbench.action.navigateBack"]
-    }
   ],
   "vim.useCtrlKeys": false,
   "vim.foldfix": true,
