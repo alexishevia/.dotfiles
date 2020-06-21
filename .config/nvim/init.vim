@@ -34,6 +34,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb' " add Github support to vim-fugitive's :Gbrowse command
 Plug 'tommcdo/vim-fubitive' " add Bitbucket support to vim-fugitive's :Gbrowse command
 
+" lean & mean status/tabline for vim that's light as air
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -192,7 +196,7 @@ set nolist
 set foldmethod=manual
 
 " -----------------------------------------------------------------------------
-" Plugin-related settings
+" Plugin specific settings
 " -----------------------------------------------------------------------------
 
 " colorschemes - load theme
@@ -270,9 +274,9 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-" use `[c` and `]c` to navigate diagnostics
-nmap <silent> [c <Plug>(coc-diagnostic-prev)
-nmap <silent> ]c <Plug>(coc-diagnostic-next)
+" use [d and ]d to navigate diagnostics
+nmap <silent> [d <Plug>(coc-diagnostic-prev)
+nmap <silent> ]d <Plug>(coc-diagnostic-next)
 
 " use gd to open definition in a new tab
 nmap <silent> gd :call CocAction('jumpDefinition', 'tabe')<cr>
@@ -358,11 +362,7 @@ augroup lex
   " on save, run MDo on any markdown file living inside a `todo/` folder
   autocmd BufWritePre *todo/*.md call Preserve('%!mdo')
 
+  " on save, run goimports on any go file
+  autocmd BufWritePre *.go call Preserve('%!goimports')
+
 augroup END
-
-" -----------------------------------------------------------------------------
-" golang
-" -----------------------------------------------------------------------------
-
-" " vim-go Run goimports along gofmt on each save
-" let g:go_fmt_command = "goimports"
