@@ -93,8 +93,8 @@ alias gpull="git pull"
 alias gbranch="git branch"
 
 # prefer neovim over vim
-alias vim='echo you should be using nvim instead of vim. You can use \"vimold\" if you REALLY want vim'
-alias vimold="/usr/bin/vim"
+alias vim='nvim'
+alias oldvim="/usr/bin/vim"
 
 #---------------------------------------
 # JAVA
