@@ -126,6 +126,12 @@ nnoremap <leader>cf :let @+=expand("%:p")<CR>
 " use ,cr to copy the relative path to the current file
 nnoremap <leader>cr :let @+=expand("%")<CR>
 
+" use ,tf to test the function that is focused (under the cursor)
+nnoremap <leader>tf :GoTestFunc<CR>
+
+" use ,tp to run all tests for current package
+nnoremap <leader>tp :GoTestPackage<CR>
+
 " -----------------------------------------------------------------------------
 " Abbreviations
 " -----------------------------------------------------------------------------
@@ -297,6 +303,12 @@ nnoremap <silent> <C-S-P>  :<C-u>CocList commands<cr>
 
 " :ReloadConfig reloads the init.vim file
 command! ReloadConfig :source ~/.config/nvim/init.vim
+
+" :GoTestFunc opens the vimux runner and runs the test that is under the cursor
+command! GoTestFunc :call VimuxOpenRunner() | :call GolangTestFocused()
+
+" :GoTestPackage opens the vimux runner and runs all tests for the current package
+command! GoTestPackage :call VimuxOpenRunner() | :call GolangTestCurrentPackage()
 
 " -----------------------------------------------------------------------------
 " Custom Functions
