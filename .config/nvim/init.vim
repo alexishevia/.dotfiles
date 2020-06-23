@@ -132,6 +132,9 @@ nnoremap <leader>tf :GoTestFunc<CR>
 " use ,tp to run all tests for current package
 nnoremap <leader>tp :GoTestPackage<CR>
 
+" use ,ta to run all tests for current project
+nnoremap <leader>ta :GoTest<CR>
+
 " -----------------------------------------------------------------------------
 " Abbreviations
 " -----------------------------------------------------------------------------
@@ -309,6 +312,9 @@ command! GoTestFunc :call VimuxOpenRunner() | :call GolangTestFocused()
 
 " :GoTestPackage opens the vimux runner and runs all tests for the current package
 command! GoTestPackage :call VimuxOpenRunner() | :call GolangTestCurrentPackage()
+
+" :GoTest opens the vimux runner and runs all tests for the current project
+command! GoTest :call VimuxOpenRunner() | :call VimuxRunCommand("cd " . getcwd() . " && go test ./...")
 
 " -----------------------------------------------------------------------------
 " Custom Functions
