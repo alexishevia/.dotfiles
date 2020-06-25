@@ -2,9 +2,6 @@
 
 set -e # exit if any command fails
 
-# install neovim python client
-pip3 install neovim
-
 # install pipenv
 pip3 install pipenv
 

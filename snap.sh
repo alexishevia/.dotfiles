@@ -2,9 +2,8 @@
 
 set -e # exit if any command fails
 
-# install snap packages I use
+# install --classic snap packages I use
 PACKAGES=""
-PACKAGES+=" slack"
 PACKAGES+=" skype"
 PACKAGES+=" asciinema"
 PACKAGES+=" kubectl"
@@ -17,6 +16,7 @@ for pkg in $PACKAGES; do
   fi
 done
 
+# install "normal" snap packages I use
 PACKAGES=""
 PACKAGES+=" http"
 PACKAGES+=" jq"

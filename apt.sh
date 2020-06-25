@@ -18,13 +18,6 @@ if ! [ -x "$(command -v charles)" ]; then
   echo 'deb https://www.charlesproxy.com/packages/apt/ charles-proxy main' | sudo tee /etc/apt/sources.list.d/charles.list
 fi
 
-# vs code
-if ! [ -x "$(command -v code)" ]; then
-  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /tmp/microsoft.gpg
-  sudo install -o root -g root -m 644 /tmp/microsoft.gpg /etc/apt/trusted.gpg.d/
-  echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
-fi
-
 # java
 if ! [ -x "$(command -v java)" ]; then
   sudo add-apt-repository --yes ppa:linuxuprising/java
@@ -36,11 +29,13 @@ sudo apt update
 # remove apt packages I don't want
 # Most of these will be installed from a different source - either a different
 # apt package, snap or flatpack
-sudo apt remove --yes avahi-daemon vim vim-gnome terminator gimp inkscape     \
+sudo apt remove --yes vim vim-gnome terminator gimp inkscape     \
   openshot openshot-qt vlc libreoffice
 
 # install apt packages I use
 sudo apt install --yes \
+  snapd                   ` # Daemon and tooling that enable snap packages                   ` \
+  flatpak                 ` # Application deployment framework for desktop apps              ` \
   curl                    ` # command line tool for transferring data with URL syntax        ` \
   vim-gtk3                ` # Vi IMproved - enhanced vi editor - with GTK3 GUI               ` \
   neovim                  ` # heavily refactored vim fork                                    ` \
@@ -66,8 +61,14 @@ sudo apt install --yes \
   unrar                   ` # Unarchiver for .rar files (non-free version)                   ` \
   p7zip-full              ` # 7z and 7za file archivers with high compression ratio          ` \
   simple-scan             ` # Simple Scanning Utility                                        ` \
+  nautilus-dropbox        ` # Dropbox integration for Nautilus                               ` \
   oracle-java14-installer ` # Oracle Java(TM) Development Kit (JDK) 14                       ` \
-  virtualbox              ` # x86 virtualization solution - base binaries                    `
+  virtualbox              ` # x86 virtualization solution - base binaries                    ` \
+  python3-pip             ` # Python package installer                                       ` \
+  gnupg2                  ` # GNU privacy guard - I use it to sign git commits               `
+
+# install dropbox daemon and start it
+dropbox start -i
 
 # apt cleanup
 sudo apt upgrade --yes

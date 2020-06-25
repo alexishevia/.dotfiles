@@ -1,5 +1,0 @@
-#!/bin/bash
-
-pushd ~/.swagger-editor
-./node_modules/.bin/npm-run-all --parallel serve-static
-popd
