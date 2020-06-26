@@ -21,6 +21,7 @@ set -e # exit if any command fails
 ./hosts.sh
 ./xkb.sh
 ./apps/vscode/vscode.sh
+./fonts.sh
 
 # restore dconf settings
 dconf load /org/ < ./dconf.backup

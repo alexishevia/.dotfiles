@@ -1,5 +1,9 @@
+[gnome/Totem]
+active-plugins=['skipto', 'autoload-subtitles', 'media-player-keys', 'apple-trailers', 'save-file', 'recent', 'rotation', 'movie-properties', 'screensaver', 'vimeo', 'variable-rate', 'open-directory', 'screenshot']
+subtitle-encoding='UTF-8'
+
 [gnome/control-center]
-last-panel='keyboard'
+last-panel='display'
 
 [gnome/desktop/app-folders/folders/Pop-Office]
 apps=['libreoffice-calc.desktop', 'libreoffice-draw.desktop', 'libreoffice-impress.desktop', 'libreoffice-math.desktop', 'libreoffice-startcenter.desktop', 'libreoffice-writer.desktop']
@@ -16,6 +20,13 @@ apps=['com.github.donadigo.eddy.desktop', 'com.system76.Popsicle.desktop', 'guch
 name='Utilities'
 translate=true
 
+[gnome/desktop/background]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/pop/ng-32703.jpg'
+primary-color='#000000'
+secondary-color='#000000'
+
 [gnome/desktop/input-sources]
 sources=[('xkb', 'us+intl')]
 xkb-options=@as []
@@ -24,7 +35,7 @@ xkb-options=@as []
 gtk-im-module='gtk-im-context-simple'
 
 [gnome/desktop/notifications]
-application-children=['io-elementary-appcenter', 'firefox', 'org-openshot-openshot', 'google-chrome']
+application-children=['io-elementary-appcenter', 'firefox', 'org-openshot-openshot', 'google-chrome', 'org-gnome-nautilus']
 show-banners=true
 
 [gnome/desktop/notifications/application/firefox]
@@ -36,6 +47,9 @@ application-id='google-chrome.desktop'
 [gnome/desktop/notifications/application/io-elementary-appcenter]
 application-id='io.elementary.appcenter.desktop'
 
+[gnome/desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
 [gnome/desktop/notifications/application/org-openshot-openshot]
 application-id='org.openshot.OpenShot.desktop'
 
@@ -44,10 +58,18 @@ natural-scroll=false
 
 [gnome/desktop/peripherals/touchpad]
 natural-scroll=true
+send-events='enabled'
 two-finger-scrolling-enabled=true
 
 [gnome/desktop/privacy]
 disable-microphone=false
+
+[gnome/desktop/screensaver]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/pop/ng-32703.jpg'
+primary-color='#000000'
+secondary-color='#000000'
 
 [gnome/desktop/wm/keybindings]
 switch-applications=@as []
@@ -81,12 +103,13 @@ initial-size=(890, 550)
 maximized=false
 
 [gnome/shell]
-favorite-apps=['google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop']
+favorite-apps=['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'org.gnome.Terminal.desktop', 'code.desktop', 'com.getpostman.Postman.desktop', 'charles-proxy.desktop']
 had-bluetooth-devices-setup=true
 
 [gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 default-size-columns=140
 default-size-rows=45
+font='Input Mono 12'
 
 [gtk/settings/file-chooser]
 date-format='regular'
@@ -94,7 +117,7 @@ location-mode='path-bar'
 show-hidden=true
 show-size-column=true
 show-type-column=true
-sidebar-width=150
+sidebar-width=153
 sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
