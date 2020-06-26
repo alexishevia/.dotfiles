@@ -135,6 +135,9 @@ nnoremap <leader>tp :GoTestPackage<CR>
 " use ,ta to run all tests for current project
 nnoremap <leader>ta :GoTest<CR>
 
+" use ,vc to close the vimux runner window
+nnoremap <leader>vc :VimuxCloseRunner<CR>
+
 " -----------------------------------------------------------------------------
 " Abbreviations
 " -----------------------------------------------------------------------------
