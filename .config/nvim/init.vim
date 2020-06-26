@@ -316,6 +316,9 @@ command! GoTestPackage :call VimuxOpenRunner() | :call GolangTestCurrentPackage(
 " :GoTest opens the vimux runner and runs all tests for the current project
 command! GoTest :call VimuxOpenRunner() | :call VimuxRunCommand("cd " . getcwd() . " && go test ./...")
 
+" :GoImports will try to fix imports for the current file
+command! GoImports :call Preserve('%!goimports')
+
 " -----------------------------------------------------------------------------
 " Custom Functions
 " -----------------------------------------------------------------------------
@@ -382,8 +385,5 @@ augroup lex
 
   " on save, run MDo on any markdown file living inside a `todo/` folder
   autocmd BufWritePre *todo/*.md call Preserve('%!mdo')
-
-  " on save, run goimports on any go file
-  autocmd BufWritePre *.go call Preserve('%!goimports')
 
 augroup END
