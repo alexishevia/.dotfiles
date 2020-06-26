@@ -65,7 +65,8 @@ sudo apt install --yes \
   oracle-java14-installer ` # Oracle Java(TM) Development Kit (JDK) 14                       ` \
   virtualbox              ` # x86 virtualization solution - base binaries                    ` \
   python3-pip             ` # Python package installer                                       ` \
-  gnupg2                  ` # GNU privacy guard - I use it to sign git commits               `
+  gnupg2                  ` # GNU privacy guard - I use it to sign git commits               ` \
+  pavucontrol             ` # PulseAudio Volume Control                                      `
 
 # install dropbox daemon and start it
 dropbox start -i
