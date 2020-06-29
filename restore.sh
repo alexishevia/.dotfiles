@@ -22,6 +22,7 @@ set -e # exit if any command fails
 ./xkb.sh
 ./apps/vscode/vscode.sh
 ./fonts.sh
+./gnome-extensions.sh
 
 # restore dconf settings
 dconf load /org/ < ./dconf.backup
