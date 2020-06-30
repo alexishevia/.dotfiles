@@ -66,8 +66,7 @@ sudo apt install --yes \
   virtualbox              ` # x86 virtualization solution - base binaries                    ` \
   python3-pip             ` # Python package installer                                       ` \
   gnupg2                  ` # GNU privacy guard - I use it to sign git commits               ` \
-  pavucontrol             ` # PulseAudio Volume Control                                      ` \
-  blueman                 ` # Graphical bluetooth manager                                    `
+  pavucontrol             ` # PulseAudio Volume Control                                      `
 
 # install dropbox daemon and start it
 dropbox start -i

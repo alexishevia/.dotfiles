@@ -60,6 +60,29 @@
           "<node_internals>/**/*.js"
         ],
         "outputCapture": "std",
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "FOX NodeJS Vodplayer Service",
+        "program": "${workspaceFolder}/packages/dcgapi-service-vodplayer-d2c/app.js",
+        "env": {
+          "DEFAULT_REDIS_HOST": "127.0.0.1",
+          "DEFAULT_REDIS_PORT": "6379",
+          "ELASTICSEARCH_HOST": "https://jumpbox-es.us-west-2.es.amazonaws.com:9200",
+          "NODE_TLS_REJECT_UNAUTHORIZED": "0",
+          // "LOG_LEVEL": "debug",
+          "LINKERD_IP": "127.0.0.1",
+          "SERVICE_NAME": "vodplayer_v3"
+        },
+        "runtimeArgs": [
+          "--inspect"
+        ],
+        "port": 9230,
+        "skipFiles": [
+          "<node_internals>/**/*.js"
+        ],
+        "outputCapture": "std",
       }
     ]
   },
