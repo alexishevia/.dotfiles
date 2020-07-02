@@ -376,7 +376,7 @@ set softtabstop=2
 set expandtab
 
 " replace 'ck' with a checkmark
-iabbrev ck 🗸
+iabbrev ck ✓
 
 " replace '[bullet]' with an actual bullet
 iabbrev [bullet] ∙

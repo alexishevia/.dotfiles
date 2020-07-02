@@ -143,7 +143,7 @@ nnoremap <leader>vc :VimuxCloseRunner<CR>
 " -----------------------------------------------------------------------------
 
 " replace 'ck' with a checkmark
-iabbrev ck 🗸
+iabbrev ck ✓
 
 " replace '[bullet]' with an actual bullet
 iabbrev [bullet] ∙
