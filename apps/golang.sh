@@ -12,6 +12,10 @@ if ! [ -x "$(command -v dlv)" ]; then
   go get github.com/go-delve/delve/cmd/dlv
 fi
 
+if ! [ -x "$(command -v goimports)" ]; then
+  go get golang.org/x/tools/cmd/goimports
+fi
+
 if ! [ -x "$(command -v glide)" ]; then
   curl https://glide.sh/get | sh
 fi
