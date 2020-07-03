@@ -8,6 +8,10 @@ if ! [ -x "$(command -v go)" ]; then
   mkdir -p $HOME/go/bin
 fi
 
+if ! [ -x "$(command -v dlv)" ]; then
+  go get github.com/go-delve/delve/cmd/dlv
+fi
+
 if ! [ -x "$(command -v glide)" ]; then
   curl https://glide.sh/get | sh
 fi
