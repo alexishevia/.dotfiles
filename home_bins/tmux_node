@@ -5,28 +5,28 @@
 # - editor: nvim
 # - run: node
 
-tmux has-session -t fox
+tmux has-session -t cpe-node-services
 
 if [ $? != 0 ]
 then
     # editor window
-    tmux new -s fox -n editor -d
-    tmux send-keys -t fox:editor 'cd $HOME/Projects/FOX/cpe-node-services' C-m
-    tmux send-keys -t fox:editor 'nvm use' C-m
-    tmux send-keys -t fox:editor 'source ../.aws_keys' C-m
-    tmux send-keys -t fox:editor 'source $HOME/Dropbox/env_vars.sh' C-m
-    tmux send-keys -t fox:editor 'clear' C-m
-    tmux send-keys -t fox:editor 'git pull' C-m
-    tmux send-keys -t fox:editor 'nvim .'
+    tmux new -s cpe-node-services -n editor -d
+    tmux send-keys -t cpe-node-services:editor 'cd $HOME/Projects/FOX/cpe-node-services' C-m
+    tmux send-keys -t cpe-node-services:editor 'nvm use' C-m
+    tmux send-keys -t cpe-node-services:editor 'source ../.aws_keys' C-m
+    tmux send-keys -t cpe-node-services:editor 'source $HOME/Dropbox/env_vars.sh' C-m
+    tmux send-keys -t cpe-node-services:editor 'clear' C-m
+    tmux send-keys -t cpe-node-services:editor 'git pull' C-m
+    tmux send-keys -t cpe-node-services:editor 'nvim .'
 
     # run window
-    tmux new-window -t fox -n run
-    tmux send-keys -t fox:run 'cd $HOME/Projects/FOX/cpe-node-services' C-m
-    tmux send-keys -t fox:run 'nvm use' C-m
-    tmux send-keys -t fox:run 'source ../.aws_keys' C-m
-    tmux send-keys -t fox:run 'source $HOME/Dropbox/env_vars.sh' C-m
-    tmux send-keys -t fox:run 'clear' C-m
-    tmux send-keys -t fox:run 'DEFAULT_REDIS_HOST=127.0.0.1 \
+    tmux new-window -t cpe-node-services -n run
+    tmux send-keys -t cpe-node-services:run 'cd $HOME/Projects/FOX/cpe-node-services' C-m
+    tmux send-keys -t cpe-node-services:run 'nvm use' C-m
+    tmux send-keys -t cpe-node-services:run 'source ../.aws_keys' C-m
+    tmux send-keys -t cpe-node-services:run 'source $HOME/Dropbox/env_vars.sh' C-m
+    tmux send-keys -t cpe-node-services:run 'clear' C-m
+    tmux send-keys -t cpe-node-services:run 'DEFAULT_REDIS_HOST=127.0.0.1 \
 DEFAULT_REDIS_PORT=6379 \
 ELASTICSEARCH_HOST=https://jumpbox-es.us-west-2.es.amazonaws.com:9200 \
 NODE_TLS_REJECT_UNAUTHORIZED=0 \
@@ -39,8 +39,8 @@ fi
 # The TMUX environment variable will tell you if the current process is running
 # under tmux or not (and whether to attach to tmux or just switch session)
 if [ -z "$TMUX" ]; then
-    tmux select-window -t fox:editor
-    tmux attach -t fox
+    tmux select-window -t cpe-node-services:editor
+    tmux attach -t cpe-node-services
 else
-    tmux switch -t fox
+    tmux switch -t cpe-node-services
 fi
