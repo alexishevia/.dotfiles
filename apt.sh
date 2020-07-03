@@ -67,7 +67,8 @@ sudo apt install --yes \
   python3-pip             ` # Python package installer                                       ` \
   gnupg2                  ` # GNU privacy guard - I use it to sign git commits               ` \
   pavucontrol             ` # PulseAudio Volume Control                                      ` \
-  blueman                 ` # Graphical bluetooth manager                                    `
+  blueman                 ` # Graphical bluetooth manager                                    ` \
+  gnome-tweaks            ` # tool to adjust advanced configuration settings for GNOME       `
 
 # install dropbox daemon and start it
 dropbox start -i
