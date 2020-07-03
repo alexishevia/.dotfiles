@@ -3,7 +3,7 @@
 set -e # exit if any command fails
 
 if ! [ -x "$(command -v go)" ]; then
-  wget -O /tmp/golang.tar.gz https://dl.google.com/go/go1.13.12.linux-amd64.tar.gz
+  wget -O /tmp/golang.tar.gz https://golang.org/dl/go1.14.4.linux-amd64.tar.gz
   sudo tar -xzf /tmp/golang.tar.gz -C /usr/local
   mkdir -p $HOME/go/bin
 fi
