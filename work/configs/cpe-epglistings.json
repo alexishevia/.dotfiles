@@ -10,6 +10,7 @@
     "cfg/svc/epglistings/services/epglistings_GetByID/enableTracing": "false",
     "cfg/svc/epglistings/services/dma_Get/enableTracing": "false",
     "cfg/svc/epglistings/services/foxentitlement_Get/enableTracing": "false",
-    "cfg/svc/epglistings/services/video_GetByID/enableTracing": "false"
+    "cfg/svc/epglistings/services/video_GetByID/enableTracing": "false",
+    "cfg/svc/epglistings/services/geo_GetStations/enableTracing": "false"
   }
 }

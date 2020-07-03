@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# if 'cpe-node-services' session exists, attach to it.
+# otherwise, create it with the following windows:
+# - editor: nvim
+# - run: node
+
+tmux has-session -t fox
+
+if [ $? != 0 ]
+then
+    # editor window
+    tmux new -s fox -n editor -d
+    tmux send-keys -t fox:editor 'cd $HOME/Projects/FOX/cpe-node-services' C-m
+    tmux send-keys -t fox:editor 'nvm use' C-m
+    tmux send-keys -t fox:editor 'source ../.aws_keys' C-m
+    tmux send-keys -t fox:editor 'source $HOME/Dropbox/env_vars.sh' C-m
+    tmux send-keys -t fox:editor 'clear' C-m
+    tmux send-keys -t fox:editor 'git pull' C-m
+    tmux send-keys -t fox:editor 'nvim .'
+
+    # run window
+    tmux new-window -t fox -n run
+    tmux send-keys -t fox:run 'cd $HOME/Projects/FOX/cpe-node-services' C-m
+    tmux send-keys -t fox:run 'nvm use' C-m
+    tmux send-keys -t fox:run 'source ../.aws_keys' C-m
+    tmux send-keys -t fox:run 'source $HOME/Dropbox/env_vars.sh' C-m
+    tmux send-keys -t fox:run 'clear' C-m
+    tmux send-keys -t fox:run 'DEFAULT_REDIS_HOST=127.0.0.1 \
+DEFAULT_REDIS_PORT=6379 \
+ELASTICSEARCH_HOST=https://jumpbox-es.us-west-2.es.amazonaws.com:9200 \
+NODE_TLS_REJECT_UNAUTHORIZED=0 \
+LINKERD_IP=127.0.0.1 \
+SERVICE_NAME=video_v1 \
+node --inspect ./packages/dcgapi-service-vodplayer-d2c/app.js'
+fi
+
+# attach to session
+# The TMUX environment variable will tell you if the current process is running
+# under tmux or not (and whether to attach to tmux or just switch session)
+if [ -z "$TMUX" ]; then
+    tmux select-window -t fox:editor
+    tmux attach -t fox
+else
+    tmux switch -t fox
+fi
