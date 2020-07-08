@@ -12,6 +12,7 @@ set -e # exit if any command fails
 ./apps/google-chrome.sh
 # ./apps/prey.sh # Current prey version depends on python-gtk2, which is not installable on Ubuntu 20.04
 ./apps/expressvpn.sh
+./apps/awscli.sh
 ./nvm.sh
 ./apps/react-native-debugger.sh
 ./python.sh
