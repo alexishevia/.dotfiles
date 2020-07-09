@@ -68,7 +68,8 @@ sudo apt install --yes \
   gnupg2                  ` # GNU privacy guard - I use it to sign git commits               ` \
   pavucontrol             ` # PulseAudio Volume Control                                      ` \
   blueman                 ` # Graphical bluetooth manager                                    ` \
-  gnome-tweaks            ` # tool to adjust advanced configuration settings for GNOME       `
+  gnome-tweaks            ` # tool to adjust advanced configuration settings for GNOME       ` \
+  alacritty               ` # GPU-accelerated terminal emulator                              `
 
 # install dropbox daemon and start it
 dropbox start -i
