@@ -12,22 +12,22 @@
   # available, otherwise `xterm-256color` is used.
   #TERM: alacritty
 
-#window:
+window:
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  dimensions:
+    columns: 150
+    lines: 50
 
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
-  #position:
-  #  x: 0
-  #  y: 0
+  position:
+    x: 575
+    y: 10
 
   # Window padding (changes require restart)
   #
@@ -171,10 +171,10 @@
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night Bright)
-#colors:
+colors:
   # Default colors
-  #primary:
-  #  background: '#000000'
+  primary:
+    background: '#1C1C1C'
   #  foreground: '#eaeaea'
 
     # Bright and dim foreground colors
