@@ -2,7 +2,7 @@
 
 set -e # exit if any command fails
 
-mockfiles='cpe-epglistings.json'
+mockfiles='cpe-asset-info.json cpe-epglistings.json'
 
 for file in $mockfiles; do
   # split value by '.'
