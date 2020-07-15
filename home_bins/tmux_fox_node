@@ -26,13 +26,9 @@ then
     tmux send-keys -t cpe-node-services:run 'source ../.aws_keys' C-m
     tmux send-keys -t cpe-node-services:run 'source $HOME/Dropbox/env_vars.sh' C-m
     tmux send-keys -t cpe-node-services:run 'clear' C-m
-    tmux send-keys -t cpe-node-services:run 'DEFAULT_REDIS_HOST=127.0.0.1 \
-DEFAULT_REDIS_PORT=6379 \
-ELASTICSEARCH_HOST=https://jumpbox-es.us-west-2.es.amazonaws.com:9200 \
-NODE_TLS_REJECT_UNAUTHORIZED=0 \
-LINKERD_IP=127.0.0.1 \
-SERVICE_NAME=video_v1 \
-node --inspect ./packages/dcgapi-service-vodplayer-d2c/app.js'
+    tmux send-keys -t cpe-node-services:run 'rm .env' C-m
+    tmux send-keys -t cpe-node-services:run 'ln -s env/d2c/ssh-uw2-1-qa1.env .env' C-m
+    tmux send-keys -t cpe-node-services:run 'docker-compose up -d video geo screens categories'
 fi
 
 # attach to session
