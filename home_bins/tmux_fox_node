@@ -28,7 +28,7 @@ then
     tmux send-keys -t cpe-node-services:run 'clear' C-m
     tmux send-keys -t cpe-node-services:run 'rm .env' C-m
     tmux send-keys -t cpe-node-services:run 'ln -s env/d2c/ssh-uw2-1-qa1.env .env' C-m
-    tmux send-keys -t cpe-node-services:run 'docker-compose up -d video geo screens categories'
+    tmux send-keys -t cpe-node-services:run 'docker-compose up -d video geo screens categories && docker-compose logs -f'
 fi
 
 # attach to session
