@@ -1,0 +1,10 @@
+{
+  "env": {
+    "LINKERD_IP": "127.0.0.1",
+    "BASE_URL": "http://127.0.0.1"
+  },
+  "key": {
+    "cfg/svc/lpvideos/loglevel": "debug",
+    "cfg/svc/lpvideos/indexer/url": "https://jumpbox-es.us-west-2.es.amazonaws.com:9200"
+  }
+}
