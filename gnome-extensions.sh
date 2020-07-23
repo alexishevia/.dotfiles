@@ -15,5 +15,11 @@ wget -O /tmp/shadeinactive.zip https://extensions.gnome.org/download-extension/s
 unzip /tmp/shadeinactive.zip -d "$HOME/.local/share/gnome-shell/extensions/shade-inactive-windows@hepaajan.iki.fi"
 gnome-extensions enable shade-inactive-windows@hepaajan.iki.fi
 
+# Remove Alt+Tab Delay
+# https://extensions.gnome.org/extension/1403/remove-alttab-delay/
+wget -O /tmp/remove-alt-tab-delay.zip https://extensions.gnome.org/download-extension/remove-alt-tab-delay%40tetrafox.pw.shell-extension.zip?version_tag=8000
+unzip /tmp/remove-alt-tab-delay.zip -d "$HOME/.local/share/gnome-shell/extensions/remove-alt-tab-delay@tetrafox.pw"
+gnome-extensions enable remove-alt-tab-delay@tetrafox.pw
+
 # restart gnome
 sudo /etc/init.d/gdm3 restart
