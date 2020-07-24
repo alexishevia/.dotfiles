@@ -15,6 +15,7 @@ set -e # exit if any command fails
 ./apps/awscli.sh
 ./nvm.sh
 ./apps/react-native-debugger.sh
+./apps/microsoft-teams.sh
 ./python.sh
 ./neovim.sh
 ./vim.sh
