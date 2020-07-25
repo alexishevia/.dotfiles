@@ -20,3 +20,15 @@ for file in $mockfiles; do
   fi
   ln -s "$PWD/work/configs/$file" $path
 done
+
+# canIPlay is a special case because it cannot use mock.json
+path="$GOPATH/src/github.com/foxbroadcasting/cpe-canIplay/config/config.cfg"
+if [ -e $path ]
+then
+  rm $path
+fi
+if [ -L $path ]
+then
+  rm $path
+fi
+ln -s "$PWD/work/configs/cpe-canIplay.cfg" $path
