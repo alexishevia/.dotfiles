@@ -2,13 +2,10 @@
 
 set -e # exit if any command fails
 
-mockfiles='cpe-asset-info.json cpe-epglistings.json cpe-psu.json cpe-lp-videos.json'
+mockfiles='cpe-asset-info cpe-epglistings cpe-psu cpe-lp-videos cpe-lp-url'
 
 for file in $mockfiles; do
-  # split value by '.'
-  IFS='.' read -a arr <<< $file
-
-  path="$GOPATH/src/github.com/foxbroadcasting/${arr[0]}/config/mock.json"
+  path="$GOPATH/src/github.com/foxbroadcasting/$file/config/mock.json"
 
   if [ -e $path ]
   then
@@ -18,7 +15,7 @@ for file in $mockfiles; do
   then
     rm $path
   fi
-  ln -s "$PWD/work/configs/$file" $path
+  ln -s "$PWD/work/configs/$file.json" $path
 done
 
 # canIPlay is a special case because it cannot use mock.json
