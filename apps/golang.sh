@@ -31,3 +31,7 @@ fi
 if ! [ -x "$(command -v go-template-mock)" ]; then
   go get github.com/nlewo/consul-template-mock && go install github.com/nlewo/consul-template-mock
 fi
+
+if ! [ -x "$(command -v golint)" ]; then
+  go get golang.org/x/lint/golint && go install golang.org/x/lint/golint
+fi
