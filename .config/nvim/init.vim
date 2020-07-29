@@ -213,6 +213,9 @@ set nolist
 " fold manually
 set foldmethod=manual
 
+" add golint to runtime path
+set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
+
 " -----------------------------------------------------------------------------
 " Plugin specific settings
 " -----------------------------------------------------------------------------
@@ -388,5 +391,8 @@ augroup lex
 
   " on save, run MDo on any markdown file living inside a `todo/` folder
   autocmd BufWritePre *todo/*.md call Preserve('%!mdo')
+
+  " on save, run Lint on any go file
+  autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 
 augroup END
