@@ -44,6 +44,9 @@ Plug 'benmills/vimux'
 " Run golang tests using vimux
 Plug 'benmills/vimux-golang'
 
+" Merge a tab's windows with the current tab
+Plug 'vim-scripts/Tabmerge'
+
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -300,6 +303,9 @@ nmap <silent> ]d <Plug>(coc-diagnostic-next)
 " use gd to open definition in a new tab
 nmap <silent> gd :call CocAction('jumpDefinition', 'tabe')<cr>
 
+" use gD to open definition in a right split
+nmap <silent> gD :DefRight<cr>
+
 " use ,f to format selected region
 vmap <leader>f <Plug>(coc-format-selected)
 nmap <leader>f <Plug>(coc-format-selected)
@@ -325,6 +331,9 @@ command! GoTest :call VimuxOpenRunner() | :call VimuxRunCommand("cd " . getcwd()
 
 " :GoImports will try to fix imports for the current file
 command! GoImports :call Preserve('%!goimports')
+
+" :DefRight will open the definition for the current variable in a right split
+command! DefRight :call CocAction('jumpDefinition', 'tabe') | tabprevious | :call Tabmerge('right')
 
 " -----------------------------------------------------------------------------
 " Custom Functions
