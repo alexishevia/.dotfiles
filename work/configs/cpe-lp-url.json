@@ -9,6 +9,7 @@
     "cfg/svc/lpurl/services/Ext_FVCDS_GetFVCD/enableTracing": "false",
     "cfg/svc/lpurl/services/jwt_GetPublicKey/enableTracing": "false",
     "cfg/svc/lpurl/services/mediasources_GetByID/enableTracing": "false",
-    "cfg/svc/lpurl/services/listings_GetContiguous/enableTracing": "false"
+    "cfg/svc/lpurl/services/listings_GetContiguous/enableTracing": "false",
+    "cfg/svc/lpurl/services/headerbidding_RunBid/enableTracing": "true"
   }
 }
