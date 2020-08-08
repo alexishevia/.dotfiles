@@ -26,6 +26,9 @@ Plug 'ajorgensen/vim-markdown-toc'
 " Markdown syntax highlighting, matching rules and mappings
 Plug 'plasticboy/vim-markdown'
 
+" Markdown Preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
 " easy comment/uncomment
 Plug 'tpope/vim-commentary'
 
