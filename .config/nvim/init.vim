@@ -320,6 +320,9 @@ nnoremap <silent> <C-S-P>  :<C-u>CocList commands<cr>
 " Custom Commands
 " -----------------------------------------------------------------------------
 
+" :MDo runs the mdo command on the current file
+command! MDo :call Preserve('%!mdo')
+
 " :ReloadConfig reloads the init.vim file
 command! ReloadConfig :source ~/.config/nvim/init.vim
 
