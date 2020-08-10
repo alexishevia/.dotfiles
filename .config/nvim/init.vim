@@ -50,6 +50,9 @@ Plug 'benmills/vimux-golang'
 " Merge a tab's windows with the current tab
 Plug 'vim-scripts/Tabmerge'
 
+" pairs of handy bracket mappings
+Plug 'tpope/vim-unimpaired'
+
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -100,6 +103,11 @@ nnoremap <leader>J :res +5<Enter>
 nnoremap <leader>K :res -5<Enter>
 nnoremap <leader>L :vertical resize +5<Enter>
 nnoremap <leader>H :vertical resize -5<Enter>
+
+" use ,* to populate the quickfix window with all matches for the current word
+" tip: use `]q` and `[q` to move between results, or :cw to open quickfix
+" window
+nnoremap <leader>* :Ggrep --untracked <cword><CR><CR>
 
 " use ,ig to toggle cursorcolumn
 nnoremap <Leader>ig :set cursorcolumn!<Enter>
