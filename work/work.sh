@@ -2,7 +2,7 @@
 
 set -e # exit if any command fails
 
-mockfiles='cpe-asset-info cpe-epglistings cpe-psu cpe-lp-videos cpe-lp-url'
+mockfiles='cpe-asset-info cpe-epglistings cpe-psu cpe-lp-videos cpe-lp-url cpe-liveplayer'
 
 for file in $mockfiles; do
   path="$GOPATH/src/github.com/foxbroadcasting/$file/config/mock.json"
