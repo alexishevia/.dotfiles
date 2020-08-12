@@ -2,7 +2,6 @@
   // automatically format on save
   "coc.preferences.formatOnSaveFiletypes": [
     "go",
-    "javascript",
     "typescript",
     "json"
   ],

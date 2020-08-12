@@ -13,6 +13,6 @@
     "cfg/svc/liveplayer/services/lpurl_GetStream/enableTracing": "false",
     "cfg/svc/liveplayer/services/caniplay_CanIPlay/enableTracing": "false",
     "cfg/svc/liveplayer/services/jwt_GetPublicKey/enableTracing": "false",
-    "cfg/svc/liveplayer/services/dma_GetDMA/enableTracing": "true"
+    "cfg/svc/liveplayer/services/dma_GetDMA/enableTracing": "false"
   }
 }
