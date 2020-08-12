@@ -34,42 +34,43 @@ sudo apt remove --yes vim vim-gnome terminator gimp inkscape     \
 
 # install apt packages I use
 sudo apt install --yes \
-  snapd                   ` # Daemon and tooling that enable snap packages                   ` \
-  flatpak                 ` # Application deployment framework for desktop apps              ` \
-  curl                    ` # command line tool for transferring data with URL syntax        ` \
-  vim-gtk3                ` # Vi IMproved - enhanced vi editor - with GTK3 GUI               ` \
-  neovim                  ` # heavily refactored vim fork                                    ` \
-  tmux                    ` # terminal multiplexer                                           ` \
-  git git-core            ` # fast, scalable, distributed revision control system            ` \
-  gitk                    ` # revision tree visualizer for git                               ` \
-  code                    ` # vs code                                                        ` \
-  grc                     ` # colouriser for beautifying your logfiles or output of commands ` \
-  gparted                 ` # GNOME partition editor                                         ` \
-  rbenv                   ` # simple per-user Ruby version manager                           ` \
-  charles-proxy           ` # proxy for web debugging                                        ` \
-  silversearcher-ag       ` # very fast grep-like program, alternative to ack-grep           ` \
-  veracrypt               ` # Cross-platform on-the-fly encryption                           ` \
-  screenruler             ` # measure objects on screen with a variety of metrics            ` \
-  docker.io               ` # Linux container runtime                                        ` \
-  docker-compose          ` # Punctual, lightweight development environments using Docker    ` \
-  mongodb-clients         ` # object/document-oriented database (client apps)                ` \
-  flameshot               ` # Powerful yet simple-to-use screenshot software                 ` \
-  redis-server            ` # Persistent key-value database with network interface           ` \
-  redis-tools             ` # Persistent key-value database with network interface (client)  ` \
-  gpick                   ` # advanced GTK+ color picker                                     ` \
-  unzip                   ` # De-archiver for .zip files                                     ` \
-  unrar                   ` # Unarchiver for .rar files (non-free version)                   ` \
-  p7zip-full              ` # 7z and 7za file archivers with high compression ratio          ` \
-  simple-scan             ` # Simple Scanning Utility                                        ` \
-  nautilus-dropbox        ` # Dropbox integration for Nautilus                               ` \
-  oracle-java14-installer ` # Oracle Java(TM) Development Kit (JDK) 14                       ` \
-  virtualbox              ` # x86 virtualization solution - base binaries                    ` \
-  python3-pip             ` # Python package installer                                       ` \
-  gnupg2                  ` # GNU privacy guard - I use it to sign git commits               ` \
-  pavucontrol             ` # PulseAudio Volume Control                                      ` \
-  blueman                 ` # Graphical bluetooth manager                                    ` \
-  gnome-tweaks            ` # tool to adjust advanced configuration settings for GNOME       ` \
-  alacritty               ` # GPU-accelerated terminal emulator                              `
+  snapd                   ` # Daemon and tooling that enable snap packages                                       ` \
+  flatpak                 ` # Application deployment framework for desktop apps                                  ` \
+  curl                    ` # command line tool for transferring data with URL syntax                            ` \
+  vim-gtk3                ` # Vi IMproved - enhanced vi editor - with GTK3 GUI                                   ` \
+  neovim                  ` # heavily refactored vim fork                                                        ` \
+  tmux                    ` # terminal multiplexer                                                               ` \
+  git git-core            ` # fast, scalable, distributed revision control system                                ` \
+  gitk                    ` # revision tree visualizer for git                                                   ` \
+  code                    ` # vs code                                                                            ` \
+  grc                     ` # colouriser for beautifying your logfiles or output of commands                     ` \
+  gparted                 ` # GNOME partition editor                                                             ` \
+  rbenv                   ` # simple per-user Ruby version manager                                               ` \
+  charles-proxy           ` # proxy for web debugging                                                            ` \
+  silversearcher-ag       ` # very fast grep-like program, alternative to ack-grep                               ` \
+  veracrypt               ` # Cross-platform on-the-fly encryption                                               ` \
+  screenruler             ` # measure objects on screen with a variety of metrics                                ` \
+  docker.io               ` # Linux container runtime                                                            ` \
+  docker-compose          ` # Punctual, lightweight development environments using Docker                        ` \
+  mongodb-clients         ` # object/document-oriented database (client apps)                                    ` \
+  flameshot               ` # Powerful yet simple-to-use screenshot software                                     ` \
+  redis-server            ` # Persistent key-value database with network interface                               ` \
+  redis-tools             ` # Persistent key-value database with network interface (client)                      ` \
+  gpick                   ` # advanced GTK+ color picker                                                         ` \
+  unzip                   ` # De-archiver for .zip files                                                         ` \
+  unrar                   ` # Unarchiver for .rar files (non-free version)                                       ` \
+  p7zip-full              ` # 7z and 7za file archivers with high compression ratio                              ` \
+  simple-scan             ` # Simple Scanning Utility                                                            ` \
+  nautilus-dropbox        ` # Dropbox integration for Nautilus                                                   ` \
+  oracle-java14-installer ` # Oracle Java(TM) Development Kit (JDK) 14                                           ` \
+  virtualbox              ` # x86 virtualization solution - base binaries                                        ` \
+  python3-pip             ` # Python package installer                                                           ` \
+  gnupg2                  ` # GNU privacy guard - I use it to sign git commits                                   ` \
+  pavucontrol             ` # PulseAudio Volume Control                                                          ` \
+  blueman                 ` # Graphical bluetooth manager                                                        ` \
+  gnome-tweaks            ` # tool to adjust advanced configuration settings for GNOME                           ` \
+  alacritty               ` # GPU-accelerated terminal emulator                                                  ` \
+  libusb-1.0-0-dev        ` # userspace USB programming library development files. Required for okta-awscli[U2F] `
 
 # install dropbox daemon and start it
 dropbox start -i
