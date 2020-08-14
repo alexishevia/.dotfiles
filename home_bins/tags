@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# tags is a small binary meant to be used with the Zettelkasten repo
+#
+# Usage:
+# - `tags` list all tags for the current directory
+# - `tags someVal` list all files with tag "someVal"
+#
+# Note: I use `@@{someVal}` for tags.
+# eg: @@foo @@bar
+
+# if no argument was passed, render a list of all tags
+if [ $# -eq 0 ]
+then
+  ag --nofilename --nobreak @@ | tr '@@' '\n' | sed 's/ //g' | sort | uniq
+  exit 0
+fi
+
+# if an argument was passed, return all filenames where the tag is used
+ag -l "@@$1"

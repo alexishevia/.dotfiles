@@ -84,9 +84,6 @@ alias open=xdg-open
 # add alias to find out who is using a given port
 alias whoisusing='netstat -tulpn | grep'
 
-# add alias to print out all tags for zettelkasten
-alias lstags="ag --nofilename --nobreak @@ | tr '@@' '\n' | sed 's/ //g' | sort | uniq"
-
 # add alias for git commands
 alias gco="git checkout"
 alias gpull="git pull"
