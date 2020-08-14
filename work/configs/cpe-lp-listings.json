@@ -1,0 +1,10 @@
+{
+  "env": {
+    "LINKERD_IP": "127.0.0.1",
+    "BASE_URL": "http://localhost:8080"
+  },
+  "key": {
+    "cfg/svc/lplistings/loglevel": "debug",
+    "cfg/svc/lplistings/indexer/url": "https://jumpbox-es.us-west-2.es.amazonaws.com:9200"
+  }
+}
