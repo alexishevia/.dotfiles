@@ -64,8 +64,8 @@ fi
 # enable 256-color support in terminal
 TERM=xterm-256color
 
-# user vim as the default editor
-export EDITOR=/usr/bin/vim
+# use neovim as the default editor
+export EDITOR=/usr/bin/nvim
 
 # multi-line prompt
 PS1='$PWD
@@ -92,6 +92,9 @@ alias gbranch="git branch"
 # prefer neovim over vim
 alias vim='nvim'
 alias oldvim="/usr/bin/vim"
+
+# command to set built-in display to my preferred resolution (1600x900)
+alias res='xrandr --output `xrandr | grep " connected"|cut -f1 -d" "`  --mode 1600x900'
 
 #---------------------------------------
 # JAVA
