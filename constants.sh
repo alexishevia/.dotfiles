@@ -38,4 +38,5 @@ $HOME/go/src/github.com/foxbroadcasting/cpe-canIplay?git@github.com:foxbroadcast
 $HOME/go/src/github.com/foxbroadcasting/cpe-cli?git@github.com:foxbroadcasting/cpe-cli.git
 $HOME/go/src/github.com/foxbroadcasting/cpe-epglistings?git@github.com:foxbroadcasting/cpe-epglistings.git
 $HOME/go/src/github.com/foxbroadcasting/cpe-sportsplayer?git@github.com:foxbroadcasting/cpe-sportsplayer.git
-$HOME/go/src/github.com/foxbroadcasting/tracking-data-helper?git@github.com:foxbroadcasting/tracking-data-helper.git"
+$HOME/go/src/github.com/foxbroadcasting/tracking-data-helper?git@github.com:foxbroadcasting/tracking-data-helper.git
+$HOME/go/src/github.com/foxbroadcasting/go-helpers?git@github.com:foxbroadcasting/go-helpers.git"
