@@ -1,6 +1,7 @@
 [user]
   name = Alexis Hevia
   email = hevia.alexis@gmail.com
+	signingkey = 8D6711F319B585B7
 [diff]
   tool = vimdiff
 [difftool]

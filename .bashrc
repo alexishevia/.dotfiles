@@ -10,6 +10,10 @@
 LOCAL_IP=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
 export DISPLAY=$LOCAL_IP:0
 
+# fix gpg signing issue on WSL2
+# see: https://alfredmyers.com/2019/05/02/error-gpg-failed-to-sign-the-data/
+export GPG_TTY=$(tty)
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
