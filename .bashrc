@@ -5,6 +5,11 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# Connect VxXsrv from Ubuntu on WSL2
+# see: https://gist.github.com/necojackarc/02c3c81e1525bb5dc3561f378e921541
+LOCAL_IP=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
+export DISPLAY=$LOCAL_IP:0
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
