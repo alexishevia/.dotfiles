@@ -49,7 +49,8 @@ sudo apt install --yes \
   oracle-java14-installer ` # Oracle Java(TM) Development Kit (JDK) 14                                           ` \
   python3-pip             ` # Python package installer                                                           ` \
   gnupg2                  ` # GNU privacy guard - I use it to sign git commits                                   ` \
-  libusb-1.0-0-dev        ` # userspace USB programming library development files. Required for okta-awscli[U2F] `
+  libusb-1.0-0-dev        ` # userspace USB programming library development files. Required for okta-awscli[U2F] ` \
+  nautilus                ` # file manager and graphical shell for GNOME                                         `
 
 # apt cleanup
 sudo apt upgrade --yes
