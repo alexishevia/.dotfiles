@@ -10,6 +10,9 @@ tmux has-session -t _todo
 
 if [ $? != 0 ]
 then
+    # make sure dropbox is running
+    dropbox start
+
     # editor window
     tmux new -s _todo -n editor -d -x "$2" -y "$(($1 - 1))" # https://superuser.com/questions/354844/cannot-resize-tmux-pane-from-bash-script
     tmux send-keys -t _todo:editor 'cd ~/Dropbox' C-m
