@@ -87,11 +87,8 @@ PATH=$PATH:~/bin
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# add alias for open
-alias open=xdg-open
-
-# add alias for open
-alias open=xdg-open
+# add alias for explorer.exe
+alias open=explorer.exe
 
 # add alias to find out who is using a given port
 alias whoisusing='netstat -tulpn | grep'
