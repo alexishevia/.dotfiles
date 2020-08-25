@@ -8,7 +8,6 @@ set -e # exit if any command fails
 ./encrypted.sh restore
 ./bins.sh
 ./apps/awscli.sh
-./apps/vscode.sh
 ./nvm.sh
 ./python.sh
 ./apps/golang.sh
