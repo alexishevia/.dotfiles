@@ -9,6 +9,7 @@ These scripts should allow me to reconstruct my entire development environment o
     https://gist.github.com/necojackarc/02c3c81e1525bb5dc3561f378e921541
 - Install Docker Desktop and use it as the WSL2 docker backend
     https://docs.docker.com/docker-for-windows/wsl/
+- Install the [Cascadia Mono font](https://github.com/microsoft/cascadia-code) and set it as the default font for the Ubuntu WSL2 client
 
 ## Usage
 ```sh
