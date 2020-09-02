@@ -10,6 +10,8 @@ These scripts should allow me to reconstruct my entire development environment o
 - Install Docker Desktop and use it as the WSL2 docker backend
     https://docs.docker.com/docker-for-windows/wsl/
 - Install the [Cascadia Mono font](https://github.com/microsoft/cascadia-code) and set it as the default font for the Ubuntu WSL2 client
+- Install [Windows PowerToys](https://github.com/microsoft/PowerToys/releases)
+- Install [ColorPic](http://www.iconico.com/colorpic/)
 
 ## Usage
 ```sh
