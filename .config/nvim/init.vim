@@ -53,6 +53,9 @@ Plug 'vim-scripts/Tabmerge'
 " pairs of handy bracket mappings
 Plug 'tpope/vim-unimpaired'
 
+"  A very fast, multi-syntax context-sensitive color name highlighter
+Plug 'ap/vim-css-color'
+
 call plug#end()
 
 " -----------------------------------------------------------------------------
