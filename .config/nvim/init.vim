@@ -53,8 +53,11 @@ Plug 'vim-scripts/Tabmerge'
 " pairs of handy bracket mappings
 Plug 'tpope/vim-unimpaired'
 
-"  A very fast, multi-syntax context-sensitive color name highlighter
+" A very fast, multi-syntax context-sensitive color name highlighter
 Plug 'ap/vim-css-color'
+
+" allows you to visually select increasingly larger regions of text using the same key combination
+Plug 'terryma/vim-expand-region'
 
 call plug#end()
 
@@ -284,6 +287,10 @@ set diffopt=filler,vertical
 
 " vimux - percent of the screen the split pane Vimux will spawn should take up
 let g:VimuxHeight = "40"
+
+" vim-expand-region - use v and ctrl v to expand/shrink selection
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
 
 " -----------------------------------------------------------------------------
 " coc.nvim default settings
