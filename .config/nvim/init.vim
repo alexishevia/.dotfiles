@@ -359,6 +359,9 @@ command! GoImports :call Preserve('%!goimports')
 " :DefRight will open the definition for the current variable in a right split
 command! DefRight :call CocAction('jumpDefinition', 'tabe') | tabprevious | :call Tabmerge('right')
 
+" TabmergeRight will move the tab on the right to a vertical split
+command! TabmergeRight :call Tabmerge('right')
+
 " -----------------------------------------------------------------------------
 " Custom Functions
 " -----------------------------------------------------------------------------
