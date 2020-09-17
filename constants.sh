@@ -40,4 +40,5 @@ $HOME/go/src/github.com/foxbroadcasting/cpe-epglistings?git@github.com:foxbroadc
 $HOME/go/src/github.com/foxbroadcasting/cpe-sportsplayer?git@github.com:foxbroadcasting/cpe-sportsplayer.git
 $HOME/go/src/github.com/foxbroadcasting/tracking-data-helper?git@github.com:foxbroadcasting/tracking-data-helper.git
 $HOME/go/src/github.com/foxbroadcasting/go-helpers?git@github.com:foxbroadcasting/go-helpers.git
-$HOME/go/src/github.com/foxbroadcasting/dcg-gomodels?git@github.com:foxbroadcasting/dcg-gomodels.git"
+$HOME/go/src/github.com/foxbroadcasting/dcg-gomodels?git@github.com:foxbroadcasting/dcg-gomodels.git
+$HOME/go/src/github.com/foxbroadcasting/cpe-video-service?git@github.com:foxbroadcasting/cpe-video-service.git"
