@@ -24,6 +24,7 @@ for version in $versions; do
   npm install -g docsify-cli # A magical documentation generator
   npm install -g vsce # Visual Studio Code Extension Manager
   npm install -g commitizen # Simple commit conventions for internet citizens.
+  npm install -g @aws-amplify/cli # AWS Amplify client
 done
 
 nvm alias default 12.16.1
