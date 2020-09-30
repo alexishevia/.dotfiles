@@ -50,6 +50,8 @@ sudo apt install --yes \
   python3-pip             ` # Python package installer                                                           ` \
   gnupg2                  ` # GNU privacy guard - I use it to sign git commits                                   ` \
   libusb-1.0-0-dev        ` # userspace USB programming library development files. Required for okta-awscli[U2F] ` \
+  redis-server            ` # Persistent key-value database with network interface                               ` \
+  redis-tools             ` # Persistent key-value database with network interface (client)                      ` \
   nautilus                ` # file manager and graphical shell for GNOME                                         `
 
 # apt cleanup
