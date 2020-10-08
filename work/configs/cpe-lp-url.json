@@ -1,6 +1,7 @@
 {
   "env": {
-    "LINKERD_IP": "127.0.0.1"
+    "LINKERD_IP": "internal-l5d-int-uw2-1-qa1-gw-2062285746.us-west-2.elb.amazonaws.com",
+    "BASE_URL": "http://localhost:8080/v1"
   },
   "key": {
     "cfg/svc/lpurl/loglevel": "debug",
@@ -9,7 +10,7 @@
     "cfg/svc/lpurl/services/Ext_FVCDS_GetFVCD/enableTracing": "false",
     "cfg/svc/lpurl/services/jwt_GetPublicKey/enableTracing": "false",
     "cfg/svc/lpurl/services/mediasources_GetByID/enableTracing": "false",
-    "cfg/svc/lpurl/services/listings_GetContiguous/enableTracing": "false",
-    "cfg/svc/lpurl/services/headerbidding_RunBid/enableTracing": "true"
+    "cfg/svc/lpurl/services/headerbidding_RunBid/enableTracing": "true",
+    "cfg/svc/lpurl/services/listings_GetContiguous/enableTracing": "false"
   }
 }

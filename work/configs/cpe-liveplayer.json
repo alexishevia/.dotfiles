@@ -1,6 +1,6 @@
 {
   "env": {
-    "LINKERD_IP": "127.0.0.1",
+    "LINKERD_IP": "internal-l5d-int-uw2-1-qa1-gw-2062285746.us-west-2.elb.amazonaws.com",
     "BASE_URL": "http://localhost:8080"
   },
   "key": {
