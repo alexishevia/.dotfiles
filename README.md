@@ -11,6 +11,7 @@ These scripts should allow me to reconstruct my entire development environment o
     https://docs.docker.com/docker-for-windows/wsl/
 - Install the [Cascadia Mono font](https://github.com/microsoft/cascadia-code) and set it as the default font for the Ubuntu WSL2 client
 - Install [ColorPic](http://www.iconico.com/colorpic/)
+- Install [GreenShot](https://getgreenshot.org/)
 
 ## Usage
 ```sh
