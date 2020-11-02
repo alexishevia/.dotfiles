@@ -1,0 +1,10 @@
+{
+  "env": {
+    "LINKERD_IP": "internal-l5d-int-uw2-1-qa1-gw-2062285746.us-west-2.elb.amazonaws.com"
+  },
+  "key": {
+    "cfg/svc/sportsplayer/loglevel": "debug",
+    "cfg/svc/sportsplayer/services/jwt_GetPublicKey/enableTracing": "false",
+    "cfg/svc/sportsplayer/services/sportsclip_GetClip/enableTracing": "false"
+  }
+}
