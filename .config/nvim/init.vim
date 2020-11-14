@@ -68,23 +68,34 @@ call plug#end()
 " change <Leader> key from \ to ,
 let mapleader = ","
 
+" remap backslash as "go to the previous searched item" command
+" By default, vim uses comma to go to the previous searched item, but I remapped comma and lost this functionality.
+" This remap lets me use backslash to go to the previous searched item.
+nnoremap \ ,
+
 " set <LocalLeader> key to -
 let maplocalleader = "-"
 
-" use jk instead of Escape
+" use jk as Escape
 inoremap jk <esc>
 
-" remap semicolon to colon (no need to use Shift + ;)
-noremap ; :
+" remap semicolon to colon
+" in a US keyboard, this allows me to go into command line mode with a single key (just `;` instead of `Shift + ;`)
+nnoremap ; :
 
-" remap U to real undo
+" remap spacebar to "go to the next searched item" command
+" By default, vim uses semicolon to go to the next searched item, but I remapped semicolon and lost this functionality.
+" This remap lets me use spacebar to go to the next searched item.
+nnoremap <space> ;
+
+" remap U to real redo
 nnoremap U :later<Enter>
 
 " disable built-in mapping of Q to enter Ex mode
 map Q <Nop>
 
-" use \ to clear highlight after a search
-nnoremap \ :nohlsearch<CR>
+" use ? (In US keyboard you type `?` by doing `Shift + /`) to clear highlight after a search
+nnoremap ? :nohlsearch<CR>
 
 " use ,t to create a new tab
 nnoremap <leader>t :tabnew<Enter>
@@ -93,10 +104,10 @@ nnoremap <leader>t :tabnew<Enter>
 nnoremap gr :tabp<Enter>
 
 " use F8 to move tab left
-noremap <F8> :execute "tabmove" tabpagenr() - 2 <CR>
+nnoremap <F8> :execute "tabmove" tabpagenr() - 2 <CR>
 
 " use F9 to move tab right
-noremap <F9> :execute "tabmove" tabpagenr() + 1 <CR>
+nnoremap <F9> :execute "tabmove" tabpagenr() + 1 <CR>
 
 " use ,- to split horizontally
 nnoremap <leader>- :split<Enter>
@@ -117,22 +128,6 @@ nnoremap <leader>* :Ggrep --untracked <cword><CR><CR>
 
 " use ,ig to toggle cursorcolumn
 nnoremap <Leader>ig :set cursorcolumn!<Enter>
-
-" mappings to align text
-" see: http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
-if exists(":Tabularize")
-  " use ,a= to align by equal sign (=)
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-
-  " use ,a| to align by pipe (|)
-  nmap <Leader>a\| :Tabularize /\|<CR>
-  vmap <Leader>a\| :Tabularize /\|<CR>
-
-  " use ,a: to align by colon (:)
-  nmap <Leader>a: :Tabularize /:\zs<CR>
-  vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
 
 " use , + direction to switch between splits
 nnoremap <leader>j <C-W><C-J>
