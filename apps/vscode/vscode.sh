@@ -16,7 +16,9 @@ for file in $files; do
   ln -s "$PWD/apps/vscode/$file" $path/$file
 done
 
-extensions='vscodevim.vim golang.go eamodio.gitlens alanwalk.markdown-toc alexishevia.mdo-extension-code esbenp.prettier-vscode mikestead.dotenv'
-for extension in $extensions; do
-  code --install-extension $extension
-done
+# wsl cannot install vscode extensions
+# see: https://github.com/microsoft/vscode-remote-release/issues/2589
+# extensions='vscodevim.vim golang.go eamodio.gitlens alanwalk.markdown-toc alexishevia.mdo-extension-code esbenp.prettier-vscode mikestead.dotenv'
+# for extension in $extensions; do
+#   code --install-extension $extension
+# done
