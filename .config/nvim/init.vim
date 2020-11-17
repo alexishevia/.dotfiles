@@ -68,10 +68,8 @@ call plug#end()
 " change <Leader> key from \ to ,
 let mapleader = ","
 
-" remap backslash as "go to the previous searched item" command
-" By default, vim uses comma to go to the previous searched item, but I remapped comma and lost this functionality.
-" This remap lets me use backslash to go to the previous searched item.
-nnoremap \ ,
+" remap backslash to clear highlight after a search
+nnoremap \ :nohlsearch<CR>
 
 " set <LocalLeader> key to -
 let maplocalleader = "-"
@@ -88,14 +86,16 @@ nnoremap ; :
 " This remap lets me use spacebar to go to the next searched item.
 nnoremap <space> ;
 
+" use ? as "go to the previous searched item" command
+" vim uses comma to go to the previous searched item, but I remapped comma and lost this functionality.
+" This remap lets me use ? (In US keyboard you type `?` by doing `Shift + /`) to go to the previous searched item.
+nnoremap ? ,
+
 " remap U to real redo
 nnoremap U :later<Enter>
 
 " disable built-in mapping of Q to enter Ex mode
 map Q <Nop>
-
-" use ? (In US keyboard you type `?` by doing `Shift + /`) to clear highlight after a search
-nnoremap ? :nohlsearch<CR>
 
 " use ,t to create a new tab
 nnoremap <leader>t :tabnew<Enter>
