@@ -79,7 +79,7 @@ inoremap jk <esc>
 
 " remap semicolon to colon
 " in a US keyboard, this allows me to go into command line mode with a single key (just `;` instead of `Shift + ;`)
-nnoremap ; :
+noremap ; :
 
 " remap spacebar to "go to the next searched item" command
 " By default, vim uses semicolon to go to the next searched item, but I remapped semicolon and lost this functionality.
