@@ -27,7 +27,7 @@ then
   mkdir /tmp/backupmountdir
 
   # mount veracrypt volume
-  veracrypt -t /tmp/backup.tc /tmp/backupmountdir --pim=0 --protect-hidden=no
+  veracrypt -t -m=nokernelcrypto /tmp/backup.tc /tmp/backupmountdir --pim=0 --protect-hidden=no
 
   # copy ~/.ssh directory into veracrypt volume as a tar.gz file
   pushd ~;

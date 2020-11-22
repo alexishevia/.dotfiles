@@ -6,6 +6,7 @@ set -e # exit if any command fails
 ./apt.sh
 ./apps/dropbox.sh
 ./encrypted.sh restore
+./sensitive.sh
 ./bins.sh
 ./apps/awscli.sh
 ./nvm.sh
@@ -14,6 +15,7 @@ set -e # exit if any command fails
 ./neovim.sh
 ./vim.sh
 ./git.sh
+./sensitive.sh
 ./hosts.sh
 ./redis.sh
 ./work/work.sh
