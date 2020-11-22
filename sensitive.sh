@@ -17,7 +17,8 @@ go/src/github.com/foxbroadcasting/cpe-asset-info/config/mock.json
 go/src/github.com/foxbroadcasting/cpe-psu/config/mock.json
 go/src/github.com/foxbroadcasting/cpe-geo-service/config/mock.json
 go/src/github.com/foxbroadcasting/cpe-epglistings/config/mock.json
-go/src/github.com/foxbroadcasting/cpe-sportsplayer/config/mock.json"
+go/src/github.com/foxbroadcasting/cpe-sportsplayer/config/mock.json
+go/src/github.com/foxbroadcasting/cpe-watch/config/mock.json"
 
 for filepath in $filepaths; do
   abspath="$HOME/$filepath"
