@@ -2,6 +2,8 @@
 
 set -e # exit if any command fails
 
+source ./constants.sh
+
 if [ ! $1 ] || ([ $1 != 'backup' ] && [ $1 != 'restore' ])
 then
   echo 'Argument must be "backup" or "restore".';
@@ -27,23 +29,20 @@ then
   # mount veracrypt volume
   veracrypt -t /tmp/backup.tc /tmp/backupmountdir --pim=0 --protect-hidden=no
 
-  # copy ssh directory into veracrypt volume as a tar.gz file
+  # copy ~/.ssh directory into veracrypt volume as a tar.gz file
   pushd ~;
   tar -zcvf /tmp/backupmountdir/sshbackup.tar.gz .ssh;
   popd;
 
-  # copy .gnupg directory into veracrypt volume as a tar.gz file
+  # copy ~/.gnupg directory into veracrypt volume as a tar.gz file
   pushd ~;
   tar -zcvf /tmp/backupmountdir/gnupgbackup.tar.gz .gnupg;
   popd;
 
-  # copy sensitive files into veracrypt volume
-  cp ~/.npmrc /tmp/backupmountdir/.npmrc
-  cp ~/.fox.ovpn /tmp/backupmountdir/.fox.ovpn
-  cp ~/.okta-aws /tmp/backupmountdir/.okta-aws
-  cp ~/.cpe-cli.json /tmp/backupmountdir/.cpe-cli.json
-  cp ~/Projects/FOX/.aws_keys /tmp/backupmountdir/.fox_aws_keys
-  cp ~/Projects/Personales/mdo.jks /tmp/backupmountdir/mdo.jks
+  # copy ~/.sensitive directory into veracrypt volume as a tar.gz file
+  pushd ~;
+  tar -zcvf /tmp/backupmountdir/sensitivebackup.tar.gz .sensitive;
+  popd;
 
   # unmount all veracrypt volumes
   veracrypt -t -d
@@ -73,25 +72,20 @@ then
   # mount veracrypt volume
   veracrypt -t ~/Dropbox/backup.tc /tmp/backupmountdir --pim=0 --protect-hidden=no
 
-  # extract sshbackup tar into .ssh
+  # extract sshbackup tar into ~/.ssh
   pushd ~;
   tar -zxvf /tmp/backupmountdir/sshbackup.tar.gz
   popd;
 
-  # extract gnupgbackup tar into .gnupg
+  # extract gnupgbackup tar into ~/.gnupg
   pushd ~;
   tar -zxvf /tmp/backupmountdir/gnupgbackup.tar.gz
   popd;
 
-  # copy sensitive files to their correct location
-  mkdir -p ~/Projects/FOX/
-  mkdir -p ~/Projects/Personales/
-  cp /tmp/backupmountdir/.npmrc ~/.npmrc
-  cp /tmp/backupmountdir/.fox.ovpn ~/.fox.ovpn
-  cp /tmp/backupmountdir/.okta-aws ~/.okta-aws
-  cp /tmp/backupmountdir/.cpe-cli.json ~/.cpe-cli.json
-  cp /tmp/backupmountdir/.fox_aws_keys ~/Projects/FOX/.aws_keys
-  cp /tmp/backupmountdir/mdo.jks ~/Projects/Personales/mdo.jks
+  # extract sensitivebackup tar into ~/.sensitive
+  pushd ~;
+  tar -zxvf /tmp/backupmountdir/sensitivebackup.tar.gz
+  popd;
 
   # unmount all veracrypt volumes
   veracrypt -t -d
