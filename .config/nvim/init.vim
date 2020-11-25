@@ -84,12 +84,12 @@ noremap ; :
 " remap spacebar to "go to the next searched item" command
 " By default, vim uses semicolon to go to the next searched item, but I remapped semicolon and lost this functionality.
 " This remap lets me use spacebar to go to the next searched item.
-nnoremap <space> ;
+noremap <space> ;
 
 " use ? as "go to the previous searched item" command
 " vim uses comma to go to the previous searched item, but I remapped comma and lost this functionality.
 " This remap lets me use ? (In US keyboard you type `?` by doing `Shift + /`) to go to the previous searched item.
-nnoremap ? ,
+noremap ? ,
 
 " remap U to real redo
 nnoremap U :later<Enter>
