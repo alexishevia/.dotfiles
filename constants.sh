@@ -34,7 +34,6 @@ $HOME/go/src/github.com/foxbroadcasting/cpe-assetvideo?git@github.com:foxbroadca
 $HOME/go/src/github.com/foxbroadcasting/cpe-assetimage?git@github.com:foxbroadcasting/cpe-assetimage
 $HOME/go/src/github.com/foxbroadcasting/cpe-contentsku?git@github.com:foxbroadcasting/cpe-contentsku
 $HOME/go/src/github.com/foxbroadcasting/cpe-foxentitlement?git@github.com:foxbroadcasting/cpe-foxentitlement.git
-$HOME/go/src/github.com/foxbroadcasting/cpe-canIplay?git@github.com:foxbroadcasting/cpe-canIplay
 $HOME/go/src/github.com/foxbroadcasting/cpe-cli?git@github.com:foxbroadcasting/cpe-cli.git
 $HOME/go/src/github.com/foxbroadcasting/cpe-epglistings?git@github.com:foxbroadcasting/cpe-epglistings.git
 $HOME/go/src/github.com/foxbroadcasting/cpe-sportsplayer?git@github.com:foxbroadcasting/cpe-sportsplayer.git
@@ -43,4 +42,5 @@ $HOME/go/src/github.com/foxbroadcasting/go-helpers?git@github.com:foxbroadcastin
 $HOME/go/src/github.com/foxbroadcasting/dcg-gomodels?git@github.com:foxbroadcasting/dcg-gomodels.git
 $HOME/go/src/github.com/foxbroadcasting/cpe-video-service?git@github.com:foxbroadcasting/cpe-video-service.git
 $HOME/go/src/github.com/foxbroadcasting/geo-cache-poc?git@github.com:foxbroadcasting/geo-cache-poc.git
-$HOME/go/src/github.com/foxbroadcasting/cpe-watch?git@github.com:foxbroadcasting/cpe-watch.git"
+$HOME/Projects/FOX/cpe-canIplay?git@github.com:foxbroadcasting/cpe-canIplay
+$HOME/Projects/FOX/cpe-watch?git@github.com:foxbroadcasting/cpe-watch.git"
