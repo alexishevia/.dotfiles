@@ -31,7 +31,7 @@ then
   # debug window
   tmux new-window -t $repo -n debug
   tmux send-keys -t $repo:debug "cd $fullpath" C-m
-  tmux send-keys -t $repo:debug 'export AWS_PROFILE=dcg_qa && export ENVIRONMENT=qa1 && export REGION=uw2 && dlv debug .'
+  tmux send-keys -t $repo:debug 'export USE_LOCAL_APIKEYS=$HOME/Dropbox/FOX/apikeys.json && export USE_LOCAL_PLATFORMS=$HOME/Dropbox/FOX/platforms.json && dlv debug .'
 fi
 
 # attach to session
