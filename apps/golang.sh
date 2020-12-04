@@ -8,6 +8,11 @@ if ! [ -x "$(command -v go)" ]; then
   mkdir -p $HOME/go/bin
 fi
 
+if ! [ -x "$(command -v go1.14.3)" ]; then
+  go get golang.org/dl/go1.14.3
+  go1.14.3 download
+fi
+
 if ! [ -x "$(command -v dlv)" ]; then
   go get github.com/go-delve/delve/cmd/dlv
   pushd $HOME/go/src/github.com/go-delve/delve
