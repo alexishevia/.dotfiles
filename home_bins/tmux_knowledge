@@ -17,7 +17,7 @@ then
     # docsify window
     tmux new-window -t knowledge -n docsify
     tmux send-keys -t knowledge:docsify 'cd ~/knowledge-base' C-m
-    tmux send-keys -t knowledge:docsify 'docsify serve .' C-m
+    tmux send-keys -t knowledge:docsify 'docsify serve .'
 fi
 
 # attach to session
