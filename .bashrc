@@ -45,15 +45,6 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
-
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -75,10 +66,6 @@ TERM=xterm-256color
 
 # use neovim as the default editor
 export EDITOR=/usr/bin/nvim
-
-# multi-line prompt
-PS1='$PWD
-==> '
 
 # add ~/bin to PATH
 PATH=$PATH:~/bin
@@ -104,6 +91,12 @@ alias oldvim="/usr/bin/vim"
 
 # command to set built-in display to my preferred resolution (1600x900)
 alias res='xrandr --output `xrandr | grep " connected"|cut -f1 -d" "`  --mode 1600x900'
+
+# multi-line prompt
+BASE_PS1="\[\033[01;32m\]\[\033[0m\033[0;32m\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]"
+PS1="
+$BASE_PS1
+==> "
 
 #---------------------------------------
 # JAVA
@@ -167,6 +160,29 @@ export PATH=$PATH:$HOME/.local/bin
 #---------------------------------------
 # export PATH="$HOME/.rbenv/bin:$PATH"
 # eval "$(rbenv init -)" # load rbenv automatically
+
+#---------------------------------------
+# Kubernetes
+#---------------------------------------
+alias ktl=kubectl
+
+get_kubernetes_context()
+{
+  CONTEXT=$(kubectl config current-context 2>/dev/null)
+  if [ -n "$CONTEXT" ]; then
+    NAMESPACE=$(kubectl config view --minify --output 'jsonpath={..namespace}')
+    if [ -n "$NAMESPACE" ]; then
+      echo "(${CONTEXT}::${NAMESPACE})"
+    else
+      echo "(${CONTEXT}:None)"
+    fi
+ fi
+}
+
+# add current kubernetes cluster and namespace to prompt
+PS1="
+$BASE_PS1 $(get_kubernetes_context)
+==> "
 
 #---------------------------------------
 # FOX specific projects
