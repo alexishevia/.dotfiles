@@ -8,6 +8,9 @@ filepaths=".npmrc
 .okta-aws
 .cpe-cli.json
 .civo.json
+.kube
+.ssh
+.gnupg
 Projects/Personales/mdo.jks
 Projects/FOX/.aws_keys
 Projects/FOX/cpe-watch/config/mock.json

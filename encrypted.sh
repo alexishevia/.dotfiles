@@ -29,16 +29,6 @@ then
   # mount veracrypt volume
   veracrypt -t -m=nokernelcrypto /tmp/backup.tc /tmp/backupmountdir --pim=0 --protect-hidden=no
 
-  # copy ~/.ssh directory into veracrypt volume as a tar.gz file
-  pushd ~;
-  tar -zcvf /tmp/backupmountdir/sshbackup.tar.gz .ssh;
-  popd;
-
-  # copy ~/.gnupg directory into veracrypt volume as a tar.gz file
-  pushd ~;
-  tar -zcvf /tmp/backupmountdir/gnupgbackup.tar.gz .gnupg;
-  popd;
-
   # copy ~/.sensitive directory into veracrypt volume as a tar.gz file
   pushd ~;
   tar -zcvf /tmp/backupmountdir/sensitivebackup.tar.gz .sensitive;
@@ -72,16 +62,6 @@ then
   # mount veracrypt volume
   veracrypt -t ~/Dropbox/backup.tc /tmp/backupmountdir --pim=0 --protect-hidden=no
 
-  # extract sshbackup tar into ~/.ssh
-  pushd ~;
-  tar -zxvf /tmp/backupmountdir/sshbackup.tar.gz
-  popd;
-
-  # extract gnupgbackup tar into ~/.gnupg
-  pushd ~;
-  tar -zxvf /tmp/backupmountdir/gnupgbackup.tar.gz
-  popd;
-
   # extract sensitivebackup tar into ~/.sensitive
   pushd ~;
   tar -zxvf /tmp/backupmountdir/sensitivebackup.tar.gz
@@ -92,4 +72,7 @@ then
 
   # remove tmp mount directory
   rm -r /tmp/backupmountdir
+
+  # symlink all sensitive files
+  source ./sensitive.sh
 fi
