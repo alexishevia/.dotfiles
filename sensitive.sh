@@ -7,6 +7,7 @@ set -e # exit if any command fails
 filepaths=".npmrc
 .okta-aws
 .cpe-cli.json
+.civo.json
 Projects/Personales/mdo.jks
 Projects/FOX/.aws_keys
 Projects/FOX/cpe-watch/config/mock.json
