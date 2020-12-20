@@ -19,3 +19,4 @@ set -e # exit if any command fails
 ./hosts.sh
 ./redis.sh
 ./work/work.sh
+./apps/kubectl.sh
