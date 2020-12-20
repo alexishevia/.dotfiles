@@ -20,3 +20,4 @@ set -e # exit if any command fails
 ./redis.sh
 ./work/work.sh
 ./apps/kubectl.sh
+./apps/civo.sh
