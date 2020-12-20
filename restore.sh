@@ -21,3 +21,4 @@ set -e # exit if any command fails
 ./work/work.sh
 ./apps/kubectl.sh
 ./apps/civo.sh
+./apps/homebrew.sh

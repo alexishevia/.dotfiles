@@ -54,7 +54,9 @@ sudo apt install --yes \
   redis-server            ` # Persistent key-value database with network interface                               ` \
   redis-tools             ` # Persistent key-value database with network interface (client)                      ` \
   nautilus                ` # file manager and graphical shell for GNOME                                         ` \
-  fzf                     ` #  general-purpose command-line fuzzy finder                                         `
+  fzf                     ` #  general-purpose command-line fuzzy finder                                         ` \
+  build-essential         ` # Informational list of build-essential packages. Required for linuxbrew             ` \
+  file                    ` # Recognize the type of data in a file using "magic" numbers. Required for linuxbrew `
 
 # apt cleanup
 sudo apt upgrade --yes

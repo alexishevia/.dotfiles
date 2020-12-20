@@ -205,3 +205,8 @@ fi
 
 # add alias to cd into foxbroadcasting golang directory
 alias gofox="cd $GOPATH/src/github.com/foxbroadcasting/"
+
+#---------------------------------------
+# Homebrew (linuxbrew)
+#---------------------------------------
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
