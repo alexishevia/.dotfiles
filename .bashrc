@@ -94,9 +94,8 @@ alias res='xrandr --output `xrandr | grep " connected"|cut -f1 -d" "`  --mode 16
 
 # multi-line prompt
 BASE_PS1="\[\033[01;32m\]\[\033[0m\033[0;32m\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]"
-PS1="
-$BASE_PS1
-==> "
+PS1="$BASE_PS1
+$ "
 
 #---------------------------------------
 # JAVA
@@ -180,9 +179,8 @@ get_kubernetes_context()
 }
 
 # add current kubernetes cluster and namespace to prompt
-PS1="
-$BASE_PS1 $(get_kubernetes_context)
-==> "
+PS1="$BASE_PS1 $(get_kubernetes_context)
+$ "
 
 #---------------------------------------
 # FOX specific projects
