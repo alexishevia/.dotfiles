@@ -56,7 +56,8 @@ sudo apt install --yes \
   nautilus                ` # file manager and graphical shell for GNOME                                         ` \
   fzf                     ` #  general-purpose command-line fuzzy finder                                         ` \
   build-essential         ` # Informational list of build-essential packages. Required for linuxbrew             ` \
-  file                    ` # Recognize the type of data in a file using "magic" numbers. Required for linuxbrew `
+  file                    ` # Recognize the type of data in a file using "magic" numbers. Required for linuxbrew ` \
+  net-tools               ` # NET-3 networking toolkit. Required for running netstat                             `
 
 # apt cleanup
 sudo apt upgrade --yes
