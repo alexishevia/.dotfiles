@@ -22,3 +22,4 @@ set -e # exit if any command fails
 ./apps/kubectl.sh
 ./apps/civo.sh
 ./apps/homebrew.sh
+./apps/robo3t.sh
