@@ -24,3 +24,4 @@ set -e # exit if any command fails
 ./apps/homebrew.sh
 ./apps/robo3t.sh
 ./apps/azurecli.sh
+./apps/terraform.sh
