@@ -11,6 +11,7 @@ filepaths=".npmrc
 .kube
 .ssh
 .gnupg
+.azure/accessTokens.json
 Projects/Personales/mdo.jks
 Projects/FOX/.aws_keys
 Projects/FOX/cpe-watch/config/mock.json

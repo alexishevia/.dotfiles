@@ -23,3 +23,4 @@ set -e # exit if any command fails
 ./apps/civo.sh
 ./apps/homebrew.sh
 ./apps/robo3t.sh
+./apps/azurecli.sh
