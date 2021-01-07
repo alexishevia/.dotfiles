@@ -10,8 +10,9 @@ These scripts should allow me to reconstruct my entire development environment o
 - Install Docker Desktop and use it as the WSL2 docker backend
     https://docs.docker.com/docker-for-windows/wsl/
 - Install the [Cascadia Mono font](https://github.com/microsoft/cascadia-code) and set it as the default font for the Ubuntu WSL2 client
-- Install [ColorPic](http://www.iconico.com/colorpic/)
-- Install [GreenShot](https://getgreenshot.org/)
+- Install other useful software:
+  * [Snagit](https://www.techsmith.com/screen-capture.html) for screen capture and image annotations
+      Note: Snagit also has a [color picker](https://techsmith-13.wistia.com/medias/e52ityv9p2?embedType=async&videoFoam=true&videoWidth=854)
 
 ## Usage
 ```sh

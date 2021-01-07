@@ -10,3 +10,6 @@ pip3 install --user okta-awscli
 
 # install yq
 pip3 install yq
+
+# intall youtube_dl
+pip3 install --upgrade youtube_dl
