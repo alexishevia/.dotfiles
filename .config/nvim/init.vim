@@ -153,6 +153,10 @@ nnoremap <leader>ta :GoTest<CR>
 " use ,vc to close the vimux runner window
 nnoremap <leader>vc :VimuxCloseRunner<CR>
 
+" run the align function after typing `|` from insert mode
+" see: https://vimtricks.com/p/vertical-alignment/
+inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+
 " -----------------------------------------------------------------------------
 " Abbreviations
 " -----------------------------------------------------------------------------
@@ -399,6 +403,19 @@ function! Preserve(command)
 
   " Restore the previous cursor position.
   call setpos('.', cursor_position)
+endfunction
+
+" automatically align tables (ie: markdown tables, cucumber tables, etc)
+" see: https://vimtricks.com/p/vertical-alignment/
+function! s:align()
+  let p = '^\s*|\s.*\s|\s*$'
+  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+    Tabularize/|/l1
+    normal! 0
+    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  endif
 endfunction
 
 " -----------------------------------------------------------------------------
