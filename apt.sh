@@ -58,7 +58,8 @@ sudo apt install --yes \
   build-essential         ` # Informational list of build-essential packages. Required for linuxbrew             ` \
   file                    ` # Recognize the type of data in a file using "magic" numbers. Required for linuxbrew ` \
   net-tools               ` # NET-3 networking toolkit. Required for running netstat                             ` \
-  ffmpeg                  ` # Tools for transcoding, streaming and playing of multimedia files                   `
+  ffmpeg                  ` # Tools for transcoding, streaming and playing of multimedia files                   ` \
+  pdftk-java              ` # pdftk port to java - a tool for manipulating PDF documents                         `
 
 # apt cleanup
 sudo apt upgrade --yes
