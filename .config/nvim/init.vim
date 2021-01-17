@@ -59,6 +59,9 @@ Plug 'ap/vim-css-color'
 " allows you to visually select increasingly larger regions of text using the same key combination
 Plug 'terryma/vim-expand-region'
 
+" terraform support
+Plug 'hashivim/vim-terraform'
+
 call plug#end()
 
 " -----------------------------------------------------------------------------
