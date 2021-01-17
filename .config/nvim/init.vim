@@ -59,7 +59,7 @@ Plug 'ap/vim-css-color'
 " allows you to visually select increasingly larger regions of text using the same key combination
 Plug 'terryma/vim-expand-region'
 
-" terraform support
+" add terraform support
 Plug 'hashivim/vim-terraform'
 
 call plug#end()
@@ -296,6 +296,13 @@ let g:VimuxHeight = "40"
 " vim-expand-region - use v and ctrl v to expand/shrink selection
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+
+" vim-terraform - align settings automatically with Tabularize.
+let g:terraform_align=1
+
+" vim-terraform - automatically format *.tf and *.tfvars files with terraform fmt.
+" ie: run `:TerraformFmt` on save.
+let g:terraform_fmt_on_save=1
 
 " -----------------------------------------------------------------------------
 " coc.nvim default settings
