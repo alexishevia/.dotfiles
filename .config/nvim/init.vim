@@ -232,6 +232,9 @@ set nolist
 " fold manually
 set foldmethod=manual
 
+" when wrapping, don't split words
+set linebreak
+
 " add golint to runtime path
 " use `:Lint` to run golint
 set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
