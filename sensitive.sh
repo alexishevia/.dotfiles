@@ -8,7 +8,6 @@ filepaths=".npmrc
 .okta-aws
 .cpe-cli.json
 .civo.json
-.kube/config
 .ssh
 .gnupg
 .azure/accessTokens.json
