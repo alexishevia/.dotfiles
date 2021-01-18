@@ -17,15 +17,14 @@ $HOME/Projects/FOX/cpe-node-services?git@github.com:foxbroadcasting/cpe-node-ser
 $HOME/Projects/FOX/video-livestream-test-harness?git@github.com:foxbroadcasting/video-livestream-test-harness
 $HOME/Projects/FOX/apigateway?git@github.com:foxbroadcasting/apigateway.git
 $HOME/Projects/FOX/cpe-lp-url?git@github.com:foxbroadcasting/cpe-lp-url
-$HOME/go/src/github.com/foxbroadcasting/cpe-liveplayer?git@github.com:foxbroadcasting/cpe-liveplayer.git
-$HOME/go/src/github.com/foxbroadcasting/cpe-liveplayer?git@github.com:foxbroadcasting/cpe-liveplayer
+$HOME/Projects/FOX/cpe-liveplayer?git@github.com:foxbroadcasting/cpe-liveplayer.git
+$HOME/Projects/FOX/cpe-psu?git@github.com:foxbroadcasting/cpe-psu
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-listings?git@github.com:foxbroadcasting/cpe-lp-listings
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-videos?git@github.com:foxbroadcasting/cpe-lp-videos
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-listings-shows?git@github.com:foxbroadcasting/cpe-lp-listings-shows
 $HOME/go/src/github.com/foxbroadcasting/cpe-mediasources?git@github.com:foxbroadcasting/cpe-mediasources
 $HOME/go/src/github.com/foxbroadcasting/cpe-asset-info?git@github.com:foxbroadcasting/cpe-asset-info
 $HOME/go/src/github.com/foxbroadcasting/cpe-lpsu?git@github.com:foxbroadcasting/cpe-lpsu
-$HOME/go/src/github.com/foxbroadcasting/cpe-psu?git@github.com:foxbroadcasting/cpe-psu
 $HOME/go/src/github.com/foxbroadcasting/cpe-station-locator?git@github.com:foxbroadcasting/cpe-station-locator
 $HOME/go/src/github.com/foxbroadcasting/cpe-geo-service?git@github.com:foxbroadcasting/cpe-geo-service
 $HOME/go/src/github.com/foxbroadcasting/cpe-dma?git@github.com:foxbroadcasting/cpe-dma
