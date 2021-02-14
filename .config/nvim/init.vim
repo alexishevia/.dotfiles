@@ -1,6 +1,4 @@
-" -----------------------------------------------------------------------------
-" Plugins
-" -----------------------------------------------------------------------------
+" Plugins ---------------------- {{{
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -64,9 +62,134 @@ Plug 'hashivim/vim-terraform'
 
 call plug#end()
 
-" -----------------------------------------------------------------------------
-" Custom Mappings
-" -----------------------------------------------------------------------------
+" }}}
+
+" Plugin Settings: ctrlp ---------------------- {{{
+
+" ctrlp - use ,p to do fuzzy filename search
+let g:ctrlp_map = '<Leader>p'
+
+" ctrlp - make ctrlp open files on new tab
+let g:ctrlp_prompt_mappings = {
+      \ 'AcceptSelection("e")': ['<c-t>'],
+      \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+      \ }
+
+" ctrlp - if silver surfer is available, use it for ctrlp
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+endif
+
+" }}}
+
+" Plugin Settings: nerdtree ---------------------- {{{
+
+" nerdtree - show hidden files on NERDTree
+let NERDTreeShowHidden=1
+
+" nerdtree - use old folder markers (avoids issues with some terminals)
+let g:NERDTreeDirArrows=0
+
+" nerdtree - use ,r to open current file on NERDTree
+nnoremap <leader>r :NERDTreeFind<cr>
+
+" nerdtree - enable line numbers in NERDTree
+let NERDTreeShowLineNumbers=1
+
+" nerdtree - make sure relative line numbers are used in NERDTree
+augroup relativenumber
+  autocmd!
+  autocmd FileType nerdtree setlocal relativenumber
+augroup END
+
+" }}}
+
+" Plugin Settings: vim-markdown ---------------------- {{{
+
+" vim-markdown - disable folding
+let g:vim_markdown_folding_disabled = 1
+
+" vim-markdown - close :Toc on <Enter>
+nnoremap <expr><enter> &ft=="qf" ? "<cr>:lcl<cr>" : (getpos(".")[2]==1 ? "i<cr><esc>": "i<cr><esc>l")
+
+" }}}
+
+" Plugin Settings: fugitive ---------------------- {{{
+
+" fugitive - force diff to use vertical split
+set diffopt=filler,vertical
+
+" }}}
+
+" Plugin Settings: vimux ---------------------- {{{
+
+" vimux - percent of the screen the split pane Vimux will spawn should take up
+let g:VimuxHeight = "40"
+
+" }}}
+
+" Plugin Settings: vim-expand-region ---------------------- {{{
+
+" vim-expand-region - use v and ctrl v to expand/shrink selection
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
+" }}}
+
+" Plugin Settings: vim-terraform ---------------------- {{{
+
+" vim-terraform - align settings automatically with Tabularize.
+let g:terraform_align=1
+
+" vim-terraform - automatically format *.tf and *.tfvars files with terraform fmt.
+" ie: run `:TerraformFmt` on save.
+let g:terraform_fmt_on_save=1
+
+" }}}
+
+" Plugin Settings: coc.nvim ---------------------- {{{
+
+" if hidden is not set, TextEdit might fail.
+set hidden
+
+" smaller updatetime for CursorHold & CursorHoldI
+set updatetime=300
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" use [d and ]d to navigate diagnostics
+nmap <silent> [d <Plug>(coc-diagnostic-prev)
+nmap <silent> ]d <Plug>(coc-diagnostic-next)
+
+" use gd to open definition in a new tab
+nmap <silent> gd :call CocAction('jumpDefinition', 'tabe')<cr>
+
+" use gD to open definition in a right split
+nmap <silent> gD :DefRight<cr>
+
+" use ,f to format selected region
+vmap <leader>f <Plug>(coc-format-selected)
+nmap <leader>f <Plug>(coc-format-selected)
+
+" use Ctrl+Shift+P to show coc commands
+nnoremap <silent> <C-S-P>  :<C-u>CocList commands<cr>
+
+" }}}
+
+" Custom Mappings ---------------------- {{{
 
 " change <Leader> key from \ to ,
 let mapleader = ","
@@ -160,9 +283,9 @@ nnoremap <leader>vc :VimuxCloseRunner<CR>
 " see: https://vimtricks.com/p/vertical-alignment/
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
-" -----------------------------------------------------------------------------
-" Abbreviations
-" -----------------------------------------------------------------------------
+" }}}
+
+" Abbreviations ---------------------- {{{
 
 " replace 'ck' with a checkmark
 iabbrev ck ✓
@@ -172,9 +295,9 @@ iabbrev [bullet] ∙
 iabbrev [bullet1] •
 iabbrev [bullet2] ◦
 
-" -----------------------------------------------------------------------------
-" General Settings
-" -----------------------------------------------------------------------------
+" }}}
+
+" General Settings ---------------------- {{{
 
 " use line numbers
 set number
@@ -242,113 +365,12 @@ set linebreak
 " use `:Lint` to run golint
 set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
 
-" -----------------------------------------------------------------------------
-" Plugin specific settings
-" -----------------------------------------------------------------------------
-
-" colorschemes - load theme
+" load theme
 colorscheme PaperColor
 
-" ctrlp - use ,p to do fuzzy filename search
-let g:ctrlp_map = '<Leader>p'
+" }}}
 
-" ctrlp - make ctrlp open files on new tab
-let g:ctrlp_prompt_mappings = {
-      \ 'AcceptSelection("e")': ['<c-t>'],
-      \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-      \ }
-
-" ctrlp - if silver surfer is available, use it for ctrlp
-if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-endif
-
-" nerdtree - show hidden files on NERDTree
-let NERDTreeShowHidden=1
-
-" nerdtree - use old folder markers (avoids issues with some terminals)
-let g:NERDTreeDirArrows=0
-
-" nerdtree - use ,r to open current file on NERDTree
-nnoremap <leader>r :NERDTreeFind<cr>
-
-" nerdtree - enable line numbers in NERDTree
-let NERDTreeShowLineNumbers=1
-
-" nerdtree - make sure relative line numbers are used in NERDTree
-augroup relativenumber
-  autocmd!
-  autocmd FileType nerdtree setlocal relativenumber
-augroup END
-
-" vim-markdown - disable folding
-let g:vim_markdown_folding_disabled = 1
-
-" vim-markdown - close :Toc on <Enter>
-nnoremap <expr><enter> &ft=="qf" ? "<cr>:lcl<cr>" : (getpos(".")[2]==1 ? "i<cr><esc>": "i<cr><esc>l")
-
-" fugitive - force diff to use vertical split
-set diffopt=filler,vertical
-
-" vimux - percent of the screen the split pane Vimux will spawn should take up
-let g:VimuxHeight = "40"
-
-" vim-expand-region - use v and ctrl v to expand/shrink selection
-vmap v <Plug>(expand_region_expand)
-vmap <C-v> <Plug>(expand_region_shrink)
-
-" vim-terraform - align settings automatically with Tabularize.
-let g:terraform_align=1
-
-" vim-terraform - automatically format *.tf and *.tfvars files with terraform fmt.
-" ie: run `:TerraformFmt` on save.
-let g:terraform_fmt_on_save=1
-
-" -----------------------------------------------------------------------------
-" coc.nvim default settings
-" -----------------------------------------------------------------------------
-
-" if hidden is not set, TextEdit might fail.
-set hidden
-
-" smaller updatetime for CursorHold & CursorHoldI
-set updatetime=300
-
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
-
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-" use [d and ]d to navigate diagnostics
-nmap <silent> [d <Plug>(coc-diagnostic-prev)
-nmap <silent> ]d <Plug>(coc-diagnostic-next)
-
-" use gd to open definition in a new tab
-nmap <silent> gd :call CocAction('jumpDefinition', 'tabe')<cr>
-
-" use gD to open definition in a right split
-nmap <silent> gD :DefRight<cr>
-
-" use ,f to format selected region
-vmap <leader>f <Plug>(coc-format-selected)
-nmap <leader>f <Plug>(coc-format-selected)
-
-" use Ctrl+Shift+P to show coc commands
-nnoremap <silent> <C-S-P>  :<C-u>CocList commands<cr>
-
-" -----------------------------------------------------------------------------
-" Custom Commands
-" -----------------------------------------------------------------------------
+" Custom Commands ---------------------- {{{
 
 " :MDo runs the mdo command on the current file
 command! MDo :call Preserve('%!mdo')
@@ -374,9 +396,9 @@ command! DefRight :call CocAction('jumpDefinition', 'tabe') | tabprevious | :cal
 " TabmergeRight will move the tab on the right to a vertical split
 command! TabmergeRight :call Tabmerge('right')
 
-" -----------------------------------------------------------------------------
-" Custom Functions
-" -----------------------------------------------------------------------------
+" }}}
+
+" Custom Functions ---------------------- {{{
 
 " TrimWhiteSpace removes trailing whitespace
 fun! <SID>TrimWhiteSpace()
@@ -431,9 +453,9 @@ function! s:align()
   endif
 endfunction
 
-" -----------------------------------------------------------------------------
-" Auto Commands
-" -----------------------------------------------------------------------------
+" }}}
+
+" Auto Commands ---------------------- {{{
 
 augroup lex
   autocmd!
@@ -453,4 +475,9 @@ augroup lex
 
   " on save, run MDo on any markdown file living inside a `todo/` folder
   autocmd BufWritePre *todo/*.md call Preserve('%!mdo')
+
+  " set 'marker' foldmethod for vim files
+  autocmd FileType vim setlocal foldmethod=marker
 augroup END
+
+" }}}
