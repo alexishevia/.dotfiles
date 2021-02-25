@@ -231,7 +231,7 @@ set listchars=tab:>-,space:·,trail:~
 set nolist
 
 " fold manually
-set foldmethod=manual
+" set foldmethod=manual
 
 " when wrapping, don't split words
 set linebreak
