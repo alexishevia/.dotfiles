@@ -16,6 +16,7 @@ Projects/FOX/.aws_keys
 Projects/FOX/cpe-watch/config/mock.json
 Projects/FOX/cpe-canIplay/config/config.cfg
 Projects/FOX/cpe-video-service/config/config.cfg
+Projects/FOX/cpe-epglistings/config/config.cfg
 Projects/FOX/cpe-lp-url/config/mock.json
 Projects/FOX/cpe-liveplayer/config/mock.json
 Projects/FOX/cpe-psu/config/mock.json
@@ -23,7 +24,6 @@ go/src/github.com/foxbroadcasting/cpe-lp-listings/config/mock.json
 go/src/github.com/foxbroadcasting/cpe-lp-videos/config/mock.json
 go/src/github.com/foxbroadcasting/cpe-asset-info/config/mock.json
 go/src/github.com/foxbroadcasting/cpe-geo-service/config/mock.json
-go/src/github.com/foxbroadcasting/cpe-epglistings/config/mock.json
 go/src/github.com/foxbroadcasting/cpe-sportsplayer/config/mock.json"
 
 for filepath in $filepaths; do
