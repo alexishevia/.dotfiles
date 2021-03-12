@@ -20,6 +20,7 @@ Projects/FOX/cpe-epglistings/config/config.cfg
 Projects/FOX/cpe-lp-url/config/mock.json
 Projects/FOX/cpe-liveplayer/config/mock.json
 Projects/FOX/cpe-psu/config/mock.json
+Projects/FOX/cpe-contentsku/config/mock.json
 go/src/github.com/foxbroadcasting/cpe-lp-listings/config/mock.json
 go/src/github.com/foxbroadcasting/cpe-lp-videos/config/mock.json
 go/src/github.com/foxbroadcasting/cpe-asset-info/config/mock.json

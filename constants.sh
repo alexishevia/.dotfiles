@@ -24,6 +24,7 @@ $HOME/Projects/FOX/cpe-canIplay?git@github.com:foxbroadcasting/cpe-canIplay
 $HOME/Projects/FOX/cpe-watch?git@github.com:foxbroadcasting/cpe-watch.git
 $HOME/Projects/FOX/cpe-header-bidding?git@github.com:foxbroadcasting/cpe-header-bidding.git
 $HOME/Projects/FOX/cpe-epglistings?git@github.com:foxbroadcasting/cpe-epglistings.git
+$HOME/Projects/FOX/cpe-contentsku?git@github.com:foxbroadcasting/cpe-contentsku
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-listings?git@github.com:foxbroadcasting/cpe-lp-listings
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-videos?git@github.com:foxbroadcasting/cpe-lp-videos
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-listings-shows?git@github.com:foxbroadcasting/cpe-lp-listings-shows
@@ -36,7 +37,6 @@ $HOME/go/src/github.com/foxbroadcasting/cpe-dma?git@github.com:foxbroadcasting/c
 $HOME/go/src/github.com/foxbroadcasting/cpe-listings?git@github.com:foxbroadcasting/cpe-listings
 $HOME/go/src/github.com/foxbroadcasting/cpe-assetvideo?git@github.com:foxbroadcasting/cpe-assetvideo
 $HOME/go/src/github.com/foxbroadcasting/cpe-assetimage?git@github.com:foxbroadcasting/cpe-assetimage
-$HOME/go/src/github.com/foxbroadcasting/cpe-contentsku?git@github.com:foxbroadcasting/cpe-contentsku
 $HOME/go/src/github.com/foxbroadcasting/cpe-foxentitlement?git@github.com:foxbroadcasting/cpe-foxentitlement.git
 $HOME/go/src/github.com/foxbroadcasting/cpe-cli?git@github.com:foxbroadcasting/cpe-cli.git
 $HOME/go/src/github.com/foxbroadcasting/cpe-sportsplayer?git@github.com:foxbroadcasting/cpe-sportsplayer.git
