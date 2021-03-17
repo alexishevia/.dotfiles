@@ -25,3 +25,4 @@ set -e # exit if any command fails
 ./apps/robo3t.sh
 ./apps/azurecli.sh
 ./apps/terraform.sh
+./apps/k6.sh
