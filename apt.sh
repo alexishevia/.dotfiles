@@ -60,7 +60,8 @@ sudo apt install --yes \
   net-tools               ` # NET-3 networking toolkit. Required for running netstat                             ` \
   ffmpeg                  ` # Tools for transcoding, streaming and playing of multimedia files                   ` \
   pdftk-java              ` # pdftk port to java - a tool for manipulating PDF documents                         ` \
-  imagemagick             ` # image manipulation programs -- binaries                                            `
+  imagemagick             ` # image manipulation programs -- binaries                                            ` \
+  graphviz                ` # rich set of graph drawing tools                                                    `
 
 # apt cleanup
 sudo apt upgrade --yes
