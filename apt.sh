@@ -61,7 +61,8 @@ sudo apt install --yes \
   ffmpeg                  ` # Tools for transcoding, streaming and playing of multimedia files                   ` \
   pdftk-java              ` # pdftk port to java - a tool for manipulating PDF documents                         ` \
   imagemagick             ` # image manipulation programs -- binaries                                            ` \
-  graphviz                ` # rich set of graph drawing tools                                                    `
+  graphviz                ` # rich set of graph drawing tools                                                    ` \
+  hey                     ` # Sends some load to a web application                                               ` \
 
 # apt cleanup
 sudo apt upgrade --yes
