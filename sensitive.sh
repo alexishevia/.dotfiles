@@ -5,7 +5,7 @@ set -e # exit if any command fails
 # symlink all sensitive files
 
 filepaths=".npmrc
-.okta-aws
+.aws
 .cpe-cli.json
 .civo.json
 .ssh
