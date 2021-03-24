@@ -26,6 +26,7 @@ $HOME/Projects/FOX/cpe-header-bidding?git@github.com:foxbroadcasting/cpe-header-
 $HOME/Projects/FOX/cpe-epglistings?git@github.com:foxbroadcasting/cpe-epglistings.git
 $HOME/Projects/FOX/cpe-contentsku?git@github.com:foxbroadcasting/cpe-contentsku
 $HOME/Projects/FOX/cpe-geo-service?git@github.com:foxbroadcasting/cpe-geo-service
+$HOME/Projects/FOX/cpe-screens?git@github.com:foxbroadcasting/cpe-screens
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-listings?git@github.com:foxbroadcasting/cpe-lp-listings
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-videos?git@github.com:foxbroadcasting/cpe-lp-videos
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-listings-shows?git@github.com:foxbroadcasting/cpe-lp-listings-shows
