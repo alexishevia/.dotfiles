@@ -27,11 +27,11 @@ $HOME/Projects/FOX/cpe-epglistings?git@github.com:foxbroadcasting/cpe-epglisting
 $HOME/Projects/FOX/cpe-contentsku?git@github.com:foxbroadcasting/cpe-contentsku
 $HOME/Projects/FOX/cpe-geo-service?git@github.com:foxbroadcasting/cpe-geo-service
 $HOME/Projects/FOX/cpe-screens?git@github.com:foxbroadcasting/cpe-screens
+$HOME/Projects/FOX/cpe-asset-info?git@github.com:foxbroadcasting/cpe-asset-info
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-listings?git@github.com:foxbroadcasting/cpe-lp-listings
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-videos?git@github.com:foxbroadcasting/cpe-lp-videos
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-listings-shows?git@github.com:foxbroadcasting/cpe-lp-listings-shows
 $HOME/go/src/github.com/foxbroadcasting/cpe-mediasources?git@github.com:foxbroadcasting/cpe-mediasources
-$HOME/go/src/github.com/foxbroadcasting/cpe-asset-info?git@github.com:foxbroadcasting/cpe-asset-info
 $HOME/go/src/github.com/foxbroadcasting/cpe-lpsu?git@github.com:foxbroadcasting/cpe-lpsu
 $HOME/go/src/github.com/foxbroadcasting/cpe-station-locator?git@github.com:foxbroadcasting/cpe-station-locator
 $HOME/go/src/github.com/foxbroadcasting/cpe-dma?git@github.com:foxbroadcasting/cpe-dma
