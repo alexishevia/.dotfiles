@@ -13,7 +13,7 @@ then
     tmux new -s cpe-node-services -n editor -d
     tmux send-keys -t cpe-node-services:editor 'cd $HOME/Projects/FOX/cpe-node-services' C-m
     tmux send-keys -t cpe-node-services:editor 'nvm use' C-m
-    tmux send-keys -t cpe-node-services:editor 'source ../.aws_keys' C-m
+    tmux send-keys -t cpe-node-services:editor 'source $HOME/Dropbox/.aws_keys' C-m
     tmux send-keys -t cpe-node-services:editor 'source $HOME/Dropbox/env_vars.sh' C-m
     tmux send-keys -t cpe-node-services:editor 'clear' C-m
     tmux send-keys -t cpe-node-services:editor 'git pull' C-m
@@ -23,7 +23,7 @@ then
     tmux new-window -t cpe-node-services -n run
     tmux send-keys -t cpe-node-services:run 'cd $HOME/Projects/FOX/cpe-node-services' C-m
     tmux send-keys -t cpe-node-services:run 'nvm use' C-m
-    tmux send-keys -t cpe-node-services:run 'source ../.aws_keys' C-m
+    tmux send-keys -t cpe-node-services:run 'source $HOME/Dropbox/.aws_keys' C-m
     tmux send-keys -t cpe-node-services:run 'source $HOME/Dropbox/env_vars.sh' C-m
     tmux send-keys -t cpe-node-services:run 'clear' C-m
     tmux send-keys -t cpe-node-services:run 'docker-compose up -d video geo screens categories && docker-compose logs -f'

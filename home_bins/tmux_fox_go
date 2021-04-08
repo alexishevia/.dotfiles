@@ -32,11 +32,15 @@ then
   # editor window
   tmux new -s $repo -n editor -d
   tmux send-keys -t $repo:editor "cd $fullpath" C-m
+  tmux send-keys -t $repo:editor 'source $HOME/Dropbox/.aws_keys' C-m
+  tmux send-keys -t $repo:editor 'source $HOME/Dropbox/env_vars.sh' C-m
   tmux send-keys -t $repo:editor 'nvim .' C-m
 
   # debug window
   tmux new-window -t $repo -n debug
   tmux send-keys -t $repo:debug "cd $fullpath" C-m
+  tmux send-keys -t $repo:debug 'source $HOME/Dropbox/.aws_keys' C-m
+  tmux send-keys -t $repo:debug 'source $HOME/Dropbox/env_vars.sh' C-m
   tmux send-keys -t $repo:debug 'export USE_LOCAL_APIKEYS=$HOME/Dropbox/FOX/apikeys.json && export USE_LOCAL_PLATFORMS=$HOME/Dropbox/FOX/platforms.json && dlv debug .'
 fi
 
