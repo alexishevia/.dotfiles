@@ -168,11 +168,6 @@ inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 " replace 'ck' with a checkmark
 iabbrev ck ✓
 
-" replace '[bullet]' with an actual bullet
-iabbrev [bullet] ∙
-iabbrev [bullet1] •
-iabbrev [bullet2] ◦
-
 " }}}
 
 " General Settings ---------------------- {{{
@@ -185,6 +180,9 @@ set relativenumber
 
 " ruler line
 set colorcolumn=80
+
+" text width (used for autowrapping)
+set textwidth=80
 
 " highlight current line
 set cursorline
@@ -233,18 +231,21 @@ hi SpecialKey ctermfg=66 guifg=#649A9A
 set listchars=tab:>-,space:·,trail:~
 set nolist
 
-" fold manually
-" set foldmethod=manual
-
-" when wrapping, don't split words
-set linebreak
-
 " add golint to runtime path
 " use `:Lint` to run golint
 set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
 
 " load theme
 colorscheme PaperColor
+
+" set formatoptions (see `:help fo-table` for full details)
+set formatoptions=tcqjpl
+
+" when wrapping, don't split words
+set linebreak
+
+" configure how comments are recognized (see `:help format-comments` for full details)
+set comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>
 
 " }}}
 
@@ -318,7 +319,7 @@ function! Preserve(command)
   call setpos('.', cursor_position)
 endfunction
 
-" automatically align tables (ie: markdown tables, cucumber tables, etc)
+" align tables (ie: markdown tables, cucumber tables, etc)
 " see: https://vimtricks.com/p/vertical-alignment/
 function! s:align()
   let p = '^\s*|\s.*\s|\s*$'
@@ -353,9 +354,6 @@ augroup lex
 
   " on save, run MDo on any markdown file living inside a `todo/` folder
   autocmd BufWritePre *todo/*.md call Preserve('%!mdo')
-
-  " set 'marker' foldmethod for vim files
-  autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
 " }}}
