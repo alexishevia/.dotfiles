@@ -29,6 +29,7 @@ $HOME/Projects/FOX/cpe-geo-service?git@github.com:foxbroadcasting/cpe-geo-servic
 $HOME/Projects/FOX/cpe-screens?git@github.com:foxbroadcasting/cpe-screens
 $HOME/Projects/FOX/cpe-screenpanels?git@github.com:foxbroadcasting/cpe-screenpanels
 $HOME/Projects/FOX/cpe-asset-info?git@github.com:foxbroadcasting/cpe-asset-info
+$HOME/Projects/FOX/cpe-sportsclip?git@github.com:foxbroadcasting/cpe-sportsclip
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-listings?git@github.com:foxbroadcasting/cpe-lp-listings
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-videos?git@github.com:foxbroadcasting/cpe-lp-videos
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-listings-shows?git@github.com:foxbroadcasting/cpe-lp-listings-shows
