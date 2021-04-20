@@ -24,9 +24,9 @@ Projects/FOX/cpe-contentsku/config/mock.json
 Projects/FOX/cpe-geo-service/config/mock.json
 Projects/FOX/cpe-screens/config/mock.json
 Projects/FOX/cpe-asset-info/config/mock.json
+Projects/FOX/cpe-sportsplayer/config/mock.json
 go/src/github.com/foxbroadcasting/cpe-lp-listings/config/mock.json
-go/src/github.com/foxbroadcasting/cpe-lp-videos/config/mock.json
-go/src/github.com/foxbroadcasting/cpe-sportsplayer/config/mock.json"
+go/src/github.com/foxbroadcasting/cpe-lp-videos/config/mock.json"
 
 for filepath in $filepaths; do
   abspath="$HOME/$filepath"
