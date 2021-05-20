@@ -32,7 +32,7 @@ $HOME/Projects/FOX/cpe-asset-info?git@github.com:foxbroadcasting/cpe-asset-info
 $HOME/Projects/FOX/cpe-sportsclip?git@github.com:foxbroadcasting/cpe-sportsclip
 $HOME/Projects/FOX/cpe-sre-automation?git@github.com:foxbroadcasting/cpe-sre-automation
 $HOME/Projects/FOX/cpe-sportsplayer?git@github.com:foxbroadcasting/cpe-sportsplayer.git
-$HOME/go/src/github.com/foxbroadcasting/cpe-lp-listings?git@github.com:foxbroadcasting/cpe-lp-listings
+$HOME/Projects/FOX/cpe-lp-listings?git@github.com:foxbroadcasting/cpe-lp-listings
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-videos?git@github.com:foxbroadcasting/cpe-lp-videos
 $HOME/go/src/github.com/foxbroadcasting/cpe-lp-listings-shows?git@github.com:foxbroadcasting/cpe-lp-listings-shows
 $HOME/go/src/github.com/foxbroadcasting/cpe-mediasources?git@github.com:foxbroadcasting/cpe-mediasources
