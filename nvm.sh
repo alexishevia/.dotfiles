@@ -12,7 +12,7 @@ git pull
 popd
 
 
-versions='12.16.1 v11.9.0'
+versions='12.16.1 14.17.0'
 
 for version in $versions; do
   nvm install $version
@@ -27,5 +27,5 @@ for version in $versions; do
   npm install -g @aws-amplify/cli # AWS Amplify client
 done
 
-nvm alias default 12.16.1
-nvm use 12.16.1
+nvm alias default 14.17.0
+nvm use 14.17.0
