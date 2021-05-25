@@ -196,13 +196,6 @@ if [[ $PWD/ = $HOME/Dropbox/* ]];
     source $HOME/Dropbox/env_vars.sh;
     nvm use;
 fi
-if [[ $PWD/ = $HOME/go/src/github.com/foxbroadcasting/* ]];
-  then
-    source $HOME/Dropbox/env_vars.sh;
-fi
-
-# add alias to cd into foxbroadcasting golang directory
-alias gofox="cd $GOPATH/src/github.com/foxbroadcasting/"
 
 #---------------------------------------
 # Homebrew (linuxbrew)
