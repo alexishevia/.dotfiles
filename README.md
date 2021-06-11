@@ -12,8 +12,8 @@ These scripts should allow me to reconstruct my entire development environment o
     https://docs.docker.com/docker-for-windows/wsl/
 - Install the [Cascadia Mono font](https://github.com/microsoft/cascadia-code) and set it as the default font for the Ubuntu WSL2 client
     I like using font size: 18
-- Configure the Ubuntu WSL2 client (right click -> properties)
-    * enable ctrl+c/v to copy/paste
+- Configure the Ubuntu WSL2 client (right click on title bar -> properties -> options)
+    * enable ctrl+shitf+c/v to copy/paste
 - Install other useful software:
   * [Snagit](https://www.techsmith.com/screen-capture.html) for screen capture and image annotations
       Note: Snagit also has a [color picker](https://techsmith-13.wistia.com/medias/e52ityv9p2?embedType=async&videoFoam=true&videoWidth=854)
