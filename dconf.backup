@@ -7,6 +7,7 @@ default-zoom-level='small'
 [gnome/nautilus/preferences]
 default-folder-viewer='icon-view'
 search-filter-time-type='last_modified'
+search-view='list-view'
 
 [gnome/nautilus/window-state]
 initial-size=(890, 550)
