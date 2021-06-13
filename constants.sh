@@ -39,11 +39,8 @@ $HOME/Projects/FOX/tracking-data-helper?git@github.com:foxbroadcasting/tracking-
 $HOME/Projects/FOX/video-livestream-test-harness?git@github.com:foxbroadcasting/video-livestream-test-harness
 $HOME/Projects/Personales/invoice-zero?git@github.com:alexishevia/invoice-zero.git
 $HOME/Projects/Personales/izinput-pwa?git@github.com:alexishevia/izinput-pwa.git
-$HOME/Projects/Personales/izreducer?git@github.com:alexishevia/izreducer.git
 $HOME/Projects/Personales/mdo-native?git@github.com:mdo-org/mdo-native.git
 $HOME/Projects/Personales/mdo?git@github.com:mdo-org/mdo.git
 $HOME/Projects/Personales/naratrujillo.com?git@bitbucket.org:alexishevia/naratrujillo.com.git
-$HOME/Projects/Personales/personal_finance?git@bitbucket.org:alexishevia/personal_finance.git
-$HOME/Projects/Personales/redux-file-sync?git@github.com:alexishevia/redux-file-sync.git
 $HOME/Projects/Personales/zettelkasten?git@github.com:alexishevia/zettelkasten.git
 $HOME/knowledge-base?git@github.com:alexishevia/knowledge-base.git"
