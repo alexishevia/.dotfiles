@@ -12,7 +12,7 @@ git pull
 popd
 
 
-versions='12.16.1 14.17.0'
+versions='12.16.1 14.17.0 16.3.0'
 
 for version in $versions; do
   nvm install $version
