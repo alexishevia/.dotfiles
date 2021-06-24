@@ -26,3 +26,4 @@ set -e # exit if any command fails
 ./apps/azurecli.sh
 ./apps/terraform.sh
 ./apps/k6.sh
+./apps/apicmp.sh

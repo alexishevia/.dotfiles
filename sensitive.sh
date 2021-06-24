@@ -22,6 +22,7 @@ Projects/FOX/cpe-liveplayer/config/mock.json
 Projects/FOX/cpe-psu/config/mock.json
 Projects/FOX/cpe-contentsku/config/mock.json
 Projects/FOX/cpe-geo-service/config/mock.json
+Projects/FOX/cpe-station-locator/config/mock.json
 Projects/FOX/cpe-dma/config/mock.json
 Projects/FOX/cpe-screens/config/mock.json
 Projects/FOX/cpe-asset-info/config/mock.json
