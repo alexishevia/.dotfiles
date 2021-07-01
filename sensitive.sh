@@ -28,6 +28,7 @@ Projects/FOX/cpe-screens/config/mock.json
 Projects/FOX/cpe-asset-info/config/mock.json
 Projects/FOX/cpe-sportsplayer/config/mock.json
 Projects/FOX/cpe-lp-listings/config/mock.json
+Projects/FOX/cpe-header-bidding/config/mock.json
 Projects/FOX/cpe-lp-videos/config/mock.json"
 
 for filepath in $filepaths; do
