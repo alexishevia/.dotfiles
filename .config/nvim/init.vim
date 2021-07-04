@@ -76,10 +76,7 @@ nnoremap \ :nohlsearch<CR>
 let maplocalleader = "-"
 
 " use jk as Escape
-" inoremap jk <esc>
-
-" use fd as Escape
-inoremap fd <esc>
+inoremap jk <esc>
 
 " remap semicolon to colon
 " in a US keyboard, this allows me to go into command line mode with a single key (just `;` instead of `Shift + ;`)
